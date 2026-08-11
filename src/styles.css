@@ -884,19 +884,41 @@ html.custom-cursor textarea {
     linear-gradient(var(--band-ink), var(--band-ink)) center / 1px 20px no-repeat;
 }
 
-/* Scrollbar */
-* {
+/* Scrollbar: the page rail replaces the native gray bar */
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scrollbar-gutter: auto;
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
+  display: none !important;
+}
+html::-webkit-scrollbar-track,
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-track,
+body::-webkit-scrollbar-thumb,
+html::-webkit-scrollbar-corner,
+body::-webkit-scrollbar-corner {
+  background: transparent !important;
+  display: none !important;
+}
+/* Inner scrollable areas keep a thin, themed bar */
+.themed-scroll {
   scrollbar-width: thin;
-  scrollbar-color: var(--brand-accent-tint) var(--base);
+  scrollbar-color: var(--brand-accent-tint) transparent;
 }
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+.themed-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
 }
-::-webkit-scrollbar-track {
-  background: var(--base);
+.themed-scroll::-webkit-scrollbar-track {
+  background: transparent;
 }
-::-webkit-scrollbar-thumb {
+.themed-scroll::-webkit-scrollbar-thumb {
   background: var(--brand-accent-tint);
 }
 
@@ -904,8 +926,9 @@ html.custom-cursor textarea {
 .scroll-progress {
   position: fixed;
   inset: 0 0 auto 0;
-  z-index: 50;
-  height: 2px;
+  z-index: 100;
+  height: 3px;
+  background: var(--brand-accent-tint);
   pointer-events: none;
 }
 .scroll-progress-bar {
@@ -920,10 +943,12 @@ html.custom-cursor textarea {
 /* Scroll progress side rail */
 .scroll-progress-side {
   position: fixed;
-  inset: 0 0 0 auto;
-  z-index: 50;
-  width: 2px;
-  height: 100vh;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  width: 3px;
+  background: var(--brand-accent-tint);
   pointer-events: none;
 }
 .scroll-progress-side-bar {
