@@ -7,7 +7,7 @@ import { LineReveal } from "@/components/site/LineReveal";
 import abgLogoAsset from "@/assets/abg-logo.png.asset.json";
 
 const DESCRIPTION =
-  "First-year at Northeastern studying Artificial Intelligence and Behavioral Neuroscience. Chess trainer, Python game, NASA GeneLab, Formula SAE. Looking for summer 2027 research.";
+  "First-year at Northeastern studying Artificial Intelligence and Behavioral Neuroscience. Chess trainer, Python game, NASA GeneLab GL4HS, Formula SAE. Looking for summer 2027 research.";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
