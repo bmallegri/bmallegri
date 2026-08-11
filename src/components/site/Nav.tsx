@@ -19,7 +19,7 @@ export function Nav({ overlay = false }: { overlay?: boolean }) {
     <nav
       className={
         overlay
-          ? `fixed inset-x-0 top-0 z-30 ${overlayMode ? "on-media" : "bg-band text-band-ink"}`
+          ? `fixed inset-x-0 top-0 z-30 ${overlayMode ? "text-ink" : "bg-band text-band-ink"}`
           : "bg-base"
       }
     >
@@ -27,7 +27,7 @@ export function Nav({ overlay = false }: { overlay?: boolean }) {
         <Link
           to="/"
           className={`t-wordmark shrink-0 transition-colors duration-150 ${
-            overlay ? "text-band-ink" : "text-ink hover:text-accent"
+            overlay && !overlayMode ? "text-band-ink" : "text-ink hover:text-accent"
           }`}
         >
           BMAllegri

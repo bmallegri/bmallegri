@@ -34,19 +34,19 @@ export function Hero() {
         </div>
         <div className="mt-auto">
         <div className="hero-hairline mb-6" aria-hidden="true" />
-        <h1 className="t-hero text-band-ink">
+        <h1 className="t-hero text-ink">
           <LineReveal as="span" className="block" lines={["Bella Michele"]} />
           <LineReveal as="span" className="hero-accent-line block" lines={["Allegri"]} />
         </h1>
         <div className="mt-8 grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
-          <div className="max-w-[46ch] space-y-2 t-mono text-band-ink">
+          <div className="max-w-[46ch] space-y-2 t-mono text-ink">
             <p>I build tools that pay attention to how people learn and decide.</p>
             <p>First semester at Queen's University Belfast, then Boston in January.</p>
           </div>
-          <span className="now-tag text-band-ink">Belfast — now</span>
+          <span className="now-tag text-ink">Belfast — now</span>
         </div>
         <div className="hero-hairline mt-8" aria-hidden="true" />
-        <p className="mt-6 flex flex-wrap items-baseline gap-4 t-mono text-band-ink">
+        <p className="mt-6 flex flex-wrap items-baseline gap-4 t-mono text-ink">
           <a href="mailto:bellamallegri@gmail.com" className="link-accent t-mono">
             bellamallegri@gmail.com
           </a>
