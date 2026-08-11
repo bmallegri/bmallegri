@@ -173,8 +173,8 @@ function Index() {
               <Reveal as="p" delay={60} className="mt-6 t-body">
                 This fall I'm at Queen's University Belfast for my first semester. I am currently
                 working as COO of Artistic Builders Guild (
-                <a href="https://abg.institute" className="link-accent">
-                  abg.institute
+                <a href="https://www.linkedin.com/company/abg-institute" className="link-accent">
+                  LinkedIn
                 </a>
                 ), and working on my project. I am also currently working on certification for IBM
                 Generative AI Engineering. January is Boston, where I'm after a lab spot and the
