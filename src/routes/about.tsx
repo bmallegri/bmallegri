@@ -3,8 +3,8 @@ import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { ContactForm } from "@/components/site/ContactForm";
 import { Reveal } from "@/components/site/Reveal";
-import { PhotoSlot } from "@/components/site/Photo";
 import { LineReveal } from "@/components/site/LineReveal";
+import abgLogoAsset from "@/assets/abg-logo.png.asset.json";
 
 const DESCRIPTION =
   "First-year at Northeastern studying Artificial Intelligence and Behavioral Neuroscience. Chess trainer, Python game, NASA GeneLab, Formula SAE. Looking for summer 2027 research.";
@@ -48,25 +48,44 @@ function About() {
             <span className="ghost-word" aria-hidden="true">
               Who
             </span>
-            <div className="relative lg:grid lg:grid-cols-[7fr_4fr] lg:gap-14">
-              <div>
-                <LineReveal as="h1" className="t-section t-heading-italic" lines={["Who I am"]} />
-                <div className="mt-10 space-y-7 t-body">
-                  {paragraphs.map((p, i) => (
-                    <Reveal as="p" key={p.slice(0, 24)} delay={i * 60}>
-                      {p}
-                    </Reveal>
-                  ))}
-                </div>
-                <Reveal as="p" delay={60} className="mt-12 t-mono">
-                  <Link to="/" className="link-accent">
-                    Home
-                  </Link>
+            <div className="relative">
+              <LineReveal as="h1" className="t-section t-heading-italic" lines={["Who I am"]} />
+              <div className="mt-10 flex flex-col gap-7 t-body">
+                {paragraphs.slice(0, 5).map((p, i) => (
+                  <Reveal as="p" key={p.slice(0, 24)} delay={i * 60}>
+                    {p}
+                  </Reveal>
+                ))}
+                <Reveal as="div" delay={5 * 60} className="mt-4 flex items-start gap-5">
+                  <a
+                    href="https://abg.institute"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="shrink-0"
+                  >
+                    <img
+                      src={abgLogoAsset.url}
+                      alt="Artistic Builders Guild logo"
+                      className="h-16 w-16 object-contain"
+                    />
+                  </a>
+                  <div className="t-mono">
+                    <p>COO, Artistic Builders Guild</p>
+                    <a href="https://abg.institute" className="link-accent">
+                      abg.institute
+                    </a>
+                  </div>
                 </Reveal>
+                {paragraphs.slice(5).map((p, i) => (
+                  <Reveal as="p" key={p.slice(0, 24)} delay={(6 + i) * 60}>
+                    {p}
+                  </Reveal>
+                ))}
               </div>
-              {/* Portrait slot, gray placeholder until the file is uploaded */}
-              <Reveal delay={120} className="mt-12 lg:mt-2">
-                <PhotoSlot ratio="4 / 5" caption="SAN DIEGO, CA / 400 FT / DATE TBC" />
+              <Reveal as="p" delay={60} className="mt-12 t-mono">
+                <Link to="/" className="link-accent">
+                  Home
+                </Link>
               </Reveal>
             </div>
           </div>

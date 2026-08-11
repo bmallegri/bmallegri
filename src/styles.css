@@ -71,14 +71,14 @@
 :root {
   --radius: 0.625rem;
   --base: #ecebe7;
-  --band: #43474b;
+  --band: #3a3937;
   --ink: #1c1d1e;
   --band-ink: #f5f4f1;
   --brand-accent: #5c7a75;
   --brand-accent-tint: #b5c6c3;
   --brand-accent-strong: #4a635f;
-  --brand-tide: #5c7a75;
-  --media-placeholder: #d8d6d1;
+  --brand-tide: #5c6a72;
+  --media-placeholder: #e0dcd4;
   --surface: var(--base);
   color-scheme: light;
   --background: oklch(1 0 0);
@@ -117,14 +117,14 @@
 
 .dark {
   --base: #26292c;
-  --band: #43474b;
+  --band: #33322f;
   --ink: #f5f4f1;
   --band-ink: #f5f4f1;
   --brand-accent: #b3c7c4;
   --brand-accent-tint: #5c7a75;
   --brand-accent-strong: #cbdad7;
-  --brand-tide: #4a635f;
-  --media-placeholder: #33373b;
+  --brand-tide: #48555c;
+  --media-placeholder: #35332f;
   --surface: var(--base);
   color-scheme: dark;
   --background: oklch(0.129 0.042 264.695);
