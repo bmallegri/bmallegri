@@ -77,6 +77,7 @@
   --brand-accent: #4e7f77;
   --brand-accent-tint: #a8cfc9;
   --brand-accent-strong: #3e665f;
+  --brand-tide: #4e7f77;
   --media-placeholder: #d8d6d1;
   --surface: var(--base);
   color-scheme: light;
@@ -122,6 +123,7 @@
   --brand-accent: #a8cfc9;
   --brand-accent-tint: #4e7f77;
   --brand-accent-strong: #c4e0db;
+  --brand-tide: #3e665f;
   --media-placeholder: #33373b;
   --surface: var(--base);
   color-scheme: dark;
