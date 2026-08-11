@@ -14,9 +14,9 @@ import drone2 from "@/assets/drone-2.webp";
 import drone3 from "@/assets/drone-3.webp";
 import bfrTeam from "@/assets/bfr-team.jpg.asset.json";
 
-const TITLE = "Bella Allegri | AI and Behavioral Neuroscience at Northeastern";
+const TITLE = "Bella Allegri | AI & Behavioral Neuroscience";
 const DESCRIPTION =
-  "First-year at Northeastern studying Artificial Intelligence and Behavioral Neuroscience. Chess trainer, Python game, NASA GeneLab GL4HS, Formula SAE. Looking for summer 2027 research.";
+  "Bella Michele Allegri builds tools for how people learn and decide: a chess trainer, a Python game, NASA GeneLab GL4HS, and Formula SAE electronics.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -26,8 +26,34 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
       { property: "og:url", content: "/" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
     links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Bella Michele Allegri",
+          jobTitle: "Student Researcher",
+          url: "https://bmallegri.ai",
+          email: "mailto:bellamallegri@gmail.com",
+          affiliation: [
+            { "@type": "CollegeOrUniversity", name: "Northeastern University" },
+            { "@type": "CollegeOrUniversity", name: "Queen's University Belfast" },
+            { "@type": "Organization", name: "Artistic Builders Guild", url: "https://abg.institute" },
+          ],
+          knowsAbout: [
+            "Artificial Intelligence",
+            "Behavioral Neuroscience",
+            "Human-AI systems",
+            "Racing electronics",
+          ],
+        }),
+      },
+    ],
   }),
   component: Index,
 });
@@ -109,7 +135,7 @@ function Index() {
             </span>
             <SectionMark>SEC 01 / SHORT</SectionMark>
             <div className="relative">
-              <Reveal as="p" className="eyebrow text-accent">
+              <Reveal as="h2" className="eyebrow text-accent">
                 The short version
               </Reveal>
               <Reveal as="p" delay={60} className="mt-6 t-body">
@@ -139,7 +165,7 @@ function Index() {
             <SectionMark>SEC 02 / NOW</SectionMark>
             <div className="relative">
               <Reveal className="flex flex-wrap items-baseline gap-x-4 gap-y-2">
-                <span className="eyebrow text-accent">Right now</span>
+                <h2 className="eyebrow text-accent">Right now</h2>
                 <span className="t-mono opacity-70">
                   updated August 2026, mid-packing for Belfast
                 </span>
@@ -176,7 +202,7 @@ function Index() {
             </span>
             <SectionMark>SEC 03 / PROJECTS</SectionMark>
             <div className="relative">
-              <Reveal as="p" className="eyebrow text-accent">
+              <Reveal as="h2" className="eyebrow text-accent">
                 Projects
               </Reveal>
               <ol className="mt-10">
@@ -244,7 +270,7 @@ function Index() {
             </span>
             <SectionMark>SEC 04 / 400 FT</SectionMark>
             <div className="relative">
-              <Reveal as="p" className="eyebrow">
+              <Reveal as="h2" className="eyebrow">
                 From 400 feet
               </Reveal>
 
