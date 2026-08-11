@@ -75,9 +75,9 @@
   --band: #1a1b1e;
   --ink: #20241f;
   --band-ink: #f3f0e9;
-  --brand-accent: #2c6a63;
-  --brand-accent-tint: #cccec4;
-  --brand-accent-strong: #1b4b46;
+  --brand-accent: #377d8c;
+  --brand-accent-tint: #c2d8dd;
+  --brand-accent-strong: #28596b;
   --brand-tide: #1a1b1e;
   --media-placeholder: #e3ded3;
   --brand-gold: #c9a227;
@@ -122,9 +122,9 @@
   --band: #1a1b1e;
   --ink: #ece9e2;
   --band-ink: #ece9e2;
-  --brand-accent: #7ec6bc;
-  --brand-accent-tint: #3a403e;
-  --brand-accent-strong: #a6ded5;
+  --brand-accent: #6fb5c4;
+  --brand-accent-tint: #2f3b40;
+  --brand-accent-strong: #9fd1de;
   --brand-tide: #1a1b1e;
   --media-placeholder: #23262a;
   --brand-gold: #c9a227;
@@ -204,9 +204,9 @@
 /* Inside contrast bands the palette flips so accent stays AA-legible on #43474B */
 @layer base {
   .bg-band {
-    --brand-accent: #8ecbc2;
-    --brand-accent-tint: #454a47;
-    --brand-accent-strong: #b4e0d8;
+    --brand-accent: #6fb5c4;
+    --brand-accent-tint: #454a4d;
+    --brand-accent-strong: #9fd1de;
     --surface: var(--band);
   }
 }
@@ -1180,7 +1180,7 @@ body::-webkit-scrollbar-corner {
 }
 
 .hero-accent-line {
-  color: #8ecbc2;
+  color: var(--brand-accent);
   font-style: italic;
   font-variation-settings: "opsz" 144, "SOFT" 60, "WONK" 1;
 }
@@ -1239,10 +1239,10 @@ body::-webkit-scrollbar-corner {
   color: var(--band-ink);
 }
 .hero-accent-line {
-  color: #2c6a63;
+  color: #377d8c;
 }
 .dark .hero-accent-line {
-  color: #8ecbc2;
+  color: #6fb5c4;
 }
 
 /* ---- Cohesion pass: viewfinder marks across the site ---- */
