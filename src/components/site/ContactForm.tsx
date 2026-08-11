@@ -9,9 +9,7 @@ const SOURCES = [
   "Other",
 ];
 
-const fieldClass =
-  "w-full border border-accent-tint bg-transparent px-3 py-2 font-mono text-sm text-current outline-none focus:border-accent";
-const labelClass = "block font-mono text-[0.7rem] uppercase tracking-widest";
+const labelClass = "block t-mono";
 
 export function ContactForm({ extended = false, idPrefix }: { extended?: boolean; idPrefix: string }) {
   const [purpose, setPurpose] = useState("");
@@ -41,19 +39,19 @@ export function ContactForm({ extended = false, idPrefix }: { extended?: boolean
   }
 
   return (
-    <form onSubmit={onSubmit} className="space-y-6">
-      <div className="grid gap-6 sm:grid-cols-2">
+    <form onSubmit={onSubmit} className="space-y-7">
+      <div className="grid gap-7 md:grid-cols-2">
         <div>
           <label className={labelClass} htmlFor={`${idPrefix}-first`}>
             First name
           </label>
-          <input id={`${idPrefix}-first`} name="first" required className={`mt-2 ${fieldClass}`} />
+          <input id={`${idPrefix}-first`} name="first" required className="mt-2 field-underline" />
         </div>
         <div>
           <label className={labelClass} htmlFor={`${idPrefix}-last`}>
             Last name
           </label>
-          <input id={`${idPrefix}-last`} name="last" required className={`mt-2 ${fieldClass}`} />
+          <input id={`${idPrefix}-last`} name="last" required className="mt-2 field-underline" />
         </div>
       </div>
       <div>
@@ -65,7 +63,7 @@ export function ContactForm({ extended = false, idPrefix }: { extended?: boolean
           name="email"
           type="email"
           required
-          className={`mt-2 ${fieldClass}`}
+          className="mt-2 field-underline"
         />
       </div>
 
@@ -73,16 +71,19 @@ export function ContactForm({ extended = false, idPrefix }: { extended?: boolean
         <>
           <fieldset>
             <legend className={labelClass}>Purpose</legend>
-            <div className="mt-3 flex flex-wrap gap-2">
+            <div className="mt-3 flex flex-wrap gap-3">
               {PURPOSES.map((p) => (
                 <button
                   type="button"
                   key={p}
                   onClick={() => setPurpose(p)}
                   aria-pressed={purpose === p}
-                  className={`rounded-full border border-accent-tint px-4 py-1.5 font-mono text-xs transition-colors ${
-                    purpose === p ? "border-accent text-accent" : "hover:border-accent"
-                  }`}
+                  className="btn-accent"
+                  style={
+                    purpose === p
+                      ? { background: "var(--brand-accent)", color: "var(--surface)" }
+                      : undefined
+                  }
                 >
                   {p}
                 </button>
@@ -106,13 +107,13 @@ export function ContactForm({ extended = false, idPrefix }: { extended?: boolean
               name="source"
               required
               defaultValue=""
-              className={`mt-2 ${fieldClass}`}
+              className="mt-2 field-underline"
             >
               <option value="" disabled>
                 Choose one
               </option>
               {SOURCES.map((s) => (
-                <option key={s} value={s} className="text-black">
+                <option key={s} value={s}>
                   {s}
                 </option>
               ))}
@@ -130,21 +131,18 @@ export function ContactForm({ extended = false, idPrefix }: { extended?: boolean
           name="message"
           required
           rows={5}
-          className={`mt-2 ${fieldClass}`}
+          className="mt-2 field-underline"
         />
       </div>
 
-      <button
-        type="submit"
-        className="border border-accent-tint px-6 py-2 font-mono text-xs uppercase tracking-widest transition-colors hover:border-accent hover:text-accent"
-      >
+      <button type="submit" className="btn-accent">
         {extended ? "Submit" : "Send"}
       </button>
 
       {failed && (
-        <p className="font-mono text-xs">
+        <p className="t-mono">
           Your mail app did not open. Write directly to{" "}
-          <a href="mailto:bellamallegri@gmail.com" className="text-accent underline underline-offset-4">
+          <a href="mailto:bellamallegri@gmail.com" className="link-accent">
             bellamallegri@gmail.com
           </a>
         </p>
