@@ -27,11 +27,12 @@ export function Hero() {
         <span className="readout absolute bottom-6 right-6">MAVIC 3 PRO CINE</span>
       </div>
 
-      <div className="on-media relative z-10 mx-auto flex h-full max-w-[1080px] flex-col justify-end px-6 pb-28 pt-16 md:pb-20 md:pt-28">
-        <div className="mb-6 flex items-center justify-between gap-6">
+      <div className="on-media relative z-10 mx-auto flex h-full max-w-[1080px] flex-col justify-between px-6 pb-28 pt-24 md:pb-20 md:pt-32">
+        <div className="flex items-start justify-between gap-6">
           <Seal className="h-14 w-14" />
           <span className="hero-index hidden md:inline">Human systems architecture</span>
         </div>
+        <div className="mt-auto">
         <div className="hero-hairline mb-6" aria-hidden="true" />
         <h1 className="t-hero text-band-ink">
           <LineReveal as="span" className="block" lines={["Bella Michele"]} />
@@ -51,6 +52,7 @@ export function Hero() {
           </a>
           <CopyEmail />
         </p>
+        </div>
       </div>
 
       <div className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2">
