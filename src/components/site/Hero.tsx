@@ -3,18 +3,10 @@ import { CopyEmail } from "./CopyEmail";
 import { Seal } from "./Seal";
 import { LineReveal } from "./LineReveal";
 
-// Drop the reel and poster here once the files are uploaded.
-const REEL_SRC: string | null = null;
-const POSTER_SRC: string | null = null;
-
 export function Hero() {
-  const [playVideo, setPlayVideo] = useState(false);
   const [today, setToday] = useState("");
 
   useEffect(() => {
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const conn = (navigator as unknown as { connection?: { saveData?: boolean } }).connection;
-    setPlayVideo(!reduced && !conn?.saveData);
     setToday(
       new Date()
         .toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" })
@@ -24,26 +16,7 @@ export function Hero() {
 
   return (
     <section className="relative h-[100svh] min-h-[560px] w-full overflow-hidden bg-band">
-      {/* Poster frame placeholder until the reel is uploaded */}
-      <div className="absolute inset-0 media-placeholder" aria-hidden="true" />
-      {POSTER_SRC && (
-        <img src={POSTER_SRC} alt="" className="absolute inset-0 h-full w-full object-cover" />
-      )}
-      {playVideo && REEL_SRC && (
-        <video
-          className="absolute inset-0 h-full w-full object-cover"
-          muted
-          loop
-          playsInline
-          autoPlay
-          preload="metadata"
-          aria-hidden="true"
-          poster={POSTER_SRC ?? undefined}
-          src={REEL_SRC}
-        />
-      )}
-      {/* Flat charcoal scrim */}
-      <div className="absolute inset-0" style={{ background: "#26292C", opacity: 0.35 }} aria-hidden="true" />
+      <span className="hero-rules" aria-hidden="true" />
       <span className="hero-grain" aria-hidden="true" />
 
       {/* Viewfinder readouts */}
@@ -55,13 +28,24 @@ export function Hero() {
       </div>
 
       <div className="on-media relative z-10 mx-auto flex h-full max-w-[1080px] flex-col justify-end px-6 pb-28 pt-16 md:pb-20 md:pt-28">
-        <Seal className="mb-6 h-14 w-14" />
-        <LineReveal as="h1" className="t-hero text-band-ink" lines={["Bella Michele", "Allegri"]} />
-        <div className="mt-8 max-w-[46ch] space-y-2 t-mono text-band-ink">
-          <p>I build tools that pay attention to how people learn and decide.</p>
-          <p>First semester at Queen's University Belfast, then Boston in January.</p>
+        <div className="mb-6 flex items-center justify-between gap-6">
+          <Seal className="h-14 w-14" />
+          <span className="hero-index hidden md:inline">Human systems architecture</span>
         </div>
-        <p className="mt-8 flex flex-wrap items-baseline gap-4 t-mono text-band-ink">
+        <div className="hero-hairline mb-6" aria-hidden="true" />
+        <h1 className="t-hero text-band-ink">
+          <LineReveal as="span" className="block" lines={["Bella Michele"]} />
+          <LineReveal as="span" className="hero-accent-line block" lines={["Allegri"]} />
+        </h1>
+        <div className="mt-8 grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
+          <div className="max-w-[46ch] space-y-2 t-mono text-band-ink">
+            <p>I build tools that pay attention to how people learn and decide.</p>
+            <p>First semester at Queen's University Belfast, then Boston in January.</p>
+          </div>
+          <span className="now-tag text-band-ink">Belfast — now</span>
+        </div>
+        <div className="hero-hairline mt-8" aria-hidden="true" />
+        <p className="mt-6 flex flex-wrap items-baseline gap-4 t-mono text-band-ink">
           <a href="mailto:bellamallegri@gmail.com" className="link-accent t-mono">
             bellamallegri@gmail.com
           </a>
