@@ -1121,3 +1121,87 @@ html.custom-cursor textarea {
 .dark .hero-accent-line {
   color: #8ecbc2;
 }
+
+/* ---- Cohesion pass: viewfinder marks across the site ---- */
+
+/* Small mono marker with an accent square, echoing the hero readouts */
+.section-mark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.4;
+  pointer-events: none;
+  user-select: none;
+}
+.section-mark::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  flex: none;
+  background: var(--brand-accent);
+}
+@media (max-width: 767px) {
+  .section-mark {
+    display: none;
+  }
+}
+
+/* Registration corner ticks on a block */
+.corner-ticks {
+  position: relative;
+}
+.corner-ticks::before,
+.corner-ticks::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
+  opacity: 0.55;
+}
+.corner-ticks::before {
+  top: 0;
+  left: 0;
+  border-top: 1px solid var(--brand-accent-tint);
+  border-left: 1px solid var(--brand-accent-tint);
+}
+.corner-ticks::after {
+  bottom: 0;
+  right: 0;
+  border-bottom: 1px solid var(--brand-accent-tint);
+  border-right: 1px solid var(--brand-accent-tint);
+}
+
+/* Nav: accent square before the wordmark, hairline once it goes solid */
+.nav-square {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  flex: none;
+  background: var(--brand-accent);
+}
+.nav-solid {
+  border-bottom: 1px solid color-mix(in srgb, var(--band-ink) 22%, transparent);
+}
+
+/* Footer readout row */
+.footer-marks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid var(--brand-accent-tint);
+  padding-top: 1rem;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.4;
+}

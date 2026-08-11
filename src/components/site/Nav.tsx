@@ -19,11 +19,13 @@ export function Nav({ overlay = false }: { overlay?: boolean }) {
     <nav
       className={
         overlay
-          ? `fixed inset-x-0 top-0 z-30 ${overlayMode ? "text-ink" : "bg-band text-band-ink"}`
-          : "bg-base"
+          ? `fixed inset-x-0 top-0 z-30 ${overlayMode ? "text-ink" : "nav-solid bg-band text-band-ink"}`
+          : "nav-solid bg-base"
       }
     >
       <div className="mx-auto flex max-w-[1080px] flex-nowrap items-center justify-between gap-4 px-6 py-5">
+        <span className="flex shrink-0 items-center gap-3">
+          <span className="nav-square" aria-hidden="true" />
         <Link
           to="/"
           className={`t-wordmark shrink-0 transition-colors duration-150 ${
@@ -32,6 +34,7 @@ export function Nav({ overlay = false }: { overlay?: boolean }) {
         >
           BMAllegri
         </Link>
+        </span>
         <div className="flex shrink-0 items-center gap-5">
           <Link to="/about" className="t-mono link-accent">
             About
