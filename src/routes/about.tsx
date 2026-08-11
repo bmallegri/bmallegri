@@ -66,7 +66,7 @@ function About() {
               </div>
               {/* Portrait slot, gray placeholder until the file is uploaded */}
               <Reveal delay={120} className="mt-12 lg:mt-2">
-                <PhotoSlot ratio="4 / 5" caption="NEW JERSEY / 400 FT / DATE TBC" />
+                <PhotoSlot ratio="4 / 5" caption="SAN DIEGO, CA / 400 FT / DATE TBC" />
               </Reveal>
             </div>
           </div>

@@ -74,10 +74,10 @@
   --band: #43474b;
   --ink: #1c1d1e;
   --band-ink: #f5f4f1;
-  --brand-accent: #4e7f77;
-  --brand-accent-tint: #a8cfc9;
-  --brand-accent-strong: #3e665f;
-  --brand-tide: #4e7f77;
+  --brand-accent: #5c7a75;
+  --brand-accent-tint: #b5c6c3;
+  --brand-accent-strong: #4a635f;
+  --brand-tide: #5c7a75;
   --media-placeholder: #d8d6d1;
   --surface: var(--base);
   color-scheme: light;
@@ -120,10 +120,10 @@
   --band: #43474b;
   --ink: #f5f4f1;
   --band-ink: #f5f4f1;
-  --brand-accent: #a8cfc9;
-  --brand-accent-tint: #4e7f77;
-  --brand-accent-strong: #c4e0db;
-  --brand-tide: #3e665f;
+  --brand-accent: #b3c7c4;
+  --brand-accent-tint: #5c7a75;
+  --brand-accent-strong: #cbdad7;
+  --brand-tide: #4a635f;
   --media-placeholder: #33373b;
   --surface: var(--base);
   color-scheme: dark;
@@ -201,9 +201,9 @@
 /* Inside contrast bands the palette flips so accent stays AA-legible on #43474B */
 @layer base {
   .bg-band {
-    --brand-accent: #a8cfc9;
-    --brand-accent-tint: #6f8f8a;
-    --brand-accent-strong: #c4e0db;
+    --brand-accent: #b3c7c4;
+    --brand-accent-tint: #7c918e;
+    --brand-accent-strong: #cbdad7;
     --surface: var(--band);
   }
 }
