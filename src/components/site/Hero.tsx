@@ -37,6 +37,9 @@ export function Hero() {
         <h1 className="t-hero text-ink">
           <LineReveal as="span" className="block" lines={["Bella Michele"]} />
           <LineReveal as="span" className="hero-accent-line block" lines={["Allegri"]} />
+          <span className="sr-only">
+            {" "}— Artificial Intelligence and Behavioral Neuroscience student
+          </span>
         </h1>
         <div className="mt-8 grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
           <div className="max-w-[46ch] space-y-2 t-mono text-ink">
