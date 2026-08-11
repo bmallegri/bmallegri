@@ -266,7 +266,7 @@
 }
 
 @utility t-hero {
-  font-size: clamp(48px, 9vw, 92px);
+  font-size: clamp(56px, 13.5vw, 168px);
   line-height: 1;
   hyphens: none;
   overflow-wrap: normal;
@@ -281,18 +281,18 @@
 }
 
 @utility t-section {
-  font-size: 30px;
+  font-size: 36px;
   line-height: 1.15;
   @media (min-width: 768px) {
-    font-size: 38px;
+    font-size: 48px;
   }
 }
 
 @utility t-project {
-  font-size: 21px;
+  font-size: 24px;
   line-height: 1.2;
   @media (min-width: 768px) {
-    font-size: 24px;
+    font-size: 32px;
   }
 }
 
@@ -324,15 +324,23 @@
 /* Links, buttons, fields */
 @utility link-accent {
   color: var(--brand-accent);
+  position: relative;
   text-decoration-line: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
   transition:
     color 150ms ease,
     text-decoration-thickness 150ms ease;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 2px;
+  background-image: linear-gradient(var(--brand-accent), var(--brand-accent));
+  transition:
+    color 150ms ease,
+    background-size 200ms ease-out;
   &:hover {
     color: var(--brand-accent-strong);
-    text-decoration-thickness: 2px;
+    background-size: 100% 2px;
   }
 }
 
