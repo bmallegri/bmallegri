@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { ContactForm } from "@/components/site/ContactForm";
+import { CopyEmail } from "@/components/site/CopyEmail";
 
 const TITLE = "Bella Allegri | AI and Behavioral Neuroscience at Northeastern";
 const DESCRIPTION =
@@ -74,13 +75,14 @@ function Index() {
             <div className="mt-10 max-w-[46ch] space-y-4 text-lg leading-relaxed sm:text-xl lg:ml-[22%]">
               <p>I build tools that pay attention to how people learn and decide.</p>
               <p>First semester at Queen's University Belfast, then Boston in January.</p>
-              <p className="pt-2">
+              <p className="flex flex-wrap items-baseline gap-4 pt-2">
                 <a
                   href="mailto:bellamallegri@gmail.com"
                   className="text-accent underline underline-offset-4"
                 >
                   bellamallegri@gmail.com
                 </a>
+                <CopyEmail />
               </p>
             </div>
           </div>
