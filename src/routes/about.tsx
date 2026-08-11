@@ -85,57 +85,6 @@ const shelf = [
     title: "Endsley, Toward a Theory of Situation Awareness in Dynamic Systems (1995).",
     note: "What a person inside a fast machine actually knows.",
   },
-  {
-    index: "11",
-    title: "Wickens, Multiple Resources and Mental Workload (2008).",
-    note: "Why attention runs out.",
-  },
-  {
-    index: "12",
-    title: "Amershi et al., Guidelines for Human-AI Interaction (2019).",
-    note: "Rules for AI a person can actually use.",
-  },
-  {
-    index: "13",
-    title:
-      "Doshi-Velez and Kim, Towards a Rigorous Science of Interpretable Machine Learning (2017).",
-    note: "Making models explain themselves.",
-  },
-  {
-    index: "14",
-    title: "Mitchell et al., Model Cards for Model Reporting (2019).",
-    note: "Documenting what a model can and can't do.",
-  },
-  {
-    index: "15",
-    title: "Gebru et al., Datasheets for Datasets (2018).",
-    note: "Where data comes from matters.",
-  },
-  {
-    index: "16",
-    title: "Love, Huber and Anders, DESeq2 (2014).",
-    note: "The workhorse of RNA-seq analysis.",
-  },
-  {
-    index: "17",
-    title: "Subramanian et al., Gene Set Enrichment Analysis (2005).",
-    note: "Reading biology at the pathway level.",
-  },
-  {
-    index: "18",
-    title: "Wolpaw et al., Brain-Computer Interfaces for Communication and Control (2002).",
-    note: "Signals straight out of the skull.",
-  },
-  {
-    index: "19",
-    title: "Norman, The Design of Everyday Things (1988).",
-    note: "Affordances, and why errors are the design's fault.",
-  },
-  {
-    index: "20",
-    title: "Simon, The Sciences of the Artificial (1969).",
-    note: "Systems thinking, the whole worldview.",
-  },
 ];
 
 function About() {
