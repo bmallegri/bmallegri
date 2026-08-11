@@ -864,3 +864,152 @@ html.custom-cursor textarea {
     display: none;
   }
 }
+
+/* Status dots on the projects list */
+.status-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: none;
+  opacity: 0.85;
+}
+.status-tag::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  flex: none;
+  background: var(--brand-accent);
+}
+.status-tag[data-status="working"]::before {
+  background: var(--brand-gold);
+}
+
+/* The route */
+.route-line {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  border-left: 1px solid var(--brand-accent-tint);
+  padding-left: 1.25rem;
+}
+@media (min-width: 768px) {
+  .route-line {
+    flex-direction: row;
+    gap: 0;
+    border-left: 0;
+    border-top: 1px solid var(--brand-accent-tint);
+    padding-left: 0;
+    padding-top: 1.25rem;
+  }
+}
+.route-stop {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6em;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .route-stop {
+    flex: 1 1 0;
+    display: block;
+    padding-right: 1rem;
+  }
+}
+.route-stop::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  flex: none;
+  background: var(--ink);
+  margin-left: calc(-1.25rem - 4.5px);
+  align-self: center;
+}
+@media (min-width: 768px) {
+  .route-stop::before {
+    margin-left: 0;
+    margin-top: calc(-1.25rem - 4.5px);
+    margin-bottom: 0.75rem;
+  }
+}
+.route-stop[data-state="current"]::before {
+  background: var(--brand-gold);
+}
+.route-stop[data-state="future"] {
+  opacity: 0.5;
+}
+.route-stop-note {
+  opacity: 0.65;
+}
+@media (min-width: 768px) {
+  .route-stop-note {
+    display: block;
+  }
+}
+
+/* The shelf */
+.shelf-item {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 0 1rem;
+  padding: 0.9rem 0;
+  border-top: 1px solid var(--brand-accent-tint);
+}
+.shelf-index {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  opacity: 0.6;
+  padding-top: 0.35em;
+}
+.shelf-title {
+  font-size: 18px;
+  line-height: 1.35;
+}
+.shelf-note {
+  font-size: 15px;
+  line-height: 1.55;
+  opacity: 0.7;
+  margin-top: 0.25rem;
+}
+
+/* Restraint pass: quiet the earlier layers */
+.ghost-word {
+  opacity: 0.025;
+}
+.bg-band .ghost-word,
+.bg-tide .ghost-word {
+  opacity: 0.04;
+}
+.dark .ghost-word {
+  opacity: 0.035;
+}
+.film-grain,
+.hero-grain {
+  opacity: 0.04;
+}
+.hero-grain {
+  opacity: 0.035;
+}
+.ticker-track {
+  animation-duration: 75s;
+}
+.ticker-item {
+  opacity: 0.65;
+}
+@keyframes readout-in {
+  to {
+    opacity: 0.4;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .readout {
+    opacity: 0.4;
+  }
+}
