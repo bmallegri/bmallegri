@@ -15,7 +15,7 @@ import bfrTeam from "@/assets/bfr-team.jpg.asset.json";
 
 const TITLE = "Bella Allegri | AI and Behavioral Neuroscience at Northeastern";
 const DESCRIPTION =
-  "First-year at Northeastern studying Artificial Intelligence and Behavioral Neuroscience. Chess trainer, Python game, NASA GeneLab, Formula SAE. Looking for summer 2027 research.";
+  "First-year at Northeastern studying Artificial Intelligence and Behavioral Neuroscience. Chess trainer, Python game, NASA GeneLab GL4HS, Formula SAE. Looking for summer 2027 research.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -66,7 +66,7 @@ const projects = [
   },
   {
     index: "05",
-    title: "NASA GeneLab internship",
+    title: "NASA GeneLab GL4HS internship",
     meta: "Summer 2025",
     status: "done" as const,
     statusLabel: "done",
@@ -117,7 +117,7 @@ function Index() {
                 know instead of counting your puzzle streak, and a game that teaches Python. Until
                 June it was ten months on the electronics of Brown's Formula SAE car, a team I
                 joined while I was still in high school. The summer before that, spaceflight omics
-                at NASA GeneLab.
+                at NASA GeneLab GL4HS.
               </Reveal>
               <Reveal as="p" delay={120} className="mt-8 t-mono">
                 <Link to="/about" className="link-accent">
