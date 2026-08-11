@@ -283,8 +283,9 @@ function Index() {
 
 
         {/* Write to me */}
-        <section className="bg-tide">
-          <div className="mx-auto max-w-[1080px] gap-16 px-6 section-pad lg:grid lg:grid-cols-[5fr_6fr]">
+        <section className="relative bg-tide">
+          <div className="relative mx-auto max-w-[1080px] gap-16 px-6 section-pad lg:grid lg:grid-cols-[5fr_6fr]">
+            <SectionMark>SEC 05 / WRITE</SectionMark>
             <Reveal>
               <LineReveal
                 as="h2"

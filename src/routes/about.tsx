@@ -4,6 +4,7 @@ import { Footer } from "@/components/site/Footer";
 import { ContactForm } from "@/components/site/ContactForm";
 import { Reveal } from "@/components/site/Reveal";
 import { LineReveal } from "@/components/site/LineReveal";
+import { SectionMark } from "@/components/site/SectionMark";
 import abgLogoAsset from "@/assets/abg-logo.png.asset.json";
 
 const DESCRIPTION =
@@ -81,6 +82,7 @@ function About() {
             <span className="ghost-word" aria-hidden="true">
               Who
             </span>
+            <SectionMark>SEC 01 / WHO</SectionMark>
             <div className="relative">
               <LineReveal as="h1" className="t-section t-heading-italic" lines={["Who I am"]} />
               <div className="mt-10 flex flex-col gap-7 t-body">
@@ -134,6 +136,7 @@ function About() {
             <span className="ghost-word" aria-hidden="true">
               Shelf
             </span>
+            <SectionMark>SEC 02 / SHELF</SectionMark>
             <Reveal as="p" className="eyebrow text-accent">
               The shelf
             </Reveal>
@@ -154,8 +157,9 @@ function About() {
           </div>
         </section>
 
-        <section className="bg-band text-band-ink">
-          <div className="mx-auto max-w-[1080px] px-6 section-pad">
+        <section className="relative bg-band text-band-ink">
+          <div className="relative mx-auto max-w-[1080px] px-6 section-pad">
+            <SectionMark>SEC 03 / WRITE</SectionMark>
             <LineReveal as="h2" className="t-section t-heading-italic" lines={["Write to me"]} />
             <Reveal delay={60} className="mt-10 max-w-[640px]">
               <ContactForm extended idPrefix="about" />
