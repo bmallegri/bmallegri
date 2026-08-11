@@ -2,6 +2,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { ContactForm } from "@/components/site/ContactForm";
+import { CopyEmail } from "@/components/site/CopyEmail";
+import drone1 from "@/assets/drone-1.webp";
+import drone2 from "@/assets/drone-2.webp";
+import drone3 from "@/assets/drone-3.webp";
 
 const TITLE = "Bella Allegri | AI and Behavioral Neuroscience at Northeastern";
 const DESCRIPTION =
@@ -74,13 +78,14 @@ function Index() {
             <div className="mt-10 max-w-[46ch] space-y-4 text-lg leading-relaxed sm:text-xl lg:ml-[22%]">
               <p>I build tools that pay attention to how people learn and decide.</p>
               <p>First semester at Queen's University Belfast, then Boston in January.</p>
-              <p className="pt-2">
+              <p className="flex flex-wrap items-baseline gap-4 pt-2">
                 <a
                   href="mailto:bellamallegri@gmail.com"
                   className="text-accent underline underline-offset-4"
                 >
                   bellamallegri@gmail.com
                 </a>
+                <CopyEmail />
               </p>
             </div>
           </div>
@@ -163,20 +168,26 @@ function Index() {
             />
 
             <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-[2fr_3fr]">
-              <div
-                className="row-span-2 aspect-[3/4] border border-accent-tint bg-neutral-400/30"
-                role="img"
-                aria-label="Placeholder for a tall vertical drone still of the New Jersey coast"
+              <img
+                src={drone1}
+                alt="Aerial view of a New Jersey shoreline, water meeting sand in a long curve."
+                loading="lazy"
+                decoding="async"
+                className="row-span-2 h-full w-full border border-accent-tint object-cover"
               />
-              <div
-                className="aspect-[16/9] border border-accent-tint bg-neutral-400/30"
-                role="img"
-                aria-label="Placeholder for a wide drone still of New Jersey from above"
+              <img
+                src={drone2}
+                alt="Wide aerial view of New Jersey coastline with waves rolling toward the beach."
+                loading="lazy"
+                decoding="async"
+                className="aspect-[16/9] w-full border border-accent-tint object-cover"
               />
-              <div
-                className="aspect-[16/9] border border-accent-tint bg-neutral-400/30"
-                role="img"
-                aria-label="Placeholder for a second wide drone still of New Jersey from above"
+              <img
+                src={drone3}
+                alt="Wide aerial view of open water and beach in New Jersey, shot from high above."
+                loading="lazy"
+                decoding="async"
+                className="aspect-[16/9] w-full border border-accent-tint object-cover"
               />
             </div>
 
