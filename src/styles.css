@@ -572,3 +572,283 @@
   font-style: italic;
   font-variation-settings: "opsz" 144, "SOFT" 60, "WONK" 1;
 }
+
+/* ---- Viewfinder pass ---- */
+
+/* Photographs: frame, duotone, grain, registration ticks */
+.photo-frame {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+}
+.photo-frame .photo-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  filter: saturate(0.35) contrast(1.03);
+  transition:
+    transform 600ms ease-out,
+    filter 400ms ease-out;
+}
+.photo-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: var(--brand-tide);
+  mix-blend-mode: color;
+  opacity: 0.5;
+  transition: opacity 400ms ease-out;
+}
+.photo-frame:hover .photo-img {
+  transform: scale(1.03);
+  filter: none;
+}
+.photo-frame:hover::after {
+  opacity: 0;
+}
+@media (hover: none) {
+  .photo-frame .photo-img {
+    filter: none;
+    transform: none;
+  }
+  .photo-frame::after {
+    opacity: 0;
+  }
+}
+
+.film-grain,
+.hero-grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.07;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23f)'/%3E%3C/svg%3E");
+}
+.hero-grain {
+  opacity: 0.06;
+}
+
+.reg-ticks {
+  position: absolute;
+  inset: 6px;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--brand-accent-tint), var(--brand-accent-tint)),
+    linear-gradient(var(--brand-accent-tint), var(--brand-accent-tint)),
+    linear-gradient(var(--brand-accent-tint), var(--brand-accent-tint)),
+    linear-gradient(var(--brand-accent-tint), var(--brand-accent-tint)),
+    linear-gradient(var(--brand-accent-tint), var(--brand-accent-tint)),
+    linear-gradient(var(--brand-accent-tint), var(--brand-accent-tint)),
+    linear-gradient(var(--brand-accent-tint), var(--brand-accent-tint)),
+    linear-gradient(var(--brand-accent-tint), var(--brand-accent-tint));
+  background-repeat: no-repeat;
+  background-size:
+    8px 1px,
+    1px 8px,
+    8px 1px,
+    1px 8px,
+    8px 1px,
+    1px 8px,
+    8px 1px,
+    1px 8px;
+  background-position:
+    left top,
+    left top,
+    right top,
+    right top,
+    left bottom,
+    left bottom,
+    right bottom,
+    right bottom;
+  opacity: 0.8;
+}
+
+@utility photo-meta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.6;
+  margin-top: 0.75rem;
+}
+
+/* Hero readouts */
+@utility readout {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--band-ink);
+  opacity: 0;
+  animation: readout-in 500ms ease-out 700ms forwards;
+}
+@keyframes readout-in {
+  to {
+    opacity: 0.55;
+  }
+}
+
+/* Masked line reveals */
+.line-mask {
+  display: block;
+  overflow: hidden;
+}
+.line-inner {
+  display: block;
+  transform: translateY(105%);
+  animation: line-rise 500ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+@keyframes line-rise {
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Seal rotation */
+.seal-spin {
+  animation: seal-turn 40s linear infinite;
+}
+@keyframes seal-turn {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Ticker */
+.ticker {
+  overflow: hidden;
+  width: 100%;
+  padding: 14px 0;
+  border-top: 1px solid var(--brand-accent-tint);
+  border-bottom: 1px solid var(--brand-accent-tint);
+}
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker-slide 40s linear infinite;
+}
+.ticker:hover .ticker-track {
+  animation-play-state: paused;
+}
+.ticker-item {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brand-accent);
+  padding-right: 3rem;
+  white-space: nowrap;
+}
+@keyframes ticker-slide {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Preloader */
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 300ms ease-out;
+}
+.preloader[data-fading="yes"] {
+  opacity: 0;
+}
+
+/* Custom cursor */
+html.custom-cursor,
+html.custom-cursor a,
+html.custom-cursor button,
+html.custom-cursor img,
+html.custom-cursor .photo-frame {
+  cursor: none;
+}
+html.custom-cursor input,
+html.custom-cursor textarea {
+  cursor: text;
+}
+.cursor-dot {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 90;
+  pointer-events: none;
+  width: 8px;
+  height: 8px;
+  background: var(--ink);
+  border: 1px solid transparent;
+  transition:
+    width 150ms ease-out,
+    height 150ms ease-out,
+    background-color 150ms ease-out,
+    border-color 150ms ease-out;
+}
+.dark .cursor-dot {
+  background: var(--band-ink);
+}
+.cursor-dot[data-mode="ring"] {
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border-color: var(--brand-accent);
+  border-radius: 999px;
+}
+.cursor-dot[data-mode="cross"] {
+  width: 20px;
+  height: 20px;
+  background:
+    linear-gradient(var(--band-ink), var(--band-ink)) center / 20px 1px no-repeat,
+    linear-gradient(var(--band-ink), var(--band-ink)) center / 1px 20px no-repeat;
+}
+
+/* Scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--brand-accent-tint) var(--base);
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--base);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--brand-accent-tint);
+}
+
+@layer base {
+  main {
+    animation: page-fade 250ms ease-out both;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .seal-spin,
+  .ticker-track {
+    animation: none;
+  }
+  .line-inner {
+    transform: none;
+    animation: none;
+  }
+  .readout {
+    opacity: 0.55;
+    animation: none;
+  }
+  .photo-frame .photo-img {
+    transition: none;
+  }
+  .cursor-dot {
+    display: none;
+  }
+}

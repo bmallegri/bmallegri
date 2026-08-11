@@ -3,6 +3,8 @@ import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { ContactForm } from "@/components/site/ContactForm";
 import { Reveal } from "@/components/site/Reveal";
+import { PhotoSlot } from "@/components/site/Photo";
+import { LineReveal } from "@/components/site/LineReveal";
 
 const DESCRIPTION =
   "First-year at Northeastern studying Artificial Intelligence and Behavioral Neuroscience. Chess trainer, Python game, NASA GeneLab, Formula SAE. Looking for summer 2027 research.";
@@ -48,9 +50,7 @@ function About() {
             </span>
             <div className="relative lg:grid lg:grid-cols-[7fr_4fr] lg:gap-14">
               <div>
-                <Reveal as="h1" className="t-section t-heading-italic">
-                  Who I am
-                </Reveal>
+                <LineReveal as="h1" className="t-section t-heading-italic" lines={["Who I am"]} />
                 <div className="mt-10 space-y-7 t-body">
                   {paragraphs.map((p, i) => (
                     <Reveal as="p" key={p.slice(0, 24)} delay={i * 60}>
@@ -66,8 +66,7 @@ function About() {
               </div>
               {/* Portrait slot, gray placeholder until the file is uploaded */}
               <Reveal delay={120} className="mt-12 lg:mt-2">
-                <div className="aspect-[4/5] w-full media-placeholder" />
-                <p className="mt-3 t-mono opacity-60">Portrait.</p>
+                <PhotoSlot ratio="4 / 5" caption="NEW JERSEY / 400 FT / DATE TBC" />
               </Reveal>
             </div>
           </div>
@@ -75,9 +74,7 @@ function About() {
 
         <section className="bg-band text-band-ink">
           <div className="mx-auto max-w-[1080px] px-6 section-pad">
-            <Reveal as="h2" className="t-section t-heading-italic">
-              Write to me
-            </Reveal>
+            <LineReveal as="h2" className="t-section t-heading-italic" lines={["Write to me"]} />
             <Reveal delay={60} className="mt-10 max-w-[640px]">
               <ContactForm extended idPrefix="about" />
             </Reveal>

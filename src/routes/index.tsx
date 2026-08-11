@@ -5,6 +5,9 @@ import { ContactForm } from "@/components/site/ContactForm";
 import { Hero } from "@/components/site/Hero";
 import { Reveal } from "@/components/site/Reveal";
 import { useCursorPreview, CursorPreviewLayer } from "@/components/site/CursorPreview";
+import { Photo, FullBleedPhoto } from "@/components/site/Photo";
+import { Ticker } from "@/components/site/Ticker";
+import { LineReveal } from "@/components/site/LineReveal";
 import drone1 from "@/assets/drone-1.webp";
 import drone2 from "@/assets/drone-2.webp";
 import drone3 from "@/assets/drone-3.webp";
@@ -185,13 +188,9 @@ function Index() {
         />
 
         {/* Full-bleed still */}
-        <img
-          src={drone1}
-          alt="Full-bleed aerial still of the New Jersey coastline."
-          loading="lazy"
-          decoding="async"
-          className="aspect-[21/9] w-full media-placeholder object-cover"
-        />
+        <FullBleedPhoto src={drone1} alt="Full-bleed aerial still of the New Jersey coastline." />
+
+        <Ticker />
 
         {/* From 400 feet */}
         <section className="relative overflow-hidden bg-band text-band-ink">
@@ -207,42 +206,36 @@ function Index() {
               {/* Staggered cluster */}
               <div className="mt-12 md:relative md:min-h-[760px]">
                 <Reveal className="md:absolute md:left-0 md:top-0 md:w-[54%]">
-                  <img
+                  <Photo
                     src={drone2}
                     alt="Aerial still from the drone reel: New Jersey coastline seen from 400 feet."
-                    loading="lazy"
-                    decoding="async"
-                    className="aspect-[16/10] w-full media-placeholder object-cover"
+                    ratio="16 / 10"
+                    caption="NEW JERSEY / 400 FT / DATE TBC"
                   />
-                  <p className="mt-3 t-mono opacity-60">Coastline, 400 feet.</p>
                 </Reveal>
 
                 <Reveal
                   delay={60}
                   className="mt-10 md:absolute md:left-[8%] md:top-[380px] md:mt-0 md:w-[46%]"
                 >
-                  <img
+                  <Photo
                     src={drone3}
                     alt="Wide aerial view of open water and beach in New Jersey, shot from high above."
-                    loading="lazy"
-                    decoding="async"
-                    className="aspect-[16/10] w-full media-placeholder object-cover"
+                    ratio="16 / 10"
+                    caption="NEW JERSEY / 400 FT / DATE TBC"
                   />
-                  <p className="mt-3 t-mono opacity-60">Open water, mid morning.</p>
                 </Reveal>
 
                 <Reveal
                   delay={120}
                   className="mt-10 md:absolute md:right-[-8%] md:top-[120px] md:mt-0 md:w-[38%]"
                 >
-                  <img
+                  <Photo
                     src={drone1}
                     alt="Aerial view of a New Jersey shoreline, water meeting sand in a long curve."
-                    loading="lazy"
-                    decoding="async"
-                    className="aspect-[4/5] w-full media-placeholder object-cover"
+                    ratio="4 / 5"
+                    caption="NEW JERSEY / 400 FT / DATE TBC"
                   />
-                  <p className="mt-3 t-mono opacity-60">Shoreline, long curve.</p>
                 </Reveal>
               </div>
 
@@ -259,7 +252,11 @@ function Index() {
         <section className="bg-tide">
           <div className="mx-auto max-w-[1080px] gap-16 px-6 section-pad lg:grid lg:grid-cols-[5fr_6fr]">
             <Reveal>
-              <h2 className="t-section t-heading-italic">Write to me</h2>
+              <LineReveal
+                as="h2"
+                className="t-section t-heading-italic"
+                lines={["Write to me"]}
+              />
               <p className="mt-6 t-body">
                 If you're hiring for summer 2027, or you run a lab anywhere near human performance
                 or human-AI systems, I'd like to hear from you. Drone and web inquiries welcome too.

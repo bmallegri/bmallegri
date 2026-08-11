@@ -11,11 +11,15 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { Seal } from "@/components/site/Seal";
+import { Cursor } from "@/components/site/Cursor";
+import { Preloader } from "@/components/site/Preloader";
 
 function NotFoundComponent() {
   return (
     <main className="min-h-screen bg-base text-ink">
       <div className="mx-auto max-w-[1080px] px-6 section-pad">
+        <Seal className="mb-8 h-14 w-14" />
         <h1 className="t-section">Nothing here.</h1>
         <p className="mt-8 t-mono">
           <Link to="/" className="link-accent">
@@ -110,6 +114,8 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <Preloader />
+      <Cursor />
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
     </QueryClientProvider>
