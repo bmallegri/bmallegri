@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
@@ -62,9 +61,7 @@ const projects = [
 ];
 
 function Index() {
-  const { active, setActive, el } = useCursorPreview();
-  const previewRef = useRef<HTMLDivElement | null>(null);
-  el.current = previewRef.current;
+  const { active, setActive, el: previewRef } = useCursorPreview();
 
   return (
     <>
