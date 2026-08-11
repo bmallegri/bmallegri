@@ -181,7 +181,7 @@ function Index() {
         <CursorPreviewLayer
           previewRef={previewRef}
           visible={active !== null}
-          label={active !== null ? projects[active].title : ""}
+          label={active !== null ? (projects[active]?.title ?? "") : ""}
         />
 
         {/* Full-bleed still */}
