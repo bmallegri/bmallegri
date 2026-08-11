@@ -81,7 +81,7 @@ const projects = [
     meta: "September 2025 to May 2026",
     status: "done" as const,
     statusLabel: "done",
-    body: "Ten months on the electronics subsystem of a Formula SAE car, on a team I joined in high school. Most of my hours went to the wiring harness and electrical QA, and also driving up 4 hours on weekends from New Jersey.",
+    body: "Nine months on the electronics subsystem of a Formula SAE car, on a team I joined in high school. Most of my hours went to the wiring harness and electrical QA, and also driving up 4 hours on weekends from New Jersey.",
   },
   {
     index: "04",
@@ -143,7 +143,7 @@ function Index() {
                 Neuroscience. I want to know what happens when a person learns something hard, and
                 whether software can see it. Right now that's a chess trainer that models what you
                 know instead of counting your puzzle streak, and a game that teaches Python. Until
-                June it was ten months on the electronics of Brown's Formula SAE car, a team I
+                this May it was nine months on the electronics of Brown's Formula SAE car, a team I
                 joined while I was still in high school. The summer before that, spaceflight omics
                 at NASA GeneLab GL4HS.
               </Reveal>

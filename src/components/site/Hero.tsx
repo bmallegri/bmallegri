@@ -15,14 +15,14 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative h-[100svh] min-h-[560px] w-full overflow-hidden hero-surface">
+    <section className="relative h-[100svh] min-h-[560px] w-full overflow-hidden hero-surface md:h-[80svh]">
       <span className="hero-rules" aria-hidden="true" />
       <span className="hero-grain" aria-hidden="true" />
 
       {/* Viewfinder readouts */}
       <div className="pointer-events-none absolute inset-0 z-10 hidden md:block">
         <span className="readout absolute left-6 top-24">
-          <span className="rec-dot" aria-hidden="true" /> REC &middot; {today}
+          {today}
         </span>
         <span className="readout absolute right-6 top-24">ALT 400 FT</span>
         <span className="readout absolute bottom-6 left-6">41.826155 N / 71.403275 W</span>
@@ -46,7 +46,7 @@ export function Hero() {
         <div className="mt-8 grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
           <div className="max-w-[46ch] space-y-2 t-mono text-ink">
             <p>I build tools that pay attention to how people learn and decide.</p>
-            <p>First semester at Queen's University Belfast, then Boston in January.</p>
+            <p>Northeastern University, Artificial Intelligence and Behavioral Neuroscience.</p>
           </div>
           <span className="now-tag text-ink">Providence, RI / now</span>
         </div>
