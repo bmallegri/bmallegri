@@ -204,9 +204,9 @@
 /* Inside contrast bands the palette flips so accent stays AA-legible on #43474B */
 @layer base {
   .bg-band {
-    --brand-accent: #8ed0c7;
-    --brand-accent-tint: #4e7973;
-    --brand-accent-strong: #b2e2db;
+    --brand-accent: #8ecbc2;
+    --brand-accent-tint: #3f6b66;
+    --brand-accent-strong: #b4e0d8;
     --surface: var(--band);
   }
 }
