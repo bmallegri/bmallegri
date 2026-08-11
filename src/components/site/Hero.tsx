@@ -40,7 +40,7 @@ export function Hero() {
           <LineReveal as="span" className="block" lines={["Bella Michele"]} />
           <LineReveal as="span" className="hero-accent-line block" lines={["Allegri"]} />
           <span className="sr-only">
-            {" "}— Artificial Intelligence and Behavioral Neuroscience student
+            Bella Michele Allegri, Artificial Intelligence and Behavioral Neuroscience student.
           </span>
         </h1>
         <div className="mt-8 grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
@@ -48,7 +48,7 @@ export function Hero() {
             <p>I build tools that pay attention to how people learn and decide.</p>
             <p>First semester at Queen's University Belfast, then Boston in January.</p>
           </div>
-          <span className="now-tag text-ink">Providence, RI — now</span>
+          <span className="now-tag text-ink">Providence, RI / now</span>
         </div>
         <div className="hero-hairline mt-8" aria-hidden="true" />
         <p className="mt-6 flex flex-wrap items-baseline gap-4 t-mono text-ink">
