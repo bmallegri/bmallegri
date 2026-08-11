@@ -45,10 +45,12 @@ export function CursorPreviewLayer({
   previewRef,
   visible,
   label,
+  src,
 }: {
   previewRef: React.MutableRefObject<HTMLDivElement | null>;
   visible: boolean;
   label: string;
+  src?: string | undefined;
 }) {
   return (
     <div
@@ -57,9 +59,20 @@ export function CursorPreviewLayer({
       className="pointer-events-none fixed left-0 top-0 z-40 hidden md:block"
       style={{ opacity: visible ? 1 : 0, transition: "opacity 200ms ease-out" }}
     >
-      <div className="aspect-[4/3] w-[280px] media-placeholder">
-        <span className="sr-only">{label}</span>
-      </div>
+      {src ? (
+        <div className="w-[180px] overflow-hidden border border-accent-tint bg-base">
+          <img
+            src={src}
+            alt={label}
+            className="block w-full"
+            style={{ aspectRatio: "3 / 2", objectFit: "cover" }}
+          />
+        </div>
+      ) : (
+        <div className="aspect-[4/3] w-[280px] media-placeholder">
+          <span className="sr-only">{label}</span>
+        </div>
+      )}
     </div>
   );
 }

@@ -74,6 +74,11 @@ function About() {
                     <a href="https://abg.institute" className="link-accent">
                       abg.institute
                     </a>
+                    <p className="mt-1">
+                      <a href="mailto:bella@abg.institute" className="link-accent">
+                        bella@abg.institute
+                      </a>
+                    </p>
                   </div>
                 </Reveal>
                 {paragraphs.slice(5).map((p, i) => (
