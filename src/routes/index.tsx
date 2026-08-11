@@ -33,33 +33,33 @@ export const Route = createFileRoute("/")({
 const projects = [
   {
     index: "01",
-    title: "Chess trainer",
-    meta: "In progress",
-    body: "Chess apps count your puzzle streak and call it progress. Mine keeps a model of what you actually know and schedules positions with spaced retrieval. Between positions it has you talk through candidate moves the way strong players do out loud. The goal is the useful part of a coach.",
-  },
-  {
-    index: "02",
-    title: "Python game",
-    meta: "In progress",
-    body: "A game that teaches Python. It comes from the same place as the chess trainer, the idea that you learn a thing by being made to do it, not by reading about it. Write-up and repo when it's done.",
-  },
-  {
-    index: "03",
-    title: "PKU dietary recommendation app",
-    meta: "Kean University, July 2025",
-    body: "Built during a four-week research program. Phenylketonuria means tracking protein in almost everything you eat, so meal planning is daily cognitive work. I built a hybrid recommender over a database of 900+ foods and deployed it with Streamlit.",
-  },
-  {
-    index: "04",
     title: "NASA GeneLab internship",
     meta: "Summer 2025",
     body: "A summer internship analyzing omics data from spaceflight experiments in Python. GeneLab is NASA's open repository of biology data from missions, gene expression from organisms that have actually been to space, and the summer went to turning that raw data into something you could ask questions of, about how living systems respond to spaceflight.",
   },
   {
-    index: "05",
+    index: "02",
+    title: "PKU dietary recommendation app",
+    meta: "Kean University, July 2025",
+    body: "Built during a four-week research program. Phenylketonuria means tracking protein in almost everything you eat, so meal planning is daily cognitive work. I built a hybrid recommender over a database of 900+ foods and deployed it with Streamlit.",
+  },
+  {
+    index: "03",
     title: "Brown Formula Racing",
     meta: "Through June 2026",
     body: "Ten months on the electronics subsystem of a Formula SAE car, on a team I joined in high school. Most of my hours went to the wiring harness and electrical QA, the unglamorous work of making sure every sensor and connector on a race car survives a race.",
+  },
+  {
+    index: "04",
+    title: "Python game",
+    meta: "In progress",
+    body: "A game that teaches Python. It comes from the same place as the chess trainer, the idea that you learn a thing by being made to do it, not by reading about it. Write-up and repo when it's done.",
+  },
+  {
+    index: "05",
+    title: "Chess trainer",
+    meta: "In progress",
+    body: "Chess apps count your puzzle streak and call it progress. Mine keeps a model of what you actually know and schedules positions with spaced retrieval. Between positions it has you talk through candidate moves the way strong players do out loud. The goal is the useful part of a coach.",
   },
 ];
 
@@ -188,7 +188,7 @@ function Index() {
         />
 
         {/* Full-bleed still */}
-        <FullBleedPhoto src={drone1} alt="Full-bleed aerial still of the New Jersey coastline." />
+        <FullBleedPhoto src={drone1} alt="Full-bleed aerial still of the San Diego coastline." />
 
         <Ticker />
 
@@ -204,49 +204,38 @@ function Index() {
               </Reveal>
 
               {/* Staggered cluster */}
-              <div className="mt-12 md:relative md:min-h-[760px]">
+              <div className="mt-12 md:relative md:min-h-[640px]">
                 <Reveal className="md:absolute md:left-0 md:top-0 md:w-[54%]">
                   <Photo
                     src={drone2}
-                    alt="Aerial still from the drone reel: New Jersey coastline seen from 400 feet."
+                    alt="Aerial still from the drone reel: San Diego coastline seen from 400 feet."
                     ratio="16 / 10"
-                    caption="NEW JERSEY / 400 FT / DATE TBC"
+                    caption="SAN DIEGO, CA / 400 FT / DATE TBC"
                   />
                 </Reveal>
 
                 <Reveal
                   delay={60}
-                  className="mt-10 md:absolute md:left-[8%] md:top-[380px] md:mt-0 md:w-[46%]"
+                  className="mt-10 md:absolute md:right-[-8%] md:top-[260px] md:mt-0 md:w-[46%]"
                 >
                   <Photo
                     src={drone3}
-                    alt="Wide aerial view of open water and beach in New Jersey, shot from high above."
+                    alt="Wide aerial view of open water and beach in San Diego, shot from high above."
                     ratio="16 / 10"
-                    caption="NEW JERSEY / 400 FT / DATE TBC"
-                  />
-                </Reveal>
-
-                <Reveal
-                  delay={120}
-                  className="mt-10 md:absolute md:right-[-8%] md:top-[120px] md:mt-0 md:w-[38%]"
-                >
-                  <Photo
-                    src={drone1}
-                    alt="Aerial view of a New Jersey shoreline, water meeting sand in a long curve."
-                    ratio="4 / 5"
-                    caption="NEW JERSEY / 400 FT / DATE TBC"
+                    caption="SAN DIEGO, CA / 400 FT / DATE TBC"
                   />
                 </Reveal>
               </div>
 
               <Reveal as="p" delay={60} className="mt-12 t-body">
-                Everything in the reel is New Jersey from above, shot on a DJI Mavic 3 Pro Cine. The
-                drone and web design practice runs alongside the technical work. If you want aerial
-                coverage or a site built, say so in the form.
+                Everything in the reel is San Diego, California from above, shot on a DJI Mavic 3
+                Pro Cine. The drone and web design practice runs alongside the technical work. If
+                you want aerial coverage or a site built, say so in the form.
               </Reveal>
             </div>
           </div>
         </section>
+
 
         {/* Write to me */}
         <section className="bg-tide">
