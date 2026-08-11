@@ -136,13 +136,16 @@ function Index() {
                   key={p.index}
                   className="group border-t border-transparent py-5 first:pt-0 md:grid md:grid-cols-[56px_1fr] md:py-7 [&+li]:border-accent-tint"
                 >
-                  <span className="t-mono opacity-70 transition-colors duration-150 group-hover:text-accent md:block">
+                  <span className="hidden t-mono opacity-70 transition-colors duration-150 group-hover:text-accent md:block">
                     {p.index}
                   </span>
                   <div className="mt-2 md:mt-0">
                     <h3 className="flex flex-wrap items-baseline gap-x-4 t-project">
                       {p.title}
-                      <span className="eyebrow opacity-70">{p.meta}</span>
+                      <span className="eyebrow opacity-70">
+                        <span className="md:hidden">{p.index} — </span>
+                        {p.meta}
+                      </span>
                     </h3>
                     <p className="mt-4 t-body">{p.body}</p>
                   </div>
