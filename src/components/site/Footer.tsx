@@ -1,6 +1,6 @@
 import { CopyEmail } from "./CopyEmail";
 import { LocalTime } from "./LocalTime";
-import seal from "@/assets/seal.webp";
+import { Seal } from "./Seal";
 
 export function Footer() {
   return (
@@ -23,13 +23,7 @@ export function Footer() {
           {/* LinkedIn link slot: <a href="LINKEDIN_URL">LinkedIn</a> */}
           {/* GitHub link slot: <a href="GITHUB_URL">GitHub</a> */}
         </div>
-        <img
-          src={seal}
-          alt="BMAllegri seal logo"
-          loading="lazy"
-          decoding="async"
-          className="h-20 w-20 shrink-0 object-contain"
-        />
+        <Seal className="h-20 w-20 shrink-0" />
       </div>
     </footer>
   );
