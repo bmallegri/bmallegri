@@ -21,6 +21,7 @@ function NotFoundComponent() {
       <div className="mx-auto max-w-[1080px] px-6 section-pad">
         <Seal className="mb-8 h-14 w-14" />
         <h1 className="t-section">Nothing here.</h1>
+        <p className="mt-4 t-mono opacity-70">The drone doesn't go this high.</p>
         <p className="mt-8 t-mono">
           <Link to="/" className="link-accent">
             Back to the front page.

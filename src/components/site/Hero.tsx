@@ -50,7 +50,7 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-0 z-10 hidden md:block">
         <span className="readout absolute left-6 top-24">{today}</span>
         <span className="readout absolute right-6 top-24">ALT 400 FT</span>
-        <span className="readout absolute bottom-6 left-6">40.49 N / 74.45 W</span>
+        <span className="readout absolute bottom-6 left-6">54.60 N / 5.93 W</span>
         <span className="readout absolute bottom-6 right-6">MAVIC 3 PRO CINE</span>
       </div>
 
