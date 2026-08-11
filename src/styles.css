@@ -121,6 +121,10 @@
   --band-ink: #f5f4f1;
   --brand-accent: #a8cfc9;
   --brand-accent-tint: #4e7f77;
+  --brand-accent-strong: #c4e0db;
+  --media-placeholder: #33373b;
+  --surface: var(--base);
+  color-scheme: dark;
   --background: oklch(0.129 0.042 264.695);
   --foreground: oklch(0.984 0.003 247.858);
   --card: oklch(0.208 0.042 265.755);
