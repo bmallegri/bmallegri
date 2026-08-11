@@ -286,6 +286,8 @@
 @utility t-section {
   font-size: 36px;
   line-height: 1.15;
+  overflow-wrap: break-word;
+  word-break: break-word;
   @media (min-width: 768px) {
     font-size: 48px;
   }
@@ -294,6 +296,8 @@
 @utility t-project {
   font-size: 24px;
   line-height: 1.2;
+  overflow-wrap: break-word;
+  word-break: break-word;
   @media (min-width: 768px) {
     font-size: 32px;
   }
@@ -566,6 +570,7 @@
   font-size: clamp(20px, 3.4vw, 32px);
   line-height: 1.2;
   overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 @utility t-heading-italic {
