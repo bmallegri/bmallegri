@@ -78,7 +78,7 @@ const projects = [
   {
     index: "03",
     title: "Brown Formula Racing",
-    meta: "September 2025–May 2026",
+    meta: "September 2025 to May 2026",
     status: "done" as const,
     statusLabel: "done",
     body: "Ten months on the electronics subsystem of a Formula SAE car, on a team I joined in high school. Most of my hours went to the wiring harness and electrical QA, and also driving up 4 hours on weekends from New Jersey.",
@@ -105,7 +105,7 @@ const route = [
   { place: "METUCHEN, NJ", note: "home", state: "past" as const },
   {
     place: "PROVIDENCE, RI",
-    note: "now — ABG, before the semester",
+    note: "now / ABG, before the semester",
     state: "current" as const,
   },
   { place: "BELFAST, Northern Ireland", note: "september", state: "future" as const },
@@ -171,14 +171,11 @@ function Index() {
                 </span>
               </Reveal>
               <Reveal as="p" delay={60} className="mt-6 t-body">
-                This fall I'm at Queen's University Belfast for my first semester. I am currently
-                working as COO of Artistic Builders Guild (
-                <a href="https://abg.institute" className="link-accent">
-                  abg.institute
-                </a>
-                ), and working on my project. I am also currently working on certification for IBM
-                Generative AI Engineering. January is Boston, where I'm after a lab spot and the
-                telemetry side of Northeastern Electric Racing.
+                This fall I'm at Queen's University Belfast for my first semester. Until then I'm
+                in Providence, running operations as COO of Artistic Builders Guild (abg.institute),
+                finishing the IBM Generative AI Engineering certification, and building the chess
+                trainer. January is Boston, where I'm after a lab spot and the telemetry side of
+                Northeastern Electric Racing.
               </Reveal>
               <Reveal delay={120} className="mt-10">
                 <ol className="route-line">
@@ -232,7 +229,7 @@ function Index() {
                           </span>
                           {p.meta && (
                             <span className="eyebrow opacity-70">
-                              <span className="md:hidden">{p.index} — </span>
+                              <span className="md:hidden">{p.index}. </span>
                               {p.meta}
                             </span>
                           )}
@@ -299,7 +296,7 @@ function Index() {
               </div>
 
               <Reveal as="p" delay={60} className="mt-12 t-body">
-                Everything in the reel is San Diego, California from above, shot on a DJI Mavic 3
+                Everything here is San Diego, California from above, shot on a DJI Mavic 3
                 Pro Cine. The drone and web design practice runs alongside the technical work. If
                 you want aerial coverage or a site built, say so in the form.
               </Reveal>

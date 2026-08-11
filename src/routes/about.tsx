@@ -29,7 +29,7 @@ export const Route = createFileRoute("/about")({
 
 const paragraphs = [
   "I got here through wires. I started in high school on my school's FTC robotics team, eventually running it as captain. Senior year, I joined Brown Formula Racing and spent ten months in the electronics subsystem. I also found I liked strategy. With an FRC team I was helping, the Excel spreadsheet full of match data and automatic macros calculating scoring chances was the part I kept coming back to. The numbers told a story about what a person under pressure was likely to do next.",
-  "That gap became the plan. At Northeastern I study Artificial Intelligence and Behavioral Neuroscience, and both are about the same thing: people under load. I like tools that notice what is happening in the person using them. What you know. When you are about to make a bad call.",
+  "That question became the plan. At Northeastern I study Artificial Intelligence and Behavioral Neuroscience, and both are about the same thing: people under load. I like tools that notice what is happening in the person using them. What you know. When you are about to make a bad call.",
   "In my own notes I call this work human systems architecture. Systems that understand, support, predict, and improve how people think and perform. Big words for what is currently a chess trainer and a Python game. The direction holds.",
   "This fall I'm in Belfast for my first semester, at Queen's University. Boston from January.",
   "Aside from all that, I'm COO of Artistic Builders Guild, a collective of student builders and artists with members across Brown, MIT, Stanford, and more. I run the operations side. And the drone practice, and the web design work. This site is one of the builds.",
@@ -96,7 +96,7 @@ function About() {
                 ))}
                 <Reveal as="div" delay={5 * 60} className="mt-4 flex items-start gap-5">
                   <a
-                    href="https://abg.institute"
+                    href="https://www.linkedin.com/company/abg-institute"
                     target="_blank"
                     rel="noreferrer"
                     className="shrink-0 rounded-sm bg-[#F3F0E9] p-2 dark:bg-[#F3F0E9]"
@@ -109,8 +109,8 @@ function About() {
                   </a>
                   <div className="t-mono">
                     <p>COO, Artistic Builders Guild</p>
-                    <a href="https://abg.institute" className="link-accent">
-                      abg.institute
+                    <a href="https://www.linkedin.com/company/abg-institute" className="link-accent">
+                      LinkedIn
                     </a>
                     <p className="mt-1">
                       <a href="mailto:bella@abg.institute" className="link-accent">
