@@ -1023,3 +1023,80 @@ html.custom-cursor textarea {
     opacity: 0.4;
   }
 }
+
+/* ---- Hero: typographic, media-free ---- */
+.hero-rules {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--brand-accent-tint), var(--brand-accent-tint)),
+    linear-gradient(var(--brand-accent-tint), var(--brand-accent-tint)),
+    linear-gradient(var(--brand-accent-tint), var(--brand-accent-tint));
+  background-repeat: no-repeat;
+  background-size:
+    1px 100%,
+    1px 100%,
+    1px 100%;
+  background-position:
+    25% 0,
+    50% 0,
+    75% 0;
+  opacity: 0.22;
+}
+
+.hero-hairline {
+  height: 1px;
+  width: 100%;
+  background: var(--brand-accent-tint);
+  opacity: 0.5;
+}
+
+.hero-accent-line {
+  color: var(--brand-accent);
+  font-style: italic;
+  font-variation-settings: "opsz" 144, "SOFT" 60, "WONK" 1;
+}
+
+.hero-index {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.now-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.now-tag::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  flex: none;
+  background: var(--brand-gold);
+  animation: cue-pulse 2600ms ease-in-out infinite;
+  transform-origin: center;
+}
+@media (prefers-reduced-motion: reduce) {
+  .now-tag::before {
+    animation: none;
+  }
+}
+
+.preview-chip {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid var(--brand-accent-tint);
+  background: var(--band);
+  color: var(--band-ink);
+}
