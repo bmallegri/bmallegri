@@ -1,7 +1,6 @@
 # bmallegri.com
 
 My personal website. Live at [bmallegri.com](https://www.bmallegri.com)
-(Lovable preview: [bmallegri.lovable.app](https://bmallegri.lovable.app)).
 
 Two pages. Who I am, what I'm building (a chess trainer, a game that
 teaches Python), where I've worked (NASA GeneLab, Kean University, Brown
@@ -12,7 +11,7 @@ Formula Racing), and drone photography of California.
 - React + Tailwind, fully static. No backend, no database, no analytics.
 - Fraunces and IBM Plex Mono, light and dark mode.
 - Built with [Lovable](https://lovable.dev). This repo is synced both ways:
-  changes in Lovable commit here, and pushes to `main` sync back.
+  Changes in Lovable are committed here, and pushes to `main` sync back.
 
 ## Run it locally
 
