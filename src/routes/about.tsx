@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { ContactForm } from "@/components/site/ContactForm";
+import { Reveal } from "@/components/site/Reveal";
 
 const DESCRIPTION =
   "First-year at Northeastern studying Artificial Intelligence and Behavioral Neuroscience. Chess trainer, Python game, NASA GeneLab, Formula SAE. Looking for summer 2027 research.";
@@ -40,28 +41,46 @@ function About() {
       </a>
       <Nav />
       <main id="main">
-        <section className="bg-base">
-          <div className="mx-auto max-w-[1080px] px-6 section-pad">
-            <h1 className="t-section">Who I am</h1>
-            <div className="mt-10 space-y-7 t-body">
-              {paragraphs.map((p) => (
-                <p key={p.slice(0, 24)}>{p}</p>
-              ))}
+        <section className="relative overflow-hidden bg-base">
+          <div className="relative mx-auto max-w-[1080px] px-6 section-pad">
+            <span className="ghost-word" aria-hidden="true">
+              Who
+            </span>
+            <div className="relative lg:grid lg:grid-cols-[7fr_4fr] lg:gap-14">
+              <div>
+                <Reveal as="h1" className="t-section t-heading-italic">
+                  Who I am
+                </Reveal>
+                <div className="mt-10 space-y-7 t-body">
+                  {paragraphs.map((p, i) => (
+                    <Reveal as="p" key={p.slice(0, 24)} delay={i * 60}>
+                      {p}
+                    </Reveal>
+                  ))}
+                </div>
+                <Reveal as="p" delay={60} className="mt-12 t-mono">
+                  <Link to="/" className="link-accent">
+                    Home
+                  </Link>
+                </Reveal>
+              </div>
+              {/* Portrait slot, gray placeholder until the file is uploaded */}
+              <Reveal delay={120} className="mt-12 lg:mt-2">
+                <div className="aspect-[4/5] w-full media-placeholder" />
+                <p className="mt-3 t-mono opacity-60">Portrait.</p>
+              </Reveal>
             </div>
-            <p className="mt-12 t-mono">
-              <Link to="/" className="link-accent">
-                Home
-              </Link>
-            </p>
           </div>
         </section>
 
         <section className="bg-band text-band-ink">
           <div className="mx-auto max-w-[1080px] px-6 section-pad">
-            <h2 className="t-section">Write to me</h2>
-            <div className="mt-10 max-w-[640px]">
+            <Reveal as="h2" className="t-section t-heading-italic">
+              Write to me
+            </Reveal>
+            <Reveal delay={60} className="mt-10 max-w-[640px]">
               <ContactForm extended idPrefix="about" />
-            </div>
+            </Reveal>
           </div>
         </section>
       </main>

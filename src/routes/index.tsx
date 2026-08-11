@@ -2,11 +2,12 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { ContactForm } from "@/components/site/ContactForm";
-import { CopyEmail } from "@/components/site/CopyEmail";
+import { Hero } from "@/components/site/Hero";
+import { Reveal } from "@/components/site/Reveal";
+import { useCursorPreview, CursorPreviewLayer } from "@/components/site/CursorPreview";
 import drone1 from "@/assets/drone-1.webp";
 import drone2 from "@/assets/drone-2.webp";
 import drone3 from "@/assets/drone-3.webp";
-import seal from "@/assets/seal.webp";
 
 const TITLE = "Bella Allegri | AI and Behavioral Neuroscience at Northeastern";
 const DESCRIPTION =
@@ -60,6 +61,8 @@ const projects = [
 ];
 
 function Index() {
+  const { active, setActive, el: previewRef } = useCursorPreview();
+
   return (
     <>
       <a
@@ -68,109 +71,118 @@ function Index() {
       >
         Skip to content
       </a>
-      <Nav />
+      <Nav overlay />
       <main id="main">
-        {/* Hero */}
-        <section className="bg-base">
-          <div className="mx-auto flex min-h-[70vh] max-w-[1080px] flex-col justify-center px-6 pb-16 pt-10 md:min-h-[80vh] md:pb-28 md:pt-16">
-            <img
-              src={seal}
-              alt="BMAllegri seal"
-              decoding="async"
-              className="h-14 w-14 object-contain"
-            />
-            <h1 className="mt-8 t-hero">
-              Bella Michele
-              <br />
-              Allegri
-            </h1>
-            <div className="mt-10 max-w-[46ch] space-y-4 t-subline md:ml-[20%]">
-              <p>I build tools that pay attention to how people learn and decide.</p>
-              <p>First semester at Queen's University Belfast, then Boston in January.</p>
-            </div>
-            <p className="mt-8 flex flex-wrap items-baseline gap-4 md:ml-[20%]">
-              <a href="mailto:bellamallegri@gmail.com" className="link-accent t-mono">
-                bellamallegri@gmail.com
-              </a>
-              <CopyEmail />
-            </p>
-          </div>
-        </section>
+        <Hero />
 
         {/* The short version */}
-        <section className="bg-base">
-          <div className="mx-auto max-w-[1080px] px-6 pb-16 md:pb-28">
-            <p className="eyebrow text-accent">The short version</p>
-            <p className="mt-6 t-body">
-              I'm a first-year at Northeastern studying Artificial Intelligence and Behavioral
-              Neuroscience. I want to know what happens when a person learns something hard, and
-              whether software can see it. Right now that's a chess trainer that models what you know
-              instead of counting your puzzle streak, and a game that teaches Python. Until June it
-              was ten months on the electronics of Brown's Formula SAE car, a team I joined while I
-              was still in high school. The summer before that, spaceflight omics at NASA GeneLab.
-            </p>
-            <p className="mt-8 t-mono">
-              <Link to="/about" className="link-accent">
-                The longer version
-              </Link>
-            </p>
+        <section className="relative overflow-hidden bg-base">
+          <div className="relative mx-auto max-w-[1080px] px-6 section-pad">
+            <span className="ghost-word" aria-hidden="true">
+              Short
+            </span>
+            <div className="relative">
+              <Reveal as="p" className="eyebrow text-accent">
+                The short version
+              </Reveal>
+              <Reveal as="p" delay={60} className="mt-6 t-body">
+                I'm a first-year at Northeastern studying Artificial Intelligence and Behavioral
+                Neuroscience. I want to know what happens when a person learns something hard, and
+                whether software can see it. Right now that's a chess trainer that models what you
+                know instead of counting your puzzle streak, and a game that teaches Python. Until
+                June it was ten months on the electronics of Brown's Formula SAE car, a team I
+                joined while I was still in high school. The summer before that, spaceflight omics
+                at NASA GeneLab.
+              </Reveal>
+              <Reveal as="p" delay={120} className="mt-8 t-mono">
+                <Link to="/about" className="link-accent">
+                  The longer version
+                </Link>
+              </Reveal>
+            </div>
           </div>
         </section>
 
         {/* Right now */}
-        <section className="border-t border-accent-tint bg-base">
-          <div className="mx-auto max-w-[1080px] px-6 section-pad">
-            <div className="flex flex-wrap items-baseline gap-x-4 gap-y-2">
-              <p className="eyebrow text-accent">Right now</p>
-              <p className="t-mono opacity-70">updated August 2026</p>
+        <section className="relative overflow-hidden border-t border-accent-tint bg-base">
+          <div className="relative mx-auto max-w-[1080px] px-6 section-pad">
+            <span className="ghost-word" aria-hidden="true">
+              Now
+            </span>
+            <div className="relative">
+              <Reveal className="flex flex-wrap items-baseline gap-x-4 gap-y-2">
+                <span className="eyebrow text-accent">Right now</span>
+                <span className="t-mono opacity-70">updated August 2026</span>
+              </Reveal>
+              <Reveal as="p" delay={60} className="mt-6 t-body">
+                This fall I'm at Queen's University Belfast for my first semester. I am currently
+                working as COO of Artistic Builders Guild (
+                <a href="https://abg.institute" className="link-accent">
+                  abg.institute
+                </a>
+                ), and working on my project. I am also currently working on certification for IBM
+                Generative AI Engineering. January is Boston, where I'm after a lab spot and the
+                telemetry side of Northeastern Electric Racing.
+              </Reveal>
             </div>
-            <p className="mt-6 t-body">
-              This fall I'm at Queen's University Belfast for my first semester. I am currently
-              working as COO of Artistic Builders Guild (
-              <a href="https://abg.institute" className="link-accent">
-                abg.institute
-              </a>
-              ), and working on my project. I am also currently working on certification for IBM
-              Generative AI Engineering. January is Boston, where I'm after a lab spot and the
-              telemetry side of Northeastern Electric Racing.
-            </p>
           </div>
         </section>
 
         {/* Projects */}
-        <section className="bg-base">
-          <div className="mx-auto max-w-[1080px] px-6 pb-16 md:pb-28">
-            <p className="eyebrow text-accent">Projects</p>
-            <ol className="mt-10">
-              {projects.map((p) => (
-                <li
-                  key={p.index}
-                  className="group border-t border-transparent py-5 first:pt-0 md:grid md:grid-cols-[120px_1fr] md:gap-x-6 md:py-7 [&+li]:border-accent-tint"
-                >
-                  <div className="hidden md:block">
-                    <span className="block t-gutter-num">{p.index}</span>
-                    <span className="mt-2 block t-mono opacity-70 transition-colors duration-150 group-hover:text-accent">
-                      {p.index}
-                    </span>
-                  </div>
-                  <div className="mt-2 md:mt-0">
-                    <h3 className="flex flex-wrap items-baseline gap-x-4 t-project">
-                      {p.title}
-                      <span className="eyebrow opacity-70">
-                        <span className="md:hidden">{p.index} — </span>
-                        {p.meta}
-                      </span>
-                    </h3>
-                    <p className="mt-4 t-body">{p.body}</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
-            <p className="mt-10 t-body">
-              Repos go up as I finish the write-ups. Email me if you want a look before then.
-            </p>
+        <section className="relative overflow-hidden bg-base">
+          <div className="relative mx-auto max-w-[1080px] px-6 pb-16 md:pb-28">
+            <span className="ghost-word" aria-hidden="true">
+              Projects
+            </span>
+            <div className="relative">
+              <Reveal as="p" className="eyebrow text-accent">
+                Projects
+              </Reveal>
+              <ol className="mt-10">
+                {projects.map((p, i) => (
+                  <Reveal
+                    as="li"
+                    key={p.index}
+                    delay={i * 60}
+                    className="group border-t border-transparent py-5 first:pt-0 md:grid md:grid-cols-[120px_1fr] md:gap-x-6 md:py-7 [&+li]:border-accent-tint"
+                  >
+                    <div
+                      onPointerEnter={() => setActive(i)}
+                      onPointerLeave={() => setActive(null)}
+                      className="contents"
+                    >
+                      <div className="hidden md:block">
+                        <span className="block t-gutter-num">{p.index}</span>
+                        <span className="mt-2 block t-mono opacity-70 transition-colors duration-150 group-hover:text-accent">
+                          {p.index}
+                        </span>
+                      </div>
+                      <div className="mt-2 md:mt-0">
+                        <h3 className="flex flex-wrap items-baseline gap-x-4 t-project">
+                          {p.title}
+                          <span className="eyebrow opacity-70">
+                            <span className="md:hidden">{p.index} — </span>
+                            {p.meta}
+                          </span>
+                        </h3>
+                        <p className="mt-4 t-body">{p.body}</p>
+                      </div>
+                    </div>
+                  </Reveal>
+                ))}
+              </ol>
+              <Reveal as="p" delay={60} className="mt-10 t-body">
+                Repos go up as I finish the write-ups. Email me if you want a look before then.
+              </Reveal>
+            </div>
           </div>
         </section>
+
+        <CursorPreviewLayer
+          previewRef={previewRef}
+          visible={active !== null}
+          label={active !== null ? (projects[active]?.title ?? "") : ""}
+        />
 
         {/* Full-bleed still */}
         <img
@@ -182,67 +194,84 @@ function Index() {
         />
 
         {/* From 400 feet */}
-        <section className="bg-band text-band-ink">
-          <div className="mx-auto max-w-[1080px] px-6 section-pad">
-            <p className="eyebrow">From 400 feet</p>
+        <section className="relative overflow-hidden bg-band text-band-ink">
+          <div className="relative mx-auto max-w-[1080px] px-6 section-pad">
+            <span className="ghost-word" aria-hidden="true">
+              400
+            </span>
+            <div className="relative">
+              <Reveal as="p" className="eyebrow">
+                From 400 feet
+              </Reveal>
 
-            <img
-              src={drone2}
-              alt="Aerial still from the drone reel: New Jersey coastline seen from 400 feet."
-              loading="lazy"
-              decoding="async"
-              className="mt-10 aspect-video w-full media-placeholder object-cover"
-            />
+              {/* Staggered cluster */}
+              <div className="mt-12 md:relative md:min-h-[760px]">
+                <Reveal className="md:absolute md:left-0 md:top-0 md:w-[54%]">
+                  <img
+                    src={drone2}
+                    alt="Aerial still from the drone reel: New Jersey coastline seen from 400 feet."
+                    loading="lazy"
+                    decoding="async"
+                    className="aspect-[16/10] w-full media-placeholder object-cover"
+                  />
+                  <p className="mt-3 t-mono opacity-60">Coastline, 400 feet.</p>
+                </Reveal>
 
-            <div className="mt-3 grid grid-cols-1 gap-3 md:grid-cols-[2fr_3fr]">
-              <img
-                src={drone1}
-                alt="Aerial view of a New Jersey shoreline, water meeting sand in a long curve."
-                loading="lazy"
-                decoding="async"
-                className="aspect-[4/5] w-full media-placeholder object-cover md:row-span-2 md:h-full"
-              />
-              <img
-                src={drone2}
-                alt="Wide aerial view of New Jersey coastline with waves rolling toward the beach."
-                loading="lazy"
-                decoding="async"
-                className="aspect-[16/10] w-full media-placeholder object-cover"
-              />
-              <img
-                src={drone3}
-                alt="Wide aerial view of open water and beach in New Jersey, shot from high above."
-                loading="lazy"
-                decoding="async"
-                className="aspect-[16/10] w-full media-placeholder object-cover"
-              />
+                <Reveal
+                  delay={60}
+                  className="mt-10 md:absolute md:left-[8%] md:top-[380px] md:mt-0 md:w-[46%]"
+                >
+                  <img
+                    src={drone3}
+                    alt="Wide aerial view of open water and beach in New Jersey, shot from high above."
+                    loading="lazy"
+                    decoding="async"
+                    className="aspect-[16/10] w-full media-placeholder object-cover"
+                  />
+                  <p className="mt-3 t-mono opacity-60">Open water, mid morning.</p>
+                </Reveal>
+
+                <Reveal
+                  delay={120}
+                  className="mt-10 md:absolute md:right-[-8%] md:top-[120px] md:mt-0 md:w-[38%]"
+                >
+                  <img
+                    src={drone1}
+                    alt="Aerial view of a New Jersey shoreline, water meeting sand in a long curve."
+                    loading="lazy"
+                    decoding="async"
+                    className="aspect-[4/5] w-full media-placeholder object-cover"
+                  />
+                  <p className="mt-3 t-mono opacity-60">Shoreline, long curve.</p>
+                </Reveal>
+              </div>
+
+              <Reveal as="p" delay={60} className="mt-12 t-body">
+                Everything in the reel is New Jersey from above, shot on a DJI Mavic 3 Pro Cine. The
+                drone and web design practice runs alongside the technical work. If you want aerial
+                coverage or a site built, say so in the form.
+              </Reveal>
             </div>
-
-            <p className="mt-6 t-body">
-              Everything in the reel is New Jersey from above, shot on a DJI Mavic 3 Pro Cine. The
-              drone and web design practice runs alongside the technical work. If you want aerial
-              coverage or a site built, say so in the form.
-            </p>
           </div>
         </section>
 
         {/* Write to me */}
-        <section className="bg-band text-band-ink">
-          <div className="mx-auto max-w-[1080px] gap-16 px-6 pb-16 md:pb-28 lg:grid lg:grid-cols-[5fr_6fr]">
-            <div>
-              <h2 className="t-section">Write to me</h2>
+        <section className="bg-tide">
+          <div className="mx-auto max-w-[1080px] gap-16 px-6 section-pad lg:grid lg:grid-cols-[5fr_6fr]">
+            <Reveal>
+              <h2 className="t-section t-heading-italic">Write to me</h2>
               <p className="mt-6 t-body">
-                If you're hiring for summer 2027, or you run a lab anywhere near human performance or
-                human-AI systems, I'd like to hear from you. Drone and web inquiries welcome too. The
-                form works. Email is faster:{" "}
+                If you're hiring for summer 2027, or you run a lab anywhere near human performance
+                or human-AI systems, I'd like to hear from you. Drone and web inquiries welcome too.
+                The form works. Email is faster:{" "}
                 <a href="mailto:bellamallegri@gmail.com" className="link-accent">
                   bellamallegri@gmail.com
                 </a>
               </p>
-            </div>
-            <div className="mt-12 lg:mt-0">
+            </Reveal>
+            <Reveal delay={60} className="mt-12 lg:mt-0">
               <ContactForm idPrefix="home" />
-            </div>
+            </Reveal>
           </div>
         </section>
       </main>

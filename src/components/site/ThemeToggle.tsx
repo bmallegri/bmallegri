@@ -19,6 +19,11 @@ export function ThemeToggle() {
 
   function toggle() {
     const next = !dark;
+    const root = document.documentElement;
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      root.classList.add("theme-anim");
+      window.setTimeout(() => root.classList.remove("theme-anim"), 300);
+    }
     setDark(next);
     document.documentElement.classList.toggle("dark", next);
     setThemeColor(next);
