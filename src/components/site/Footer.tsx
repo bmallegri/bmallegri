@@ -7,10 +7,10 @@ export function Footer() {
           <p className="mt-3 font-mono text-xs tracking-widest text-ink/70">New Jersey</p>
           <p className="mt-2 font-mono text-xs">
             <a
-              href="mailto:bmallegri@gmail.com"
+              href="mailto:bellamallegri@gmail.com"
               className="text-accent underline underline-offset-4"
             >
-              bmallegri@gmail.com
+              bellamallegri@gmail.com
             </a>
           </p>
           {/* LinkedIn link slot: <a href="LINKEDIN_URL">LinkedIn</a> */}

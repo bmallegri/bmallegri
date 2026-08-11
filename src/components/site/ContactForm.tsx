@@ -29,7 +29,7 @@ export function ContactForm({ extended = false, idPrefix }: { extended?: boolean
       lines.push(`Purpose: ${purpose}`, `How did you hear about me: ${data.get("source")}`);
     }
     lines.push("", String(data.get("message") ?? ""));
-    const href = `mailto:bmallegri@gmail.com?subject=${encodeURIComponent(
+    const href = `mailto:bellamallegri@gmail.com?subject=${encodeURIComponent(
       "Message from the website",
     )}&body=${encodeURIComponent(lines.join("\n"))}`;
     try {
@@ -144,8 +144,8 @@ export function ContactForm({ extended = false, idPrefix }: { extended?: boolean
       {failed && (
         <p className="font-mono text-xs">
           Your mail app did not open. Write directly to{" "}
-          <a href="mailto:bmallegri@gmail.com" className="text-accent underline underline-offset-4">
-            bmallegri@gmail.com
+          <a href="mailto:bellamallegri@gmail.com" className="text-accent underline underline-offset-4">
+            bellamallegri@gmail.com
           </a>
         </p>
       )}

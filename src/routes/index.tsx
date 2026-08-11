@@ -76,10 +76,10 @@ function Index() {
               <p>First semester at Queen's University Belfast, then Boston in January.</p>
               <p className="pt-2">
                 <a
-                  href="mailto:bmallegri@gmail.com"
+                  href="mailto:bellamallegri@gmail.com"
                   className="text-accent underline underline-offset-4"
                 >
-                  bmallegri@gmail.com
+                  bellamallegri@gmail.com
                 </a>
               </p>
             </div>
@@ -198,10 +198,10 @@ function Index() {
                 human-AI systems, I'd like to hear from you. Drone and web inquiries welcome too. The
                 form works. Email is faster:{" "}
                 <a
-                  href="mailto:bmallegri@gmail.com"
+                  href="mailto:bellamallegri@gmail.com"
                   className="text-accent underline underline-offset-4"
                 >
-                  bmallegri@gmail.com
+                  bellamallegri@gmail.com
                 </a>
               </p>
             </div>
