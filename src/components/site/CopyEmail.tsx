@@ -16,14 +16,10 @@ export function CopyEmail() {
 
   return (
     <span className="inline-flex flex-wrap items-baseline gap-3">
-      <button
-        type="button"
-        onClick={copy}
-        className="border border-accent-tint px-3 py-1 font-mono text-[0.7rem] uppercase tracking-widest transition-colors hover:border-accent hover:text-accent"
-      >
+      <button type="button" onClick={copy} className="btn-accent">
         Copy email
       </button>
-      <span aria-live="polite" className="font-mono text-[0.7rem]">
+      <span aria-live="polite" className="t-mono">
         {state === "copied" && "Copied"}
         {state === "failed" && `Copy failed. The address is ${EMAIL}`}
       </span>
