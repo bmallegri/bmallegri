@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import { CopyEmail } from "./CopyEmail";
 
+// Drop the reel and poster here once the files are uploaded.
+const REEL_SRC: string | null = null;
+const POSTER_SRC: string | null = null;
+
 export function Hero() {
   const [playVideo, setPlayVideo] = useState(false);
 
@@ -14,7 +18,10 @@ export function Hero() {
     <section className="relative h-[100svh] min-h-[560px] w-full overflow-hidden bg-band">
       {/* Poster frame placeholder until the reel is uploaded */}
       <div className="absolute inset-0 media-placeholder" aria-hidden="true" />
-      {playVideo && (
+      {POSTER_SRC && (
+        <img src={POSTER_SRC} alt="" className="absolute inset-0 h-full w-full object-cover" />
+      )}
+      {playVideo && REEL_SRC && (
         <video
           className="absolute inset-0 h-full w-full object-cover"
           muted
@@ -23,7 +30,8 @@ export function Hero() {
           autoPlay
           preload="metadata"
           aria-hidden="true"
-          poster=""
+          poster={POSTER_SRC ?? undefined}
+          src={REEL_SRC}
         />
       )}
       {/* Flat charcoal scrim */}
