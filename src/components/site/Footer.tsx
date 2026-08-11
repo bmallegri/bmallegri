@@ -28,7 +28,7 @@ export function Footer() {
         </div>
         <div className="footer-marks mt-12" aria-hidden="true">
           <span>BMALLEGRI</span>
-          <span className="hidden sm:inline">54.60 N / 5.93 W</span>
+          <span className="hidden sm:inline">41.82 N / 71.41 W</span>
           <span>END OF TRANSMISSION</span>
         </div>
       </div>
