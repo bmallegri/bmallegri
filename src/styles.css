@@ -705,6 +705,64 @@
   }
 }
 
+/* Recording indicator dot */
+.rec-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 0.5em;
+  border-radius: 50%;
+  background: #c9a227;
+  vertical-align: 1px;
+  box-shadow: 0 0 0 0 rgba(201, 162, 39, 0.6);
+  animation: rec-pulse 1.6s ease-in-out infinite;
+}
+@keyframes rec-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(201, 162, 39, 0.5);
+  }
+  50% {
+    opacity: 0.35;
+    box-shadow: 0 0 0 5px rgba(201, 162, 39, 0);
+  }
+}
+
+/* Viewfinder corner brackets on full-bleed stills */
+.vf-corners {
+  position: absolute;
+  inset: 18px;
+  pointer-events: none;
+  opacity: 0.55;
+}
+.vf-corner {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border: 1px solid var(--ink);
+}
+.vf-corner--tl {
+  top: 0;
+  left: 0;
+  border-width: 1px 0 0 1px;
+}
+.vf-corner--tr {
+  top: 0;
+  right: 0;
+  border-width: 1px 1px 0 0;
+}
+.vf-corner--bl {
+  bottom: 0;
+  left: 0;
+  border-width: 0 0 1px 1px;
+}
+.vf-corner--br {
+  bottom: 0;
+  right: 0;
+  border-width: 0 1px 1px 0;
+}
+
 /* Masked line reveals */
 .line-mask {
   display: block;
