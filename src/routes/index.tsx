@@ -186,6 +186,7 @@ function Index() {
           previewRef={previewRef}
           visible={active !== null}
           label={active !== null ? (projects[active]?.title ?? "") : ""}
+          src={active === 2 ? bfrTeam.url : undefined}
         />
 
         {/* Full-bleed still */}
