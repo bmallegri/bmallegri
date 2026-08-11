@@ -310,10 +310,14 @@
   font-size: 17px;
   line-height: 1.65;
   max-width: 640px;
+  hyphens: manual;
+  text-wrap: pretty;
+  overflow-wrap: break-word;
   @media (min-width: 768px) {
     font-size: 18px;
   }
 }
+
 
 @utility t-mono {
   font-family: var(--font-mono);

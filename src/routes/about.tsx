@@ -29,7 +29,7 @@ const paragraphs = [
   "In my own notes I call this work human systems architecture. Systems that understand, support, predict, and improve how people think and perform. Big words for what is currently a chess trainer and a Python game. The direction holds.",
   "This fall I'm in Belfast for my first semester, at Queen's University. Boston from January.",
   "Aside from all that, I'm COO of Artistic Builders Guild, a collective of student builders and artists with members across Brown, MIT, Stanford, and more. I run the operations side. And the drone practice, and the web design work. This site is one of the builds.",
-  "For the summer of 2027, I would love to do research or a first-year technical program. If your lab or team sits anywhere near human performance or human-AI systems, please write to me.",
+  "For the summer of 2027, I would love to do research or a first-year technical program. If your lab or team sits anywhere near human performance or human\u2011AI systems, please write to me.",
 ];
 
 const shelf = [
