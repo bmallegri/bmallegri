@@ -1,4 +1,5 @@
 import { CopyEmail } from "./CopyEmail";
+import seal from "@/assets/seal.webp";
 
 export function Footer() {
   return (
@@ -21,10 +22,12 @@ export function Footer() {
           {/* LinkedIn link slot: <a href="LINKEDIN_URL">LinkedIn</a> */}
           {/* GitHub link slot: <a href="GITHUB_URL">GitHub</a> */}
         </div>
-        <div
-          className="h-20 w-20 shrink-0 rounded-full border border-accent-tint bg-neutral-400/30"
-          role="img"
-          aria-label="Placeholder for the circular seal logo"
+        <img
+          src={seal}
+          alt="BMAllegri seal logo"
+          loading="lazy"
+          decoding="async"
+          className="h-20 w-20 shrink-0 rounded-full border border-accent-tint object-contain"
         />
       </div>
     </footer>
