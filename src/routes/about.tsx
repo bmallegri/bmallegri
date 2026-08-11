@@ -34,22 +34,22 @@ function About() {
     <>
       <a
         href="#main"
-        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-base focus:px-3 focus:py-2 focus:font-mono focus:text-xs"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:border focus:border-accent focus:bg-base focus:px-3 focus:py-2 focus:t-mono"
       >
         Skip to content
       </a>
       <Nav />
       <main id="main">
         <section className="bg-base">
-          <div className="mx-auto max-w-[1080px] px-5 py-20 sm:px-8 sm:py-28">
-            <h1 className="text-5xl leading-tight sm:text-6xl">Who I am</h1>
-            <div className="mt-12 max-w-[640px] space-y-7 text-lg leading-[1.85]">
+          <div className="mx-auto max-w-[1080px] px-6 section-pad">
+            <h1 className="t-section">Who I am</h1>
+            <div className="mt-10 space-y-7 t-body">
               {paragraphs.map((p) => (
                 <p key={p.slice(0, 24)}>{p}</p>
               ))}
             </div>
-            <p className="mt-12 font-mono text-xs">
-              <Link to="/" className="text-accent underline underline-offset-4">
+            <p className="mt-12 t-mono">
+              <Link to="/" className="link-accent">
                 Home
               </Link>
             </p>
@@ -57,8 +57,8 @@ function About() {
         </section>
 
         <section className="bg-band text-band-ink">
-          <div className="mx-auto max-w-[1080px] px-5 py-20 sm:px-8 sm:py-28">
-            <h2 className="text-4xl">Write to me</h2>
+          <div className="mx-auto max-w-[1080px] px-6 section-pad">
+            <h2 className="t-section">Write to me</h2>
             <div className="mt-10 max-w-[640px]">
               <ContactForm extended idPrefix="about" />
             </div>
