@@ -7,17 +7,20 @@ import { LineReveal } from "@/components/site/LineReveal";
 import { SectionMark } from "@/components/site/SectionMark";
 import abgLogoAsset from "@/assets/abg-logo.png.asset.json";
 
+const TITLE = "About Bella Allegri | Human Systems Architecture";
 const DESCRIPTION =
-  "First-year at Northeastern studying Artificial Intelligence and Behavioral Neuroscience. Chess trainer, Python game, NASA GeneLab GL4HS, Formula SAE. Looking for summer 2027 research.";
+  "From FTC robotics captain to Brown Formula Racing electronics to human systems architecture: Bella Allegri's background, current work, and the papers she returns to.";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About | Bella Allegri" },
+      { title: TITLE },
       { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: "About | Bella Allegri" },
+      { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
       { property: "og:url", content: "/about" },
+      { property: "og:type", content: "profile" },
+      { name: "twitter:card", content: "summary" },
     ],
     links: [{ rel: "canonical", href: "/about" }],
   }),
