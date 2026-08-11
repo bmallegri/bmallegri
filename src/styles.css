@@ -884,19 +884,29 @@ html.custom-cursor textarea {
     linear-gradient(var(--band-ink), var(--band-ink)) center / 1px 20px no-repeat;
 }
 
-/* Scrollbar */
-* {
+/* Scrollbar: the page rail replaces the native gray bar */
+html {
+  scrollbar-width: none;
+  scrollbar-gutter: auto;
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+/* Inner scrollable areas keep a thin, themed bar */
+.themed-scroll {
   scrollbar-width: thin;
-  scrollbar-color: var(--brand-accent-tint) var(--base);
+  scrollbar-color: var(--brand-accent-tint) transparent;
 }
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+.themed-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
 }
-::-webkit-scrollbar-track {
-  background: var(--base);
+.themed-scroll::-webkit-scrollbar-track {
+  background: transparent;
 }
-::-webkit-scrollbar-thumb {
+.themed-scroll::-webkit-scrollbar-thumb {
   background: var(--brand-accent-tint);
 }
 
@@ -921,10 +931,11 @@ html.custom-cursor textarea {
 /* Scroll progress side rail */
 .scroll-progress-side {
   position: fixed;
-  inset: 0 0 0 auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
   z-index: 100;
   width: 3px;
-  height: 100vh;
   background: var(--brand-accent-tint);
   pointer-events: none;
 }
