@@ -287,8 +287,9 @@ function Index() {
                 lines={["Write to me"]}
               />
               <p className="mt-6 t-body">
-                If you're hiring for summer 2027, or you run a lab anywhere near human performance
-                or human-AI systems, I'd like to hear from you. Drone and web inquiries welcome too.
+                For the summer of 2027, I would love to do research or a first-year technical
+                program. If your lab or team sits anywhere near human performance or human-AI
+                systems, please write to me. Drone and web inquiries welcome too.
                 The form works. Email is faster:{" "}
                 <a href="mailto:bellamallegri@gmail.com" className="link-accent">
                   bellamallegri@gmail.com
