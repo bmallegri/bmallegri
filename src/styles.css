@@ -1053,7 +1053,7 @@ html.custom-cursor textarea {
 }
 
 .hero-accent-line {
-  color: var(--brand-accent);
+  color: #8ecbc2;
   font-style: italic;
   font-variation-settings: "opsz" 144, "SOFT" 60, "WONK" 1;
 }
