@@ -25,8 +25,8 @@
   --color-band: var(--band);
   --color-ink: var(--ink);
   --color-band-ink: var(--band-ink);
-  --color-accent: var(--accent);
-  --color-accent-tint: var(--accent-tint);
+  --color-accent: var(--brand-accent);
+  --color-accent-tint: var(--brand-accent-tint);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -75,8 +75,8 @@
   --band: #43474b;
   --ink: #1c1d1e;
   --band-ink: #f5f4f1;
-  --accent: #4e7f77;
-  --accent-tint: #a8cfc9;
+  --brand-accent: #4e7f77;
+  --brand-accent-tint: #a8cfc9;
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
   --card: oklch(1 0 0);
@@ -116,8 +116,8 @@
   --band: #43474b;
   --ink: #f5f4f1;
   --band-ink: #f5f4f1;
-  --accent: #a8cfc9;
-  --accent-tint: #4e7f77;
+  --brand-accent: #a8cfc9;
+  --brand-accent-tint: #4e7f77;
   --background: oklch(0.129 0.042 264.695);
   --foreground: oklch(0.984 0.003 247.858);
   --card: oklch(0.208 0.042 265.755);
@@ -165,7 +165,7 @@
   }
 
   :focus-visible {
-    outline: 2px solid var(--accent);
+    outline: 2px solid var(--brand-accent);
     outline-offset: 2px;
   }
 }
@@ -180,8 +180,8 @@
 /* Inside contrast bands the palette flips so accent stays AA-legible on #43474B */
 @layer base {
   .bg-band {
-    --accent: #a8cfc9;
-    --accent-tint: #6f8f8a;
+    --brand-accent: #a8cfc9;
+    --brand-accent-tint: #6f8f8a;
   }
 }
 
