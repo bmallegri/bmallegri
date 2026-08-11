@@ -288,13 +288,17 @@ function Index() {
               />
               <p className="mt-6 t-body">
                 For the summer of 2027, I would love to do research or a first-year technical
-                program. If your lab or team sits anywhere near human performance or human-AI
-                systems, please write to me. Drone and web inquiries welcome too.
-                The form works. Email is faster:{" "}
-                <a href="mailto:bellamallegri@gmail.com" className="link-accent">
+                program. If your lab or team sits anywhere near human performance or{" "}
+                <span className="whitespace-nowrap">human-AI</span> systems, please write to me.
+                Drone and web inquiries welcome too. The form works. Email is faster:{" "}
+                <a
+                  href="mailto:bellamallegri@gmail.com"
+                  className="link-accent [overflow-wrap:anywhere]"
+                >
                   bellamallegri@gmail.com
                 </a>
               </p>
+
             </Reveal>
             <Reveal delay={60} className="mt-12 lg:mt-0">
               <ContactForm idPrefix="home" />
