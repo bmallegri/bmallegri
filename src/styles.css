@@ -887,12 +887,24 @@ html.custom-cursor textarea {
 /* Scrollbar: the page rail replaces the native gray bar */
 html {
   scrollbar-width: none;
+  -ms-overflow-style: none;
   scrollbar-gutter: auto;
 }
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
-  width: 0;
-  height: 0;
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
+  display: none !important;
+}
+html::-webkit-scrollbar-track,
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-track,
+body::-webkit-scrollbar-thumb,
+html::-webkit-scrollbar-corner,
+body::-webkit-scrollbar-corner {
+  background: transparent !important;
+  display: none !important;
 }
 /* Inner scrollable areas keep a thin, themed bar */
 .themed-scroll {
