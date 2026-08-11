@@ -188,7 +188,7 @@ function Index() {
         />
 
         {/* Full-bleed still */}
-        <FullBleedPhoto src={drone1} alt="Full-bleed aerial still of the New Jersey coastline." />
+        <FullBleedPhoto src={drone1} alt="Full-bleed aerial still of the San Diego coastline." />
 
         <Ticker />
 
@@ -204,49 +204,38 @@ function Index() {
               </Reveal>
 
               {/* Staggered cluster */}
-              <div className="mt-12 md:relative md:min-h-[760px]">
+              <div className="mt-12 md:relative md:min-h-[640px]">
                 <Reveal className="md:absolute md:left-0 md:top-0 md:w-[54%]">
                   <Photo
                     src={drone2}
-                    alt="Aerial still from the drone reel: New Jersey coastline seen from 400 feet."
+                    alt="Aerial still from the drone reel: San Diego coastline seen from 400 feet."
                     ratio="16 / 10"
-                    caption="NEW JERSEY / 400 FT / DATE TBC"
+                    caption="SAN DIEGO, CA / 400 FT / DATE TBC"
                   />
                 </Reveal>
 
                 <Reveal
                   delay={60}
-                  className="mt-10 md:absolute md:left-[8%] md:top-[380px] md:mt-0 md:w-[46%]"
+                  className="mt-10 md:absolute md:right-[-8%] md:top-[260px] md:mt-0 md:w-[46%]"
                 >
                   <Photo
                     src={drone3}
-                    alt="Wide aerial view of open water and beach in New Jersey, shot from high above."
+                    alt="Wide aerial view of open water and beach in San Diego, shot from high above."
                     ratio="16 / 10"
-                    caption="NEW JERSEY / 400 FT / DATE TBC"
-                  />
-                </Reveal>
-
-                <Reveal
-                  delay={120}
-                  className="mt-10 md:absolute md:right-[-8%] md:top-[120px] md:mt-0 md:w-[38%]"
-                >
-                  <Photo
-                    src={drone1}
-                    alt="Aerial view of a New Jersey shoreline, water meeting sand in a long curve."
-                    ratio="4 / 5"
-                    caption="NEW JERSEY / 400 FT / DATE TBC"
+                    caption="SAN DIEGO, CA / 400 FT / DATE TBC"
                   />
                 </Reveal>
               </div>
 
               <Reveal as="p" delay={60} className="mt-12 t-body">
-                Everything in the reel is New Jersey from above, shot on a DJI Mavic 3 Pro Cine. The
-                drone and web design practice runs alongside the technical work. If you want aerial
-                coverage or a site built, say so in the form.
+                Everything in the reel is San Diego, California from above, shot on a DJI Mavic 3
+                Pro Cine. The drone and web design practice runs alongside the technical work. If
+                you want aerial coverage or a site built, say so in the form.
               </Reveal>
             </div>
           </div>
         </section>
+
 
         {/* Write to me */}
         <section className="bg-tide">
