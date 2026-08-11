@@ -40,46 +40,99 @@ const shelf = [
   },
   {
     index: "02",
+    title:
+      "McCulloch and Pitts, A Logical Calculus of the Ideas Immanent in Nervous Activity (1943).",
+    note: "Neurons as logic, the seed of neural nets.",
+  },
+  {
+    index: "03",
+    title: "Hebb, The Organization of Behavior (1949).",
+    note: "How learning physically changes a brain.",
+  },
+  {
+    index: "04",
     title: "Miller, The Magical Number Seven, Plus or Minus Two (1956).",
     note: "The limits of working memory.",
   },
   {
-    index: "03",
+    index: "05",
     title: "Kahneman and Tversky, Judgment under Uncertainty (1974).",
     note: "Why smart people decide badly.",
   },
   {
-    index: "04",
+    index: "06",
     title: "Vaswani et al., Attention Is All You Need (2017).",
     note: "Modern AI starts here.",
   },
   {
-    index: "05",
+    index: "07",
+    title:
+      "Rumelhart, Hinton and Williams, Learning Representations by Back-Propagating Errors (1986).",
+    note: "How neural networks actually learn.",
+  },
+  {
+    index: "08",
+    title: "Newell and Simon, Computer Science as Empirical Inquiry (1976).",
+    note: "Cognition as information processing.",
+  },
+  {
+    index: "09",
     title: "Marr, Vision (1982).",
     note: "Three levels for understanding any thinking system.",
   },
   {
-    index: "06",
+    index: "10",
     title: "Endsley, Toward a Theory of Situation Awareness in Dynamic Systems (1995).",
     note: "What a person inside a fast machine actually knows.",
   },
   {
-    index: "07",
+    index: "11",
+    title: "Wickens, Multiple Resources and Mental Workload (2008).",
+    note: "Why attention runs out.",
+  },
+  {
+    index: "12",
     title: "Amershi et al., Guidelines for Human-AI Interaction (2019).",
     note: "Rules for AI a person can actually use.",
   },
   {
-    index: "08",
+    index: "13",
+    title:
+      "Doshi-Velez and Kim, Towards a Rigorous Science of Interpretable Machine Learning (2017).",
+    note: "Making models explain themselves.",
+  },
+  {
+    index: "14",
+    title: "Mitchell et al., Model Cards for Model Reporting (2019).",
+    note: "Documenting what a model can and can't do.",
+  },
+  {
+    index: "15",
+    title: "Gebru et al., Datasheets for Datasets (2018).",
+    note: "Where data comes from matters.",
+  },
+  {
+    index: "16",
     title: "Love, Huber and Anders, DESeq2 (2014).",
     note: "The workhorse of RNA-seq analysis.",
   },
   {
-    index: "09",
+    index: "17",
+    title: "Subramanian et al., Gene Set Enrichment Analysis (2005).",
+    note: "Reading biology at the pathway level.",
+  },
+  {
+    index: "18",
+    title: "Wolpaw et al., Brain-Computer Interfaces for Communication and Control (2002).",
+    note: "Signals straight out of the skull.",
+  },
+  {
+    index: "19",
     title: "Norman, The Design of Everyday Things (1988).",
     note: "Affordances, and why errors are the design's fault.",
   },
   {
-    index: "10",
+    index: "20",
     title: "Simon, The Sciences of the Artificial (1969).",
     note: "Systems thinking, the whole worldview.",
   },
@@ -151,15 +204,19 @@ function About() {
 
         <section className="relative overflow-hidden border-t border-accent-tint bg-base">
           <div className="relative mx-auto max-w-[1080px] px-6 section-pad">
+            <span className="ghost-word" aria-hidden="true">
+              Shelf
+            </span>
             <Reveal as="p" className="eyebrow text-accent">
               The shelf
             </Reveal>
-            <Reveal as="p" delay={60} className="mt-6 t-body">
-              Ten papers I keep coming back to. The list is the plan.
+            <Reveal as="p" delay={60} className="relative mt-6 max-w-[720px] t-body">
+              The twenty papers I'm building my head out of. Some I've read properly, some I'm
+              still chewing on. The list is the plan.
             </Reveal>
-            <ol className="mt-10 max-w-[720px]">
+            <ol className="shelf-list relative mt-10">
               {shelf.map((item, i) => (
-                <Reveal as="li" key={item.index} delay={i * 40} className="shelf-item">
+                <Reveal as="li" key={item.index} delay={Math.min(i, 8) * 40} className="shelf-item">
                   <span className="shelf-index">{item.index}</span>
                   <div>
                     <p className="shelf-title">{item.title}</p>
