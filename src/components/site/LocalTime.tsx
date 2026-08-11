@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 // Switch this single constant to Boston in January.
-export const CURRENT_LOCATION = { city: "Belfast", timeZone: "Europe/London" };
+export const CURRENT_LOCATION = { city: "Providence, RI", timeZone: "America/New_York" };
 
 function format(tz: string) {
   return new Intl.DateTimeFormat("en-GB", {
