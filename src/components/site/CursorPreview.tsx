@@ -50,7 +50,7 @@ export function CursorPreviewLayer({
   previewRef: React.MutableRefObject<HTMLDivElement | null>;
   visible: boolean;
   label: string;
-  src?: string;
+  src?: string | undefined;
 }) {
   return (
     <div
