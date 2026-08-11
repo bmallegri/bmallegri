@@ -9,7 +9,7 @@ import abgLogoAsset from "@/assets/abg-logo.png.asset.json";
 
 const TITLE = "About Bella Allegri | Human Systems Architecture";
 const DESCRIPTION =
-  "From FTC robotics captain to Brown Formula Racing electronics to human systems architecture: Bella Allegri's background, current work, and the papers she returns to.";
+  "From FTC robotics captain to Brown Formula Racing electronics to human systems architecture: Bella Allegri's background, current work, and the papers she keeps.";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
