@@ -433,3 +433,140 @@
     opacity: 0.92;
   }
 }
+
+/* ---- Loud pass: motion, ghosts, tide band, hero ---- */
+
+/* Theme crossfade */
+@layer base {
+  html.theme-anim *,
+  html.theme-anim *::before,
+  html.theme-anim *::after {
+    transition:
+      background-color 250ms ease,
+      color 250ms ease,
+      border-color 250ms ease,
+      fill 250ms ease,
+      outline-color 250ms ease;
+  }
+}
+
+/* Scroll reveal */
+@layer base {
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(12px);
+    transition:
+      opacity 450ms ease-out,
+      transform 450ms ease-out;
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+  [data-reveal="in"] {
+    opacity: 1;
+    transform: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    [data-reveal] {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+}
+
+/* Ghost word behind section content */
+@utility ghost-word {
+  position: absolute;
+  top: -0.15em;
+  left: -0.06em;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(84px, 16vw, 176px);
+  line-height: 0.8;
+  color: var(--ink);
+  opacity: 0.04;
+  white-space: nowrap;
+}
+
+.bg-band .ghost-word,
+.bg-tide .ghost-word {
+  color: var(--band-ink);
+  opacity: 0.06;
+}
+
+.dark .ghost-word {
+  color: var(--ink);
+  opacity: 0.06;
+}
+
+/* Tide band */
+@layer base {
+  .bg-tide {
+    background: var(--brand-tide);
+    color: var(--band-ink);
+    --surface: var(--brand-tide);
+    --brand-accent: var(--band-ink);
+    --brand-accent-tint: color-mix(in srgb, var(--band-ink) 55%, transparent);
+    --brand-accent-strong: var(--band-ink);
+  }
+  .bg-tide .btn-accent:hover {
+    background: var(--band-ink);
+    color: var(--brand-tide);
+  }
+}
+
+/* Hero scroll cue */
+@keyframes cue-pulse {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scaleY(0.6);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scaleY(1);
+  }
+}
+
+.scroll-cue {
+  width: 1px;
+  height: 24px;
+  background: var(--band-ink);
+  transform-origin: bottom;
+  animation: cue-pulse 2600ms ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-cue {
+    animation: none;
+    opacity: 0.6;
+  }
+}
+
+/* Hero over-video treatment */
+@layer base {
+  .on-media {
+    color: var(--band-ink);
+    --ink: var(--band-ink);
+    --brand-accent: var(--band-ink);
+    --brand-accent-strong: var(--band-ink);
+    --brand-accent-tint: color-mix(in srgb, var(--band-ink) 60%, transparent);
+    --surface: transparent;
+  }
+}
+
+@utility t-giant-mail {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(30px, 7vw, 64px);
+  line-height: 1.05;
+  overflow-wrap: anywhere;
+}
+
+@utility t-heading-italic {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-variation-settings: "opsz" 144, "SOFT" 60, "WONK" 1;
+}
