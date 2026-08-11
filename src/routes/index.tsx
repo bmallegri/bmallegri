@@ -54,7 +54,7 @@ const projects = [
     meta: "September 2025–May 2026",
     status: "done" as const,
     statusLabel: "done",
-    body: "Ten months on the electronics subsystem of a Formula SAE car, on a team I joined in high school. Most of my hours went to the wiring harness and electrical QA, the unglamorous work of making sure every sensor and connector on a race car survives a race.",
+    body: "Ten months on the electronics subsystem of a Formula SAE car, on a team I joined in high school. Most of my hours went to the wiring harness and electrical QA, and also driving up 4 hours on weekends from New Jersey.",
   },
   {
     index: "04",
