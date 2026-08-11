@@ -117,14 +117,14 @@
 
 .dark {
   --base: #26292c;
-  --band: #43474b;
+  --band: #33322f;
   --ink: #f5f4f1;
   --band-ink: #f5f4f1;
   --brand-accent: #b3c7c4;
   --brand-accent-tint: #5c7a75;
   --brand-accent-strong: #cbdad7;
   --brand-tide: #48555c;
-  --media-placeholder: #33373b;
+  --media-placeholder: #35332f;
   --surface: var(--base);
   color-scheme: dark;
   --background: oklch(0.129 0.042 264.695);
