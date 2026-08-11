@@ -10,16 +10,19 @@ import Lenis from "lenis";
  */
 export function SmoothScroll() {
   const barRef = useRef<HTMLDivElement | null>(null);
+  const sideRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const bar = barRef.current;
+    const side = sideRef.current;
 
     let lenis: Lenis | null = null;
     let rafId = 0;
 
     const updateBar = (progress: number) => {
       if (bar) bar.style.transform = `scaleX(${progress})`;
+      if (side) side.style.transform = `scaleY(${progress})`;
     };
 
     // Set initial state
@@ -61,8 +64,13 @@ export function SmoothScroll() {
   }, []);
 
   return (
-    <div aria-hidden="true" className="scroll-progress">
-      <div ref={barRef} className="scroll-progress-bar" />
-    </div>
+    <>
+      <div aria-hidden="true" className="scroll-progress">
+        <div ref={barRef} className="scroll-progress-bar" />
+      </div>
+      <div aria-hidden="true" className="scroll-progress-side">
+        <div ref={sideRef} className="scroll-progress-side-bar" />
+      </div>
+    </>
   );
 }
