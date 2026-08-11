@@ -8,7 +8,7 @@ export function Footer() {
       <div className="mx-auto flex max-w-[1080px] flex-col items-start gap-8 px-6 py-16 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <p className="t-mono text-ink">Bella Michele Allegri</p>
-          <p className="mt-2 t-mono text-ink/70">New Jersey</p>
+          <p className="mt-2 t-mono text-ink/70">Belfast</p>
           <div className="mt-2">
             <LocalTime />
           </div>
