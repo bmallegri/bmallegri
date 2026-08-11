@@ -72,13 +72,13 @@
 :root {
   --radius: 0.625rem;
   --base: #f3f0e9;
-  --band: #262a27;
+  --band: #2b2722;
   --ink: #20241f;
   --band-ink: #f3f0e9;
   --brand-accent: #2c6a63;
   --brand-accent-tint: #cccec4;
   --brand-accent-strong: #1b4b46;
-  --brand-tide: #262a27;
+  --brand-tide: #2b2722;
   --media-placeholder: #e3ded3;
   --brand-gold: #c9a227;
   --surface: var(--base);
