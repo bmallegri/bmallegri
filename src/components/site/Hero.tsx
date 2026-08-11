@@ -54,7 +54,7 @@ export function Hero() {
         <span className="readout absolute bottom-6 right-6">MAVIC 3 PRO CINE</span>
       </div>
 
-      <div className="on-media relative z-10 mx-auto flex h-full max-w-[1080px] flex-col justify-end px-6 pb-20 pt-28">
+      <div className="on-media relative z-10 mx-auto flex h-full max-w-[1080px] flex-col justify-end px-6 pb-28 pt-16 md:pb-20 md:pt-28">
         <Seal className="mb-6 h-14 w-14" />
         <LineReveal as="h1" className="t-hero text-band-ink" lines={["Bella Michele", "Allegri"]} />
         <div className="mt-8 max-w-[46ch] space-y-2 t-mono text-band-ink">
