@@ -96,7 +96,7 @@ function About() {
                 ))}
                 <Reveal as="div" delay={5 * 60} className="mt-4 flex items-start gap-5">
                   <a
-                    href="https://abg.institute"
+                    href="https://www.linkedin.com/company/abg-institute"
                     target="_blank"
                     rel="noreferrer"
                     className="shrink-0 rounded-sm bg-[#F3F0E9] p-2 dark:bg-[#F3F0E9]"
@@ -109,8 +109,8 @@ function About() {
                   </a>
                   <div className="t-mono">
                     <p>COO, Artistic Builders Guild</p>
-                    <a href="https://abg.institute" className="link-accent">
-                      abg.institute
+                    <a href="https://www.linkedin.com/company/abg-institute" className="link-accent">
+                      LinkedIn
                     </a>
                     <p className="mt-1">
                       <a href="mailto:bella@abg.institute" className="link-accent">
