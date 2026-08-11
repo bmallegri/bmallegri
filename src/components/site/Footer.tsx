@@ -1,3 +1,5 @@
+import { CopyEmail } from "./CopyEmail";
+
 export function Footer() {
   return (
     <footer className="border-t border-accent-tint/60 bg-base">
@@ -13,6 +15,9 @@ export function Footer() {
               bellamallegri@gmail.com
             </a>
           </p>
+          <div className="mt-4">
+            <CopyEmail />
+          </div>
           {/* LinkedIn link slot: <a href="LINKEDIN_URL">LinkedIn</a> */}
           {/* GitHub link slot: <a href="GITHUB_URL">GitHub</a> */}
         </div>
