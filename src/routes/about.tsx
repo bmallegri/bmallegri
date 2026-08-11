@@ -160,8 +160,7 @@ function About() {
               The shelf
             </Reveal>
             <Reveal as="p" delay={60} className="relative mt-6 max-w-[720px] t-body">
-              The twenty papers I'm building my head out of. Some I've read properly, some I'm
-              still chewing on. The list is the plan.
+              Ten papers I keep coming back to. The list is the plan.
             </Reveal>
             <ol className="shelf-list relative mt-10">
               {shelf.map((item, i) => (
