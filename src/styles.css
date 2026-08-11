@@ -72,13 +72,13 @@
 :root {
   --radius: 0.625rem;
   --base: #f3f0e9;
-  --band: #262a27;
+  --band: #2b2722;
   --ink: #20241f;
   --band-ink: #f3f0e9;
   --brand-accent: #2c6a63;
   --brand-accent-tint: #cccec4;
   --brand-accent-strong: #1b4b46;
-  --brand-tide: #262a27;
+  --brand-tide: #2b2722;
   --media-placeholder: #e3ded3;
   --brand-gold: #c9a227;
   --surface: var(--base);
@@ -119,13 +119,13 @@
 
 .dark {
   --base: #15171a;
-  --band: #1c1f21;
+  --band: #1a1b1e;
   --ink: #ece9e2;
   --band-ink: #ece9e2;
   --brand-accent: #7ec6bc;
   --brand-accent-tint: #3a403e;
   --brand-accent-strong: #a6ded5;
-  --brand-tide: #1c1f21;
+  --brand-tide: #1a1b1e;
   --media-placeholder: #23262a;
   --brand-gold: #c9a227;
   --surface: var(--base);

@@ -40,48 +40,26 @@ const shelf = [
   },
   {
     index: "02",
-    title:
-      "McCulloch and Pitts, A Logical Calculus of the Ideas Immanent in Nervous Activity (1943).",
-    note: "Neurons as logic, the seed of neural nets.",
-  },
-  {
-    index: "03",
     title: "Hebb, The Organization of Behavior (1949).",
     note: "How learning physically changes a brain.",
   },
   {
-    index: "04",
-    title: "Miller, The Magical Number Seven, Plus or Minus Two (1956).",
-    note: "The limits of working memory.",
-  },
-  {
-    index: "05",
+    index: "03",
     title: "Kahneman and Tversky, Judgment under Uncertainty (1974).",
     note: "Why smart people decide badly.",
   },
   {
-    index: "06",
+    index: "04",
     title: "Vaswani et al., Attention Is All You Need (2017).",
     note: "Modern AI starts here.",
   },
   {
-    index: "07",
-    title:
-      "Rumelhart, Hinton and Williams, Learning Representations by Back-Propagating Errors (1986).",
-    note: "How neural networks actually learn.",
-  },
-  {
-    index: "08",
-    title: "Newell and Simon, Computer Science as Empirical Inquiry (1976).",
-    note: "Cognition as information processing.",
-  },
-  {
-    index: "09",
+    index: "05",
     title: "Marr, Vision (1982).",
     note: "Three levels for understanding any thinking system.",
   },
   {
-    index: "10",
+    index: "06",
     title: "Endsley, Toward a Theory of Situation Awareness in Dynamic Systems (1995).",
     note: "What a person inside a fast machine actually knows.",
   },
@@ -160,7 +138,7 @@ function About() {
               The shelf
             </Reveal>
             <Reveal as="p" delay={60} className="relative mt-6 max-w-[720px] t-body">
-              Ten papers I keep coming back to. The list is the plan.
+              Six papers I keep coming back to. The list is the plan.
             </Reveal>
             <ol className="shelf-list relative mt-10">
               {shelf.map((item, i) => (
