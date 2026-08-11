@@ -54,7 +54,7 @@ const projects = [
     meta: "September 2025–May 2026",
     status: "done" as const,
     statusLabel: "done",
-    body: "Ten months on the electronics subsystem of a Formula SAE car, on a team I joined in high school. Most of my hours went to the wiring harness and electrical QA, the unglamorous work of making sure every sensor and connector on a race car survives a race.",
+    body: "Ten months on the electronics subsystem of a Formula SAE car, on a team I joined in high school. Most of my hours went to the wiring harness and electrical QA, and also driving up 4 hours on weekends from New Jersey.",
   },
   {
     index: "04",
@@ -174,9 +174,6 @@ function Index() {
             <div className="relative">
               <Reveal as="p" className="eyebrow text-accent">
                 Projects
-              </Reveal>
-              <Reveal as="p" delay={40} className="mt-4 t-mono opacity-70">
-                Color code stolen from my own planning docs: gold means working on it.
               </Reveal>
               <ol className="mt-10">
                 {projects.map((p, i) => (

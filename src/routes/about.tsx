@@ -167,12 +167,12 @@ function About() {
                     href="https://abg.institute"
                     target="_blank"
                     rel="noreferrer"
-                    className="shrink-0"
+                    className="shrink-0 rounded-sm bg-[#F3F0E9] p-2 dark:bg-[#F3F0E9]"
                   >
                     <img
                       src={abgLogoAsset.url}
                       alt="Artistic Builders Guild logo"
-                      className="h-16 w-16 object-contain"
+                      className="h-14 w-14 object-contain"
                     />
                   </a>
                   <div className="t-mono">

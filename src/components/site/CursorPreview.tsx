@@ -69,9 +69,7 @@ export function CursorPreviewLayer({
           />
         </div>
       ) : (
-        <div className="aspect-[4/3] w-[280px] media-placeholder">
-          <span className="sr-only">{label}</span>
-        </div>
+        <div className="preview-chip">{label}</div>
       )}
     </div>
   );

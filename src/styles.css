@@ -71,15 +71,15 @@
 
 :root {
   --radius: 0.625rem;
-  --base: #eef0ec;
-  --band: #22302f;
-  --ink: #17201f;
-  --band-ink: #eef0ec;
-  --brand-accent: #2f6f6a;
-  --brand-accent-tint: #a9c8c4;
-  --brand-accent-strong: #1e544f;
-  --brand-tide: #2f6f6a;
-  --media-placeholder: #dbe0dc;
+  --base: #f3f0e9;
+  --band: #262a27;
+  --ink: #20241f;
+  --band-ink: #f3f0e9;
+  --brand-accent: #2c6a63;
+  --brand-accent-tint: #cccec4;
+  --brand-accent-strong: #1b4b46;
+  --brand-tide: #262a27;
+  --media-placeholder: #e3ded3;
   --brand-gold: #c9a227;
   --surface: var(--base);
   color-scheme: light;
@@ -118,15 +118,15 @@
 }
 
 .dark {
-  --base: #141a1a;
-  --band: #1e2827;
-  --ink: #eef0ec;
-  --band-ink: #eef0ec;
-  --brand-accent: #7fc4bb;
-  --brand-accent-tint: #3d6360;
-  --brand-accent-strong: #a5dbd3;
-  --brand-tide: #24504c;
-  --media-placeholder: #263130;
+  --base: #15171a;
+  --band: #1c1f21;
+  --ink: #ece9e2;
+  --band-ink: #ece9e2;
+  --brand-accent: #7ec6bc;
+  --brand-accent-tint: #3a403e;
+  --brand-accent-strong: #a6ded5;
+  --brand-tide: #1c1f21;
+  --media-placeholder: #23262a;
   --brand-gold: #c9a227;
   --surface: var(--base);
   color-scheme: dark;
@@ -204,9 +204,9 @@
 /* Inside contrast bands the palette flips so accent stays AA-legible on #43474B */
 @layer base {
   .bg-band {
-    --brand-accent: #8ed0c7;
-    --brand-accent-tint: #4e7973;
-    --brand-accent-strong: #b2e2db;
+    --brand-accent: #8ecbc2;
+    --brand-accent-tint: #454a47;
+    --brand-accent-strong: #b4e0d8;
     --surface: var(--band);
   }
 }
@@ -543,7 +543,7 @@
 .scroll-cue {
   width: 1px;
   height: 24px;
-  background: var(--band-ink);
+  background: var(--ink);
   transform-origin: bottom;
   animation: cue-pulse 2600ms ease-in-out infinite;
 }
@@ -597,7 +597,7 @@
   height: 100%;
   object-fit: cover;
   transform: scale(1);
-  filter: saturate(0.35) contrast(1.03);
+  filter: saturate(0.75) contrast(1.02);
   transition:
     transform 600ms ease-out,
     filter 400ms ease-out;
@@ -609,7 +609,7 @@
   pointer-events: none;
   background: var(--brand-tide);
   mix-blend-mode: color;
-  opacity: 0.5;
+  opacity: 0.22;
   transition: opacity 400ms ease-out;
 }
 .photo-frame:hover .photo-img {
@@ -691,7 +691,7 @@
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--band-ink);
+  color: var(--ink);
   opacity: 0;
   animation: readout-in 500ms ease-out 700ms forwards;
 }
@@ -1022,4 +1022,98 @@ html.custom-cursor textarea {
   .readout {
     opacity: 0.4;
   }
+}
+
+/* ---- Hero: typographic, media-free ---- */
+.hero-rules {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--brand-accent-tint), var(--brand-accent-tint)),
+    linear-gradient(var(--brand-accent-tint), var(--brand-accent-tint)),
+    linear-gradient(var(--brand-accent-tint), var(--brand-accent-tint));
+  background-repeat: no-repeat;
+  background-size:
+    1px 100%,
+    1px 100%,
+    1px 100%;
+  background-position:
+    25% 0,
+    50% 0,
+    75% 0;
+  opacity: 0.22;
+}
+
+.hero-hairline {
+  height: 1px;
+  width: 100%;
+  background: var(--brand-accent-tint);
+  opacity: 0.5;
+}
+
+.hero-accent-line {
+  color: #8ecbc2;
+  font-style: italic;
+  font-variation-settings: "opsz" 144, "SOFT" 60, "WONK" 1;
+}
+
+.hero-index {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.now-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.now-tag::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  flex: none;
+  background: var(--brand-gold);
+  animation: cue-pulse 2600ms ease-in-out infinite;
+  transform-origin: center;
+}
+@media (prefers-reduced-motion: reduce) {
+  .now-tag::before {
+    animation: none;
+  }
+}
+
+.preview-chip {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid var(--brand-accent-tint);
+  background: var(--band);
+  color: var(--band-ink);
+}
+
+/* Hero surface: paper in light, charcoal in dark */
+.hero-surface {
+  background: var(--base);
+  color: var(--ink);
+  --band-ink: var(--ink);
+}
+.dark .hero-surface {
+  background: var(--band);
+  color: var(--band-ink);
+}
+.hero-accent-line {
+  color: #2c6a63;
+}
+.dark .hero-accent-line {
+  color: #8ecbc2;
 }
