@@ -32,6 +32,59 @@ const paragraphs = [
   "For summer 2027 I want research or a first-year technical program. If your lab or team sits anywhere near human performance or human-AI systems, write to me.",
 ];
 
+const shelf = [
+  {
+    index: "01",
+    title: "Turing, Computing Machinery and Intelligence (1950).",
+    note: "Where the whole field's question comes from.",
+  },
+  {
+    index: "02",
+    title: "Miller, The Magical Number Seven, Plus or Minus Two (1956).",
+    note: "The limits of working memory.",
+  },
+  {
+    index: "03",
+    title: "Kahneman and Tversky, Judgment under Uncertainty (1974).",
+    note: "Why smart people decide badly.",
+  },
+  {
+    index: "04",
+    title: "Vaswani et al., Attention Is All You Need (2017).",
+    note: "Modern AI starts here.",
+  },
+  {
+    index: "05",
+    title: "Marr, Vision (1982).",
+    note: "Three levels for understanding any thinking system.",
+  },
+  {
+    index: "06",
+    title: "Endsley, Toward a Theory of Situation Awareness in Dynamic Systems (1995).",
+    note: "What a person inside a fast machine actually knows.",
+  },
+  {
+    index: "07",
+    title: "Amershi et al., Guidelines for Human-AI Interaction (2019).",
+    note: "Rules for AI a person can actually use.",
+  },
+  {
+    index: "08",
+    title: "Love, Huber and Anders, DESeq2 (2014).",
+    note: "The workhorse of RNA-seq analysis.",
+  },
+  {
+    index: "09",
+    title: "Norman, The Design of Everyday Things (1988).",
+    note: "Affordances, and why errors are the design's fault.",
+  },
+  {
+    index: "10",
+    title: "Simon, The Sciences of the Artificial (1969).",
+    note: "Systems thinking, the whole worldview.",
+  },
+];
+
 function About() {
   return (
     <>
@@ -93,6 +146,28 @@ function About() {
                 </Link>
               </Reveal>
             </div>
+          </div>
+        </section>
+
+        <section className="relative overflow-hidden border-t border-accent-tint bg-base">
+          <div className="relative mx-auto max-w-[1080px] px-6 section-pad">
+            <Reveal as="p" className="eyebrow text-accent">
+              The shelf
+            </Reveal>
+            <Reveal as="p" delay={60} className="mt-6 t-body">
+              Ten papers I keep coming back to. The list is the plan.
+            </Reveal>
+            <ol className="mt-10 max-w-[720px]">
+              {shelf.map((item, i) => (
+                <Reveal as="li" key={item.index} delay={i * 40} className="shelf-item">
+                  <span className="shelf-index">{item.index}</span>
+                  <div>
+                    <p className="shelf-title">{item.title}</p>
+                    <p className="shelf-note">{item.note}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </ol>
           </div>
         </section>
 
