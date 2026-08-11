@@ -177,6 +177,14 @@
   text-transform: uppercase;
 }
 
+/* Inside contrast bands the palette flips so accent stays AA-legible on #43474B */
+@layer base {
+  .bg-band {
+    --accent: #a8cfc9;
+    --accent-tint: #6f8f8a;
+  }
+}
+
 @keyframes page-fade {
   from {
     opacity: 0;
