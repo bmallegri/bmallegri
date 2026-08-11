@@ -71,14 +71,14 @@
 :root {
   --radius: 0.625rem;
   --base: #ecebe7;
-  --band: #43474b;
+  --band: #3a3937;
   --ink: #1c1d1e;
   --band-ink: #f5f4f1;
   --brand-accent: #5c7a75;
   --brand-accent-tint: #b5c6c3;
   --brand-accent-strong: #4a635f;
-  --brand-tide: #5c7a75;
-  --media-placeholder: #d8d6d1;
+  --brand-tide: #5c6a72;
+  --media-placeholder: #e0dcd4;
   --surface: var(--base);
   color-scheme: light;
   --background: oklch(1 0 0);
@@ -117,14 +117,14 @@
 
 .dark {
   --base: #26292c;
-  --band: #43474b;
+  --band: #33322f;
   --ink: #f5f4f1;
   --band-ink: #f5f4f1;
   --brand-accent: #b3c7c4;
   --brand-accent-tint: #5c7a75;
   --brand-accent-strong: #cbdad7;
-  --brand-tide: #4a635f;
-  --media-placeholder: #33373b;
+  --brand-tide: #48555c;
+  --media-placeholder: #35332f;
   --surface: var(--base);
   color-scheme: dark;
   --background: oklch(0.129 0.042 264.695);
@@ -268,10 +268,11 @@
 }
 
 @utility t-hero {
-  font-size: clamp(56px, 13.5vw, 168px);
+  font-size: clamp(44px, 11.5vw, 168px);
   line-height: 1;
   hyphens: none;
-  overflow-wrap: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 @utility t-subline {
@@ -285,6 +286,8 @@
 @utility t-section {
   font-size: 36px;
   line-height: 1.15;
+  overflow-wrap: break-word;
+  word-break: break-word;
   @media (min-width: 768px) {
     font-size: 48px;
   }
@@ -293,6 +296,8 @@
 @utility t-project {
   font-size: 24px;
   line-height: 1.2;
+  overflow-wrap: break-word;
+  word-break: break-word;
   @media (min-width: 768px) {
     font-size: 32px;
   }
@@ -562,9 +567,10 @@
 @utility t-giant-mail {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: clamp(30px, 7vw, 64px);
-  line-height: 1.05;
+  font-size: clamp(20px, 3.4vw, 32px);
+  line-height: 1.2;
   overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 @utility t-heading-italic {
@@ -696,6 +702,9 @@
 .line-mask {
   display: block;
   overflow: hidden;
+  /* room for descenders and italic overhang so glyphs are never clipped */
+  padding: 0.06em 0.08em 0.14em 0.02em;
+  margin: -0.06em -0.08em -0.14em -0.02em;
 }
 .line-inner {
   display: block;
