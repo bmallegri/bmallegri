@@ -71,15 +71,15 @@
 
 :root {
   --radius: 0.625rem;
-  --base: #eef0ec;
-  --band: #22302f;
-  --ink: #17201f;
-  --band-ink: #eef0ec;
-  --brand-accent: #2f6f6a;
-  --brand-accent-tint: #a9c8c4;
-  --brand-accent-strong: #1e544f;
-  --brand-tide: #2f6f6a;
-  --media-placeholder: #dbe0dc;
+  --base: #f3f0e9;
+  --band: #14302e;
+  --ink: #1a2725;
+  --band-ink: #f3f0e9;
+  --brand-accent: #2c6a63;
+  --brand-accent-tint: #bfd2ce;
+  --brand-accent-strong: #1b4b46;
+  --brand-tide: #14302e;
+  --media-placeholder: #e3ded3;
   --brand-gold: #c9a227;
   --surface: var(--base);
   color-scheme: light;
@@ -118,15 +118,16 @@
 }
 
 .dark {
-  --base: #141a1a;
-  --band: #1e2827;
-  --ink: #eef0ec;
-  --band-ink: #eef0ec;
-  --brand-accent: #7fc4bb;
-  --brand-accent-tint: #3d6360;
-  --brand-accent-strong: #a5dbd3;
-  --brand-tide: #24504c;
-  --media-placeholder: #263130;
+  --base: #101d1c;
+  --base-raised: #16परा;
+  --band: #0b1817;
+  --ink: #ece7dc;
+  --band-ink: #ece7dc;
+  --brand-accent: #7ec6bc;
+  --brand-accent-tint: #35605b;
+  --brand-accent-strong: #a6ded5;
+  --brand-tide: #0b1817;
+  --media-placeholder: #1b2c2a;
   --brand-gold: #c9a227;
   --surface: var(--base);
   color-scheme: dark;
