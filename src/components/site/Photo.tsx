@@ -49,6 +49,12 @@ export function FullBleedPhoto({ src, alt }: { src?: string; alt?: string }) {
       )}
       <span aria-hidden="true" className="film-grain" />
       <RegTicks />
+      <span className="vf-corners" aria-hidden="true">
+        <span className="vf-corner vf-corner--tl" />
+        <span className="vf-corner vf-corner--tr" />
+        <span className="vf-corner vf-corner--bl" />
+        <span className="vf-corner vf-corner--br" />
+      </span>
     </div>
   );
 }
