@@ -15,7 +15,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative h-[100svh] min-h-[560px] w-full overflow-hidden hero-surface md:h-[80svh]">
+    <section className="relative min-h-[100svh] w-full overflow-hidden hero-surface md:min-h-[80svh]">
       <span className="hero-rules" aria-hidden="true" />
       <span className="hero-grain" aria-hidden="true" />
 
