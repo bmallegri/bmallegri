@@ -1112,5 +1112,8 @@ html.custom-cursor textarea {
   color: var(--band-ink);
 }
 .hero-accent-line {
-  color: var(--brand-accent);
+  color: #2c6a63;
+}
+.dark .hero-accent-line {
+  color: #8ecbc2;
 }
