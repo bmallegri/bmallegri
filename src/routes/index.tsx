@@ -250,7 +250,7 @@ function Index() {
                     src={drone2}
                     alt="Aerial still from the drone reel: San Diego coastline seen from 400 feet."
                     ratio="16 / 10"
-                    caption="SAN DIEGO, CA / 400 FT / DATE TBC"
+                    caption="SAN DIEGO, CA / 400 FT"
                   />
                 </Reveal>
 
@@ -262,7 +262,7 @@ function Index() {
                     src={drone3}
                     alt="Wide aerial view of open water and beach in San Diego, shot from high above."
                     ratio="16 / 10"
-                    caption="SAN DIEGO, CA / 400 FT / DATE TBC"
+                    caption="SAN DIEGO, CA / 400 FT"
                   />
                 </Reveal>
               </div>
@@ -287,13 +287,18 @@ function Index() {
                 lines={["Write to me"]}
               />
               <p className="mt-6 t-body">
-                If you're hiring for summer 2027, or you run a lab anywhere near human performance
-                or human-AI systems, I'd like to hear from you. Drone and web inquiries welcome too.
-                The form works. Email is faster:{" "}
-                <a href="mailto:bellamallegri@gmail.com" className="link-accent">
+                For the summer of 2027, I would love to do research or a first-year technical
+                program. If your lab or team sits anywhere near human performance or{" "}
+                <span className="whitespace-nowrap">human-AI</span> systems, please write to me.
+                Drone and web inquiries welcome too. The form works. Email is faster:{" "}
+                <a
+                  href="mailto:bellamallegri@gmail.com"
+                  className="link-accent [overflow-wrap:anywhere]"
+                >
                   bellamallegri@gmail.com
                 </a>
               </p>
+
             </Reveal>
             <Reveal delay={60} className="mt-12 lg:mt-0">
               <ContactForm idPrefix="home" />

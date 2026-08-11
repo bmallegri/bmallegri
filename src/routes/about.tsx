@@ -29,7 +29,7 @@ const paragraphs = [
   "In my own notes I call this work human systems architecture. Systems that understand, support, predict, and improve how people think and perform. Big words for what is currently a chess trainer and a Python game. The direction holds.",
   "This fall I'm in Belfast for my first semester, at Queen's University. Boston from January.",
   "Aside from all that, I'm COO of Artistic Builders Guild, a collective of student builders and artists with members across Brown, MIT, Stanford, and more. I run the operations side. And the drone practice, and the web design work. This site is one of the builds.",
-  "For summer 2027 I want research or a first-year technical program. If your lab or team sits anywhere near human performance or human-AI systems, write to me.",
+  "For the summer of 2027, I would love to do research or a first-year technical program. If your lab or team sits anywhere near human performance or human\u2011AI systems, please write to me.",
 ];
 
 const shelf = [
@@ -40,48 +40,26 @@ const shelf = [
   },
   {
     index: "02",
-    title:
-      "McCulloch and Pitts, A Logical Calculus of the Ideas Immanent in Nervous Activity (1943).",
-    note: "Neurons as logic, the seed of neural nets.",
-  },
-  {
-    index: "03",
     title: "Hebb, The Organization of Behavior (1949).",
     note: "How learning physically changes a brain.",
   },
   {
-    index: "04",
-    title: "Miller, The Magical Number Seven, Plus or Minus Two (1956).",
-    note: "The limits of working memory.",
-  },
-  {
-    index: "05",
+    index: "03",
     title: "Kahneman and Tversky, Judgment under Uncertainty (1974).",
     note: "Why smart people decide badly.",
   },
   {
-    index: "06",
+    index: "04",
     title: "Vaswani et al., Attention Is All You Need (2017).",
     note: "Modern AI starts here.",
   },
   {
-    index: "07",
-    title:
-      "Rumelhart, Hinton and Williams, Learning Representations by Back-Propagating Errors (1986).",
-    note: "How neural networks actually learn.",
-  },
-  {
-    index: "08",
-    title: "Newell and Simon, Computer Science as Empirical Inquiry (1976).",
-    note: "Cognition as information processing.",
-  },
-  {
-    index: "09",
+    index: "05",
     title: "Marr, Vision (1982).",
     note: "Three levels for understanding any thinking system.",
   },
   {
-    index: "10",
+    index: "06",
     title: "Endsley, Toward a Theory of Situation Awareness in Dynamic Systems (1995).",
     note: "What a person inside a fast machine actually knows.",
   },
@@ -160,7 +138,7 @@ function About() {
               The shelf
             </Reveal>
             <Reveal as="p" delay={60} className="relative mt-6 max-w-[720px] t-body">
-              Ten papers I keep coming back to. The list is the plan.
+              Six papers I keep coming back to. The list is the plan.
             </Reveal>
             <ol className="shelf-list relative mt-10">
               {shelf.map((item, i) => (
