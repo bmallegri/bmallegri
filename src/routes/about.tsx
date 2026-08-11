@@ -24,8 +24,8 @@ export const Route = createFileRoute("/about")({
 });
 
 const paragraphs = [
-  "I got here through race cars. In high school I joined Brown Formula Racing and stayed ten months, working on the electronics subsystem. The part that stuck with me wasn't the car. A race car reports everything about itself. The person driving it reports almost nothing.",
-  "That gap became the plan. At Northeastern I study Artificial Intelligence and Behavioral Neuroscience, and both are about the same thing, people under load. I like tools that notice what's happening in the person using them. What you know. When you're about to make a bad call.",
+  "I got here through wires. I started in high school on my school's FTC robotics team, eventually running it as captain. Senior year, I joined Brown Formula Racing and spent ten months in the electronics subsystem — wiring harnesses, sensors, the work of making sure every signal made it from the car to the computer. I also found I liked strategy. With an FRC team I was helping, the Excel spreadsheet full of match data and automatic macros calculating scoring chances was the part I kept coming back to. The numbers told a story about what a person under pressure was likely to do next.",
+  "That gap became the plan. At Northeastern I study Artificial Intelligence and Behavioral Neuroscience, and both are about the same thing: people under load. I like tools that notice what is happening in the person using them. What you know. When you are about to make a bad call.",
   "In my own notes I call this work human systems architecture. Systems that understand, support, predict, and improve how people think and perform. Big words for what is currently a chess trainer and a Python game. The direction holds.",
   "This fall I'm in Belfast for my first semester, at Queen's University. Boston from January.",
   "Aside from all that, I'm COO of Artistic Builders Guild, a collective of student builders and artists with members across Brown, MIT, Stanford, and more. I run the operations side. And the drone practice, and the web design work. This site is one of the builds.",
