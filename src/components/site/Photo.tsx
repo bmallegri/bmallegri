@@ -41,10 +41,12 @@ export function Photo({
   );
 }
 
-export function FullBleedPhoto({ src, alt }: { src: string; alt: string }) {
+export function FullBleedPhoto({ src, alt }: { src?: string; alt?: string }) {
   return (
     <div className="photo-frame media-placeholder w-full" style={{ aspectRatio: "21 / 9" }}>
-      <img src={src} alt={alt} loading="lazy" decoding="async" className="photo-img" />
+      {src && alt && (
+        <img src={src} alt={alt} loading="lazy" decoding="async" className="photo-img" />
+      )}
       <span aria-hidden="true" className="film-grain" />
       <RegTicks />
     </div>
