@@ -175,9 +175,6 @@ function Index() {
               <Reveal as="p" className="eyebrow text-accent">
                 Projects
               </Reveal>
-              <Reveal as="p" delay={40} className="mt-4 t-mono opacity-70">
-                Color code stolen from my own planning docs: gold means working on it.
-              </Reveal>
               <ol className="mt-10">
                 {projects.map((p, i) => (
                   <Reveal
