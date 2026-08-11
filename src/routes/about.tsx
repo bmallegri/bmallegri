@@ -24,8 +24,8 @@ export const Route = createFileRoute("/about")({
 });
 
 const paragraphs = [
-  "I got here through race cars. In high school I joined Brown Formula Racing and stayed ten months, working on the electronics subsystem. The part that stuck with me wasn't the car. A race car reports everything about itself. The person driving it reports almost nothing.",
-  "That gap became the plan. At Northeastern I study Artificial Intelligence and Behavioral Neuroscience, and both are about the same thing, people under load. I like tools that notice what's happening in the person using them. What you know. When you're about to make a bad call.",
+  "I got here through wires. I started in high school on my school's FTC robotics team, eventually running it as captain. Senior year, I joined Brown Formula Racing and spent ten months in the electronics subsystem. I also found I liked strategy. With an FRC team I was helping, the Excel spreadsheet full of match data and automatic macros calculating scoring chances was the part I kept coming back to. The numbers told a story about what a person under pressure was likely to do next.",
+  "That gap became the plan. At Northeastern I study Artificial Intelligence and Behavioral Neuroscience, and both are about the same thing: people under load. I like tools that notice what is happening in the person using them. What you know. When you are about to make a bad call.",
   "In my own notes I call this work human systems architecture. Systems that understand, support, predict, and improve how people think and perform. Big words for what is currently a chess trainer and a Python game. The direction holds.",
   "This fall I'm in Belfast for my first semester, at Queen's University. Boston from January.",
   "Aside from all that, I'm COO of Artistic Builders Guild, a collective of student builders and artists with members across Brown, MIT, Stanford, and more. I run the operations side. And the drone practice, and the web design work. This site is one of the builds.",
@@ -84,57 +84,6 @@ const shelf = [
     index: "10",
     title: "Endsley, Toward a Theory of Situation Awareness in Dynamic Systems (1995).",
     note: "What a person inside a fast machine actually knows.",
-  },
-  {
-    index: "11",
-    title: "Wickens, Multiple Resources and Mental Workload (2008).",
-    note: "Why attention runs out.",
-  },
-  {
-    index: "12",
-    title: "Amershi et al., Guidelines for Human-AI Interaction (2019).",
-    note: "Rules for AI a person can actually use.",
-  },
-  {
-    index: "13",
-    title:
-      "Doshi-Velez and Kim, Towards a Rigorous Science of Interpretable Machine Learning (2017).",
-    note: "Making models explain themselves.",
-  },
-  {
-    index: "14",
-    title: "Mitchell et al., Model Cards for Model Reporting (2019).",
-    note: "Documenting what a model can and can't do.",
-  },
-  {
-    index: "15",
-    title: "Gebru et al., Datasheets for Datasets (2018).",
-    note: "Where data comes from matters.",
-  },
-  {
-    index: "16",
-    title: "Love, Huber and Anders, DESeq2 (2014).",
-    note: "The workhorse of RNA-seq analysis.",
-  },
-  {
-    index: "17",
-    title: "Subramanian et al., Gene Set Enrichment Analysis (2005).",
-    note: "Reading biology at the pathway level.",
-  },
-  {
-    index: "18",
-    title: "Wolpaw et al., Brain-Computer Interfaces for Communication and Control (2002).",
-    note: "Signals straight out of the skull.",
-  },
-  {
-    index: "19",
-    title: "Norman, The Design of Everyday Things (1988).",
-    note: "Affordances, and why errors are the design's fault.",
-  },
-  {
-    index: "20",
-    title: "Simon, The Sciences of the Artificial (1969).",
-    note: "Systems thinking, the whole worldview.",
   },
 ];
 
@@ -211,8 +160,7 @@ function About() {
               The shelf
             </Reveal>
             <Reveal as="p" delay={60} className="relative mt-6 max-w-[720px] t-body">
-              The twenty papers I'm building my head out of. Some I've read properly, some I'm
-              still chewing on. The list is the plan.
+              Ten papers I keep coming back to. The list is the plan.
             </Reveal>
             <ol className="shelf-list relative mt-10">
               {shelf.map((item, i) => (
