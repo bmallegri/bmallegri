@@ -250,7 +250,7 @@ function Index() {
                     src={drone2}
                     alt="Aerial still from the drone reel: San Diego coastline seen from 400 feet."
                     ratio="16 / 10"
-                    caption="SAN DIEGO, CA / 400 FT / DATE TBC"
+                    caption="SAN DIEGO, CA / 400 FT"
                   />
                 </Reveal>
 
