@@ -105,10 +105,10 @@ const route = [
   { place: "METUCHEN, NJ", note: "home", state: "past" as const },
   {
     place: "PROVIDENCE, RI",
-    note: "the race car, Artistic Builders Guild",
-    state: "past" as const,
+    note: "now — ABG, before the semester",
+    state: "current" as const,
   },
-  { place: "BELFAST, Northern Ireland", note: "now", state: "current" as const },
+  { place: "BELFAST, Northern Ireland", note: "september", state: "future" as const },
   { place: "BOSTON, MA", note: "january", state: "future" as const },
 ];
 
@@ -167,7 +167,7 @@ function Index() {
               <Reveal className="flex flex-wrap items-baseline gap-x-4 gap-y-2">
                 <h2 className="eyebrow text-accent">Right now</h2>
                 <span className="t-mono opacity-70">
-                  updated August 2026, mid-packing for Belfast
+                  updated August 2026, Providence before the semester
                 </span>
               </Reveal>
               <Reveal as="p" delay={60} className="mt-6 t-body">
