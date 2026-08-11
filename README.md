@@ -1,6 +1,6 @@
 # bmallegri.com
 
-My personal website. Live at [bmallegri.com](https://www.bmallegri.com)
+My personal website. Live at [bmallegri.ai](https://www.bmallegri.ai)
 
 Two pages. Who I am, what I'm building (a chess trainer, a game that
 teaches Python), where I've worked (NASA GeneLab, Kean University, Brown
@@ -26,4 +26,4 @@ npm run dev
 
 ## Contact
 
-bmallegri@gmail.com, or the form on the site.
+bellamallegri@gmail.com, or the form on the site.
