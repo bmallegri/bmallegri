@@ -7,7 +7,7 @@ import { LineReveal } from "@/components/site/LineReveal";
 import abgLogoAsset from "@/assets/abg-logo.png.asset.json";
 
 const DESCRIPTION =
-  "First-year at Northeastern studying Artificial Intelligence and Behavioral Neuroscience. Chess trainer, Python game, NASA GeneLab, Formula SAE. Looking for summer 2027 research.";
+  "First-year at Northeastern studying Artificial Intelligence and Behavioral Neuroscience. Chess trainer, Python game, NASA GeneLab GL4HS, Formula SAE. Looking for summer 2027 research.";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -138,7 +138,7 @@ function About() {
               The shelf
             </Reveal>
             <Reveal as="p" delay={60} className="relative mt-6 max-w-[720px] t-body">
-              Six papers I keep coming back to. The list is the plan.
+              I really like these six papers, and I thought I would share.
             </Reveal>
             <ol className="shelf-list relative mt-10">
               {shelf.map((item, i) => (
