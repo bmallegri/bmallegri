@@ -268,10 +268,11 @@
 }
 
 @utility t-hero {
-  font-size: clamp(56px, 13.5vw, 168px);
+  font-size: clamp(44px, 11.5vw, 168px);
   line-height: 1;
   hyphens: none;
-  overflow-wrap: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 @utility t-subline {
@@ -562,8 +563,8 @@
 @utility t-giant-mail {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: clamp(30px, 7vw, 64px);
-  line-height: 1.05;
+  font-size: clamp(20px, 3.4vw, 32px);
+  line-height: 1.2;
   overflow-wrap: anywhere;
 }
 
@@ -696,6 +697,9 @@
 .line-mask {
   display: block;
   overflow: hidden;
+  /* room for descenders and italic overhang so glyphs are never clipped */
+  padding: 0.06em 0.08em 0.14em 0.02em;
+  margin: -0.06em -0.08em -0.14em -0.02em;
 }
 .line-inner {
   display: block;
