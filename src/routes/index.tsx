@@ -6,6 +6,7 @@ import { CopyEmail } from "@/components/site/CopyEmail";
 import drone1 from "@/assets/drone-1.webp";
 import drone2 from "@/assets/drone-2.webp";
 import drone3 from "@/assets/drone-3.webp";
+import seal from "@/assets/seal.webp";
 
 const TITLE = "Bella Allegri | AI and Behavioral Neuroscience at Northeastern";
 const DESCRIPTION =
@@ -36,7 +37,7 @@ const projects = [
     index: "02",
     title: "Python game",
     meta: "In progress",
-    body: "A game that teaches Python. That's the honest one-line version until the write-up is done.",
+    body: "A game that teaches Python. It comes from the same place as the chess trainer, the idea that you learn a thing by being made to do it, not by reading about it. Write-up and repo when it's done.",
   },
   {
     index: "03",
@@ -48,13 +49,13 @@ const projects = [
     index: "04",
     title: "NASA GeneLab internship",
     meta: "Summer 2025",
-    body: "Analyzed omics data from spaceflight experiments in Python.",
+    body: "A summer internship analyzing omics data from spaceflight experiments in Python. GeneLab is NASA's open repository of biology data from missions, gene expression from organisms that have actually been to space, and the summer went to turning that raw data into something you could ask questions of, about how living systems respond to spaceflight.",
   },
   {
     index: "05",
     title: "Brown Formula Racing",
     meta: "Through June 2026",
-    body: "Ten months on the electronics subsystem of a Formula SAE car, on a team I joined in high school.",
+    body: "Ten months on the electronics subsystem of a Formula SAE car, on a team I joined in high school. Most of my hours went to the wiring harness and electrical QA, the unglamorous work of making sure every sensor and connector on a race car survives a race.",
   },
 ];
 
@@ -71,8 +72,18 @@ function Index() {
       <main id="main">
         {/* Hero */}
         <section className="bg-base">
-          <div className="mx-auto max-w-[1080px] px-6 pb-16 pt-10 md:pb-28 md:pt-16">
-            <h1 className="t-hero">Bella Michele Allegri</h1>
+          <div className="mx-auto flex min-h-[70vh] max-w-[1080px] flex-col justify-center px-6 pb-16 pt-10 md:min-h-[80vh] md:pb-28 md:pt-16">
+            <img
+              src={seal}
+              alt="BMAllegri seal"
+              decoding="async"
+              className="h-14 w-14 object-contain"
+            />
+            <h1 className="mt-8 t-hero">
+              Bella Michele
+              <br />
+              Allegri
+            </h1>
             <div className="mt-10 max-w-[46ch] space-y-4 t-subline md:ml-[20%]">
               <p>I build tools that pay attention to how people learn and decide.</p>
               <p>First semester at Queen's University Belfast, then Boston in January.</p>
@@ -134,11 +145,14 @@ function Index() {
               {projects.map((p) => (
                 <li
                   key={p.index}
-                  className="group border-t border-transparent py-5 first:pt-0 md:grid md:grid-cols-[56px_1fr] md:py-7 [&+li]:border-accent-tint"
+                  className="group border-t border-transparent py-5 first:pt-0 md:grid md:grid-cols-[120px_1fr] md:gap-x-6 md:py-7 [&+li]:border-accent-tint"
                 >
-                  <span className="hidden t-mono opacity-70 transition-colors duration-150 group-hover:text-accent md:block">
-                    {p.index}
-                  </span>
+                  <div className="hidden md:block">
+                    <span className="block t-gutter-num">{p.index}</span>
+                    <span className="mt-2 block t-mono opacity-70 transition-colors duration-150 group-hover:text-accent">
+                      {p.index}
+                    </span>
+                  </div>
                   <div className="mt-2 md:mt-0">
                     <h3 className="flex flex-wrap items-baseline gap-x-4 t-project">
                       {p.title}
@@ -157,6 +171,15 @@ function Index() {
             </p>
           </div>
         </section>
+
+        {/* Full-bleed still */}
+        <img
+          src={drone1}
+          alt="Full-bleed aerial still of the New Jersey coastline."
+          loading="lazy"
+          decoding="async"
+          className="aspect-[21/9] w-full media-placeholder object-cover"
+        />
 
         {/* From 400 feet */}
         <section className="bg-band text-band-ink">
