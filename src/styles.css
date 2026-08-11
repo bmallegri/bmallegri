@@ -184,6 +184,16 @@
   font-size: 12px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--brand-accent);
+  }
 }
 
 /* Inside contrast bands the palette flips so accent stays AA-legible on #43474B */
@@ -306,8 +316,8 @@
   padding-top: 64px;
   padding-bottom: 64px;
   @media (min-width: 768px) {
-    padding-top: 112px;
-    padding-bottom: 112px;
+    padding-top: 128px;
+    padding-bottom: 128px;
   }
 }
 
@@ -368,4 +378,50 @@
 
 @utility media-placeholder {
   background: var(--media-placeholder);
+}
+
+/* Oversized Fraunces gutter numeral for project entries */
+@utility t-gutter-num {
+  font-family: var(--font-display);
+  font-size: 80px;
+  line-height: 0.85;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+  color: var(--ink);
+  opacity: 0.08;
+}
+
+.dark .t-gutter-num {
+  opacity: 0.1;
+}
+
+/* Calmer inline links inside long body text */
+@layer base {
+  .t-body a.link-accent {
+    text-decoration-color: var(--brand-accent-tint);
+  }
+  .t-body a.link-accent:hover {
+    text-decoration-color: var(--brand-accent);
+  }
+
+  /* Paper grain, light mode only, static and very faint */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .dark body::before {
+    display: none;
+  }
+
+  /* Contrast band: body text slightly softened, headings full strength */
+  .bg-band .t-body,
+  .bg-band p.t-body {
+    opacity: 0.92;
+  }
 }
