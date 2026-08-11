@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
+import { SectionMark } from "@/components/site/SectionMark";
 import { ContactForm } from "@/components/site/ContactForm";
 import { Hero } from "@/components/site/Hero";
 import { Reveal } from "@/components/site/Reveal";
@@ -106,6 +107,7 @@ function Index() {
             <span className="ghost-word" aria-hidden="true">
               Short
             </span>
+            <SectionMark>SEC 01 / SHORT</SectionMark>
             <div className="relative">
               <Reveal as="p" className="eyebrow text-accent">
                 The short version
@@ -134,6 +136,7 @@ function Index() {
             <span className="ghost-word" aria-hidden="true">
               Now
             </span>
+            <SectionMark>SEC 02 / NOW</SectionMark>
             <div className="relative">
               <Reveal className="flex flex-wrap items-baseline gap-x-4 gap-y-2">
                 <span className="eyebrow text-accent">Right now</span>
@@ -171,6 +174,7 @@ function Index() {
             <span className="ghost-word" aria-hidden="true">
               Projects
             </span>
+            <SectionMark>SEC 03 / PROJECTS</SectionMark>
             <div className="relative">
               <Reveal as="p" className="eyebrow text-accent">
                 Projects
@@ -238,6 +242,7 @@ function Index() {
             <span className="ghost-word" aria-hidden="true">
               400
             </span>
+            <SectionMark>SEC 04 / 400 FT</SectionMark>
             <div className="relative">
               <Reveal as="p" className="eyebrow">
                 From 400 feet
