@@ -1,6 +1,7 @@
 import { CopyEmail } from "./CopyEmail";
 import { LocalTime } from "./LocalTime";
 import { Seal } from "./Seal";
+import { SocialLinks } from "./SocialLinks";
 
 export function Footer() {
   return (
@@ -21,8 +22,9 @@ export function Footer() {
           <div className="mt-6">
             <CopyEmail />
           </div>
-          {/* LinkedIn link slot: <a href="LINKEDIN_URL">LinkedIn</a> */}
-          {/* GitHub link slot: <a href="GITHUB_URL">GitHub</a> */}
+          <div className="mt-6">
+            <SocialLinks />
+          </div>
         </div>
         <Seal className="h-20 w-20 shrink-0" />
         </div>
