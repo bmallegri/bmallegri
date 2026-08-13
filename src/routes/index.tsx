@@ -28,7 +28,10 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: DESCRIPTION },
       { property: "og:url", content: "/" },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://bmallegri.ai/logo.png" },
+      { property: "og:image:alt", content: "BMAllegri seal logo" },
       { name: "twitter:card", content: "summary" },
+      { name: "twitter:image", content: "https://bmallegri.ai/logo.png" },
     ],
     links: [{ rel: "canonical", href: "/" }],
     scripts: [
