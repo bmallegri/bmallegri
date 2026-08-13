@@ -74,7 +74,8 @@ const projects = [
     meta: "",
     status: "working" as const,
     statusLabel: "working on it",
-    body: "A game that teaches Python. It comes from the same place as the chess trainer, the idea that you learn a thing by being made to do it, not by reading about it. Write-up and repo when it's done.",
+    url: "https://github.com/bmallegri/python-spellbook",
+    body: "A game that teaches Python. It comes from the same place as the chess trainer: you learn a thing by being made to do it, not by reading about it. The repo is live; write-up is next.",
   },
   {
     index: "03",
