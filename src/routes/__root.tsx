@@ -85,6 +85,32 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { rel: "icon", href: "/seal.webp", type: "image/webp" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "@id": "https://bmallegri.ai/#organization",
+          name: "Bella Michele Allegri",
+          alternateName: "BMAllegri",
+          url: "https://bmallegri.ai",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://bmallegri.ai/logo.png",
+            width: 1200,
+            height: 1200,
+            caption: "BMAllegri seal logo",
+          },
+          image: "https://bmallegri.ai/logo.png",
+          email: "mailto:bellamallegri@gmail.com",
+          sameAs: [
+            "https://www.linkedin.com/in/bellamallegri",
+            "https://github.com/bmallegri",
+          ],
+        }),
+      },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
