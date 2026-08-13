@@ -13,6 +13,7 @@ import drone1 from "@/assets/drone-1.webp";
 import drone2 from "@/assets/drone-2.webp";
 import drone3 from "@/assets/drone-3.webp";
 import bfrTeam from "@/assets/bfr-team.jpg.asset.json";
+import pythonSpellbook from "@/assets/python-spellbook.png.asset.json";
 
 const TITLE = "Bella Allegri | AI & Behavioral Neuroscience";
 const DESCRIPTION =
