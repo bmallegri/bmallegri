@@ -176,8 +176,7 @@ function Index() {
                 This fall I'm at Queen's University Belfast for my first semester. Until then I'm
                 in Providence, running operations as COO of Artistic Builders Guild (abg.institute),
                 finishing the IBM Generative AI Engineering certification, and building the chess
-                trainer. January is Boston, where I'm after a lab spot and the telemetry side of
-                Northeastern Electric Racing.
+                trainer. January is Boston.
               </Reveal>
               <Reveal delay={120} className="mt-10">
                 <ol className="route-line">
