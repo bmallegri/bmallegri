@@ -225,7 +225,18 @@ function Index() {
                       </div>
                       <div className="mt-2 md:mt-0">
                         <h3 className="flex flex-wrap items-baseline gap-x-4 t-project">
-                          {p.title}
+                          {p.url ? (
+                            <a
+                              href={p.url}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="link-accent"
+                            >
+                              {p.title}
+                            </a>
+                          ) : (
+                            p.title
+                          )}
                           <span className="status-tag" data-status={p.status}>
                             {p.statusLabel}
                           </span>
