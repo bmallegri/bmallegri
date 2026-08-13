@@ -13,6 +13,7 @@ import drone1 from "@/assets/drone-1.webp";
 import drone2 from "@/assets/drone-2.webp";
 import drone3 from "@/assets/drone-3.webp";
 import bfrTeam from "@/assets/bfr-team.jpg.asset.json";
+import pythonSpellbook from "@/assets/python-spellbook.png.asset.json";
 
 const TITLE = "Bella Allegri | AI & Behavioral Neuroscience";
 const DESCRIPTION =
@@ -73,7 +74,8 @@ const projects = [
     meta: "",
     status: "working" as const,
     statusLabel: "working on it",
-    body: "A game that teaches Python. It comes from the same place as the chess trainer, the idea that you learn a thing by being made to do it, not by reading about it. Write-up and repo when it's done.",
+    url: "https://github.com/bmallegri/python-spellbook",
+    body: "A game that teaches Python. It comes from the same place as the chess trainer: you learn a thing by being made to do it, not by reading about it. The repo is live; write-up is next.",
   },
   {
     index: "03",
@@ -223,7 +225,18 @@ function Index() {
                       </div>
                       <div className="mt-2 md:mt-0">
                         <h3 className="flex flex-wrap items-baseline gap-x-4 t-project">
-                          {p.title}
+                          {p.url ? (
+                            <a
+                              href={p.url}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="link-accent"
+                            >
+                              {p.title}
+                            </a>
+                          ) : (
+                            p.title
+                          )}
                           <span className="status-tag" data-status={p.status}>
                             {p.statusLabel}
                           </span>
@@ -251,7 +264,7 @@ function Index() {
           previewRef={previewRef}
           visible={active !== null}
           label={active !== null ? (projects[active]?.title ?? "") : ""}
-          src={active === 2 ? bfrTeam.url : undefined}
+          src={active === 1 ? pythonSpellbook.url : active === 2 ? bfrTeam.url : undefined}
         />
 
         {/* Full-bleed still */}
