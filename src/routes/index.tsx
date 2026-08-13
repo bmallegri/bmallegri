@@ -75,7 +75,7 @@ const projects = [
     status: "working" as const,
     statusLabel: "working on it",
     url: "https://github.com/bmallegri/python-spellbook",
-    body: "A game that teaches Python. It comes from the same place as the chess trainer: you learn a thing by being made to do it, not by reading about it. The repo is live; write-up is next.",
+    body: "A browser game that teaches Python one line at a time. You start with an empty spellbook, and a page only fills in once you can rebuild that line from scrambled tokens in three different contexts. It sits somewhere between recognising code and writing it cold, which is where things start to stick.",
   },
   {
     index: "03",
