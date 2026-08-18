@@ -26,7 +26,7 @@ export const Route = createFileRoute("/")({
       { name: "description", content: DESCRIPTION },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://bmallegri.ai/" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://bmallegri.ai/logo.png" },
       { property: "og:image:alt", content: "BMAllegri seal logo" },
