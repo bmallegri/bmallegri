@@ -40,9 +40,16 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Person",
+          "@id": "https://bmallegri.ai/#person",
           name: "Bella Michele Allegri",
           jobTitle: "Student Researcher",
           url: "https://bmallegri.ai",
+          image: "https://bmallegri.ai/logo.png",
+          mainEntityOfPage: "https://bmallegri.ai/",
+          sameAs: [
+            "https://www.linkedin.com/in/bellamallegri",
+            "https://github.com/bmallegri",
+          ],
           email: "mailto:bellamallegri@gmail.com",
           affiliation: [
             { "@type": "CollegeOrUniversity", name: "Northeastern University" },
