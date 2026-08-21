@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://bmallegri.ai/sitemap.xml
+Sitemap: https://bmallegri.com/sitemap.xml
