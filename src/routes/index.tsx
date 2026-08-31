@@ -76,6 +76,7 @@ const projects = [
     meta: "",
     status: "working" as const,
     statusLabel: "working on it",
+    url: "https://github.com/bmallegri/tempo",
     body: "Chess apps count your puzzle streak and call it progress. Mine keeps a model of what you actually know and schedules positions with spaced retrieval. Between positions it has you talk through candidate moves the way strong players do out loud. The goal is the useful part of a coach.",
   },
   {
