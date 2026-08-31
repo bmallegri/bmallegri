@@ -2,7 +2,7 @@
 
 My personal website, live at [bmallegri.ai](https://www.bmallegri.ai).
 
-Two pages covering who I am, what I'm building (a chess trainer and a Python-learning game), where I've worked (NASA GeneLab GL4HS, Kean University, Brown Formula Racing), and drone photography of San Diego.
+Two pages covering who I am, what I'm building, where I've worked, and some drone photography.
 
 ## Run Locally
 
