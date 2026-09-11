@@ -5,7 +5,7 @@ import { ContactForm } from "@/components/site/ContactForm";
 import { Reveal } from "@/components/site/Reveal";
 import { LineReveal } from "@/components/site/LineReveal";
 import { SectionMark } from "@/components/site/SectionMark";
-import abgLogoAsset from "@/assets/abg-logo.png.asset.json";
+import asteremaLogoAsset from "@/assets/asterema-logo.png.asset.json";
 
 const TITLE = "About Bella Allegri | Human Systems Architecture";
 const DESCRIPTION =
@@ -35,7 +35,7 @@ const paragraphs = [
   "That question became the plan. At Northeastern I study Artificial Intelligence and Behavioral Neuroscience, and both are about the same thing: people under load. I like tools that notice what is happening in the person using them. What you know. When you are about to make a bad call.",
   "In my own notes I call this work human systems architecture. Systems that understand, support, predict, and improve how people think and perform. Big words for what is currently a chess trainer and a Python game. The direction holds.",
   "This fall I'm in Belfast for my first semester, at Queen's University. Boston from January.",
-  "Aside from all that, I'm COO of Artistic Builders Guild, a collective of student builders and artists with members across Brown, MIT, Stanford, and more.",
+  "Aside from all that, I'm COO and Cofounder of Asterema, a collective of student builders and artists with members across Brown, MIT, Stanford, and more.",
   "For the summer of 2027, I would love to do research or a first-year technical program. If your lab or team sits anywhere near human performance or human\u2011AI systems, please write to me.",
 ];
 
@@ -102,24 +102,19 @@ function About() {
                     href="https://www.linkedin.com/company/abg-institute"
                     target="_blank"
                     rel="noreferrer"
-                    className="shrink-0 rounded-sm bg-[#F3F0E9] p-2 dark:bg-[#F3F0E9]"
+                    className="shrink-0 rounded-sm bg-white p-2 dark:bg-white"
                   >
                     <img
-                      src={abgLogoAsset.url}
-                      alt="Artistic Builders Guild logo"
+                      src={asteremaLogoAsset.url}
+                      alt="Asterema logo"
                       className="h-14 w-14 object-contain"
                     />
                   </a>
                   <div className="t-mono">
-                    <p>COO, Artistic Builders Guild</p>
+                    <p>COO & Cofounder, Asterema</p>
                     <a href="https://www.linkedin.com/company/abg-institute" className="link-accent">
                       LinkedIn
                     </a>
-                    <p className="mt-1">
-                      <a href="mailto:bella@abg.institute" className="link-accent">
-                        bella@abg.institute
-                      </a>
-                    </p>
                   </div>
                 </Reveal>
                 {paragraphs.slice(5).map((p, i) => (
