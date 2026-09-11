@@ -1,17 +1,16 @@
 import { useState, type FormEvent } from "react";
 
-const PURPOSES = ["Hiring info", "Full portfolio", "Artistic Builders Guild", "Other"];
+const PURPOSES = ["Hiring info", "Full portfolio", "Asterema", "Other"];
 const SOURCES = [
   "Friend",
   "LinkedIn",
   "Networking event or college event",
-  "Artistic Builders Guild",
+  "Asterema",
   "Other",
 ];
 
 const labelClass = "block t-mono";
 const PERSONAL_EMAIL = "bellamallegri@gmail.com";
-const ABG_EMAIL = "bella@abg.institute";
 
 export function ContactForm({ extended = false, idPrefix }: { extended?: boolean; idPrefix: string }) {
   const [purpose, setPurpose] = useState("");
@@ -29,10 +28,7 @@ export function ContactForm({ extended = false, idPrefix }: { extended?: boolean
       lines.push(`Purpose: ${purpose}`, `How did you hear about me: ${data.get("source")}`);
     }
     lines.push("", String(data.get("message") ?? ""));
-    const source = String(data.get("source") ?? "");
-    const isAbg = purpose === "Artistic Builders Guild" || source === "Artistic Builders Guild";
-    const to = extended && isAbg ? ABG_EMAIL : PERSONAL_EMAIL;
-    const href = `mailto:${to}?subject=${encodeURIComponent(
+    const href = `mailto:${PERSONAL_EMAIL}?subject=${encodeURIComponent(
       "Message from the website",
     )}&body=${encodeURIComponent(lines.join("\n"))}`;
     try {
