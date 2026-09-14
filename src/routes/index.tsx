@@ -111,12 +111,12 @@ const projects = [
 
 const route = [
   { place: "METUCHEN, NJ", note: "home", state: "past" as const },
+  { place: "PROVIDENCE, RI", note: "asterema, before the semester", state: "past" as const },
   {
-    place: "PROVIDENCE, RI",
-    note: "now / Asterema, before the semester",
+    place: "BELFAST, Northern Ireland",
+    note: "now / queen's university",
     state: "current" as const,
   },
-  { place: "BELFAST, Northern Ireland", note: "september", state: "future" as const },
   { place: "BOSTON, MA", note: "january", state: "future" as const },
 ];
 
@@ -173,14 +173,13 @@ function Index() {
               <Reveal className="flex flex-wrap items-baseline gap-x-4 gap-y-2">
                 <h2 className="eyebrow text-accent">Right now</h2>
                 <span className="t-mono opacity-70">
-                  updated August 2026, Providence before the semester
+                  updated September 2026, Belfast
                 </span>
               </Reveal>
               <Reveal as="p" delay={60} className="mt-6 t-body">
-                This fall I'm at Queen's University Belfast for my first semester. Until then I'm
-                in Providence, running operations as COO and Cofounder of Asterema,
-                finishing the IBM Generative AI Engineering certification, and building the chess
-                trainer. January is Boston.
+                I'm at Queen's University Belfast for my first semester. I'm running operations as
+                COO and Cofounder of Asterema, finishing the IBM Generative AI Engineering
+                certification, and building the chess trainer. January is Boston.
               </Reveal>
               <Reveal delay={120} className="mt-10">
                 <ol className="route-line">

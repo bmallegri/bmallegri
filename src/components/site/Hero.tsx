@@ -25,7 +25,7 @@ export function Hero() {
           {today}
         </span>
         <span className="readout absolute right-6 top-24">ALT 400 FT</span>
-        <span className="readout absolute bottom-6 left-6">41.826155 N / 71.403275 W</span>
+        <span className="readout absolute bottom-6 left-6">54.5840 N / 5.9342 W</span>
         <span className="readout absolute bottom-6 right-6">MAVIC 3 PRO CINE</span>
       </div>
 
@@ -48,7 +48,7 @@ export function Hero() {
             <p>I build tools that pay attention to how people learn and decide.</p>
             <p>Northeastern University, Artificial Intelligence and Behavioral Neuroscience.</p>
           </div>
-          <span className="now-tag text-ink">Providence, RI / now</span>
+          <span className="now-tag text-ink">Belfast, Northern Ireland / now</span>
         </div>
         <div className="hero-hairline mt-8" aria-hidden="true" />
         <p className="mt-6 flex flex-wrap items-baseline gap-4 t-mono text-ink">

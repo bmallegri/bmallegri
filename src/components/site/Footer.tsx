@@ -10,7 +10,7 @@ export function Footer() {
         <div className="flex flex-col items-start gap-8 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <p className="t-mono text-ink">Bella Michele Allegri</p>
-          <p className="mt-2 t-mono text-ink/70">New Jersey</p>
+          <p className="mt-2 t-mono text-ink/70">Belfast, Northern Ireland</p>
           <div className="mt-2">
             <LocalTime />
           </div>
@@ -30,7 +30,7 @@ export function Footer() {
         </div>
         <div className="footer-marks mt-12" aria-hidden="true">
           <span>BMALLEGRI</span>
-          <span className="hidden sm:inline">41.826155 N / 71.403275 W</span>
+          <span className="hidden sm:inline">54.5840 N / 5.9342 W</span>
           
         </div>
       </div>
