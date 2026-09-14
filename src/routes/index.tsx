@@ -5,15 +5,12 @@ import { SectionMark } from "@/components/site/SectionMark";
 import { ContactForm } from "@/components/site/ContactForm";
 import { Hero } from "@/components/site/Hero";
 import { Reveal } from "@/components/site/Reveal";
-import { useCursorPreview, CursorPreviewLayer } from "@/components/site/CursorPreview";
 import { Photo, FullBleedPhoto } from "@/components/site/Photo";
 import { Ticker } from "@/components/site/Ticker";
 import { LineReveal } from "@/components/site/LineReveal";
 import drone1 from "@/assets/drone-1.webp";
 import drone2 from "@/assets/drone-2.webp";
 import drone3 from "@/assets/drone-3.webp";
-import bfrTeam from "@/assets/bfr-team.jpg.asset.json";
-import pythonSpellbook from "@/assets/python-spellbook.png.asset.json";
 
 const TITLE = "Bella Allegri | AI & Behavioral Neuroscience";
 const DESCRIPTION =
@@ -76,8 +73,7 @@ const projects = [
     meta: "",
     status: "working" as const,
     statusLabel: "working on it",
-    url: "https://github.com/bmallegri/tempo",
-    body: "Chess apps count your puzzle streak and call it progress. Mine keeps a model of what you actually know and schedules positions with spaced retrieval. Between positions it has you talk through candidate moves the way strong players do out loud. The goal is the useful part of a coach.",
+    body: "Chess apps count your puzzle streak and call it progress. Mine keeps a model of what you actually know and schedules positions with spaced retrieval. Between positions it has you talk through candidate moves the way strong players do out loud. It's built in 3D in Unreal Engine and also takes into account the player's personality type. The goal is the useful part of a coach.",
   },
   {
     index: "02",
@@ -85,7 +81,6 @@ const projects = [
     meta: "",
     status: "working" as const,
     statusLabel: "working on it",
-    url: "https://github.com/bmallegri/python-spellbook",
     body: "A browser game that teaches Python one line at a time. You start with an empty spellbook, and a page only fills in once you can rebuild that line from scrambled tokens in three different contexts. It sits somewhere between recognising code and writing it cold, which is where things start to stick.",
   },
   {
@@ -126,8 +121,6 @@ const route = [
 ];
 
 function Index() {
-  const { active, setActive, el: previewRef } = useCursorPreview();
-
   return (
     <>
       <a
@@ -222,43 +215,26 @@ function Index() {
                     delay={i * 60}
                     className="group border-t border-transparent py-5 first:pt-0 md:grid md:grid-cols-[120px_1fr] md:gap-x-6 md:py-7 [&+li]:border-accent-tint"
                   >
-                    <div
-                      onPointerEnter={() => setActive(i)}
-                      onPointerLeave={() => setActive(null)}
-                      className="contents"
-                    >
-                      <div className="hidden md:block">
-                        <span className="block t-gutter-num">{p.index}</span>
-                        <span className="mt-2 block t-mono opacity-70 transition-colors duration-150 group-hover:text-accent">
-                          {p.index}
+                    <div className="hidden md:block">
+                      <span className="block t-gutter-num">{p.index}</span>
+                      <span className="mt-2 block t-mono opacity-70 transition-colors duration-150 group-hover:text-accent">
+                        {p.index}
+                      </span>
+                    </div>
+                    <div className="mt-2 md:mt-0">
+                      <h3 className="flex flex-wrap items-baseline gap-x-4 t-project">
+                        {p.title}
+                        <span className="status-tag" data-status={p.status}>
+                          {p.statusLabel}
                         </span>
-                      </div>
-                      <div className="mt-2 md:mt-0">
-                        <h3 className="flex flex-wrap items-baseline gap-x-4 t-project">
-                          {p.url ? (
-                            <a
-                              href={p.url}
-                              target="_blank"
-                              rel="noreferrer"
-                              className="link-accent"
-                            >
-                              {p.title}
-                            </a>
-                          ) : (
-                            p.title
-                          )}
-                          <span className="status-tag" data-status={p.status}>
-                            {p.statusLabel}
+                        {p.meta && (
+                          <span className="eyebrow opacity-70">
+                            <span className="md:hidden">{p.index}. </span>
+                            {p.meta}
                           </span>
-                          {p.meta && (
-                            <span className="eyebrow opacity-70">
-                              <span className="md:hidden">{p.index}. </span>
-                              {p.meta}
-                            </span>
-                          )}
-                        </h3>
-                        <p className="mt-4 t-body">{p.body}</p>
-                      </div>
+                        )}
+                      </h3>
+                      <p className="mt-4 t-body">{p.body}</p>
                     </div>
                   </Reveal>
                 ))}
@@ -269,13 +245,6 @@ function Index() {
             </div>
           </div>
         </section>
-
-        <CursorPreviewLayer
-          previewRef={previewRef}
-          visible={active !== null}
-          label={active !== null ? (projects[active]?.title ?? "") : ""}
-          src={active === 1 ? pythonSpellbook.url : active === 2 ? bfrTeam.url : undefined}
-        />
 
         {/* Full-bleed still */}
         <FullBleedPhoto src={drone1} alt="Full-bleed aerial still of the San Diego coastline." />
