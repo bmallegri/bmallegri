@@ -72,7 +72,7 @@ const projects = [
     meta: "",
     status: "working" as const,
     statusLabel: "working on it",
-    body: "Chess apps count your puzzle streak and call it progress. Mine keeps a model of what you actually know and schedules positions with spaced retrieval. Between positions it has you talk through candidate moves the way strong players do out loud. It's built in 3D in Unreal Engine and also takes into account the player's personality type. The goal is the useful part of a coach.",
+    body: "Chess apps count your puzzle streak and call it progress. Mine keeps a model of what you actually know and schedules positions with spaced retrieval. Between positions you talk through candidate moves out loud, the way strong players do. Built in 3D in Unreal Engine, and it reads your personality type. The goal is the useful part of a coach.",
   },
   {
     index: "02",
@@ -80,7 +80,7 @@ const projects = [
     meta: "September 2025 to May 2026",
     status: "done" as const,
     statusLabel: "done",
-    body: "Nine months on the electronics subsystem of a Formula SAE car, on a team I joined in high school. Most of my hours went to the wiring harness and electrical QA, and also driving up 4 hours on weekends from New Jersey.",
+    body: "Nine months on the electronics subsystem of a Formula SAE car, a team I joined in high school. Most hours went to the wiring harness and electrical QA, plus a four-hour drive up from New Jersey most weekends.",
   },
   {
     index: "03",
@@ -88,7 +88,7 @@ const projects = [
     meta: "Kean University, July 2025",
     status: "done" as const,
     statusLabel: "done",
-    body: "Built during a four-week research program. Phenylketonuria means tracking protein in almost everything you eat, so meal planning is daily cognitive work. I built a hybrid recommender over a database of 900+ foods and deployed it with Streamlit.",
+    body: "Built during a four-week research program. Phenylketonuria means tracking protein in nearly everything you eat, so meal planning is daily cognitive work. I built a hybrid recommender over 900+ foods and shipped it with Streamlit.",
   },
   {
     index: "04",
@@ -96,7 +96,7 @@ const projects = [
     meta: "Summer 2025",
     status: "done" as const,
     statusLabel: "done",
-    body: "A summer internship analyzing omics data from spaceflight experiments in Python. GeneLab is NASA's open repository of biology data from missions, gene expression from organisms that have actually been to space, and the summer went to turning that raw data into something you could ask questions of, about how living systems respond to spaceflight.",
+    body: "A summer internship analyzing omics data from spaceflight experiments in Python. GeneLab is NASA's open repository of biology data from missions, gene expression from organisms that have been to space. The summer went to turning that raw data into something you can ask questions of.",
   },
 ];
 
@@ -139,10 +139,9 @@ function Index() {
                 I'm a first-year at Northeastern studying Artificial Intelligence and Behavioral
                 Neuroscience. I want to know what happens when a person learns something hard, and
                 whether software can see it. Right now that's a chess trainer that models what you
-                know instead of counting your puzzle streak. Until
-                this May it was nine months on the electronics of Brown's Formula SAE car, a team I
-                joined while I was still in high school. The summer before that, spaceflight omics
-                at NASA GeneLab GL4HS.
+                know instead of counting your puzzle streak. Before it: nine months on the
+                electronics of Brown's Formula SAE car, and a summer of spaceflight omics at NASA
+                GeneLab GL4HS.
               </Reveal>
               <Reveal as="p" delay={120} className="mt-8 t-mono">
                 <Link to="/about" className="link-accent">
@@ -168,9 +167,9 @@ function Index() {
                 </span>
               </Reveal>
               <Reveal as="p" delay={60} className="mt-6 t-body">
-                I'm at Queen's University Belfast for my first semester. I'm COO & Cofounder of a
-                non-profit, finishing the IBM Generative AI Engineering certification, and building
-                the chess trainer. January is Boston.
+                I'm at Queen's University Belfast for my first semester, COO & Cofounder of a
+                non-profit, and finishing the IBM Generative AI Engineering certification. The chess
+                trainer continues. January is Boston.
               </Reveal>
               <Reveal delay={120} className="mt-10">
                 <ol className="route-line">
@@ -278,9 +277,9 @@ function Index() {
               </div>
 
               <Reveal as="p" delay={60} className="mt-12 t-body">
-                Everything here is San Diego, California from above, shot on a DJI Mavic 3
-                Pro Cine. The drone and web design practice runs alongside the technical work. If
-                you want aerial coverage or a site built, say so in the form.
+                All San Diego, California, shot on a DJI Mavic 3 Pro Cine. The drone and web design
+                practice runs alongside the technical work. Aerial coverage or a site built, say so
+                in the form.
               </Reveal>
             </div>
           </div>
@@ -298,10 +297,10 @@ function Index() {
                 lines={["Write to me"]}
               />
               <p className="mt-6 t-body">
-                For the summer of 2027, I would love to do research or a first-year technical
-                program. If your lab or team sits anywhere near human performance or{" "}
-                <span className="whitespace-nowrap">human-AI</span> systems, please write to me.
-                Drone and web inquiries welcome too. The form works. Email is faster:{" "}
+                For summer 2027 I would love research or a first-year technical program. If your lab
+                or team sits near human performance or{" "}
+                <span className="whitespace-nowrap">human-AI</span> systems, write to me. The form
+                works, email is faster:{" "}
                 <a
                   href="mailto:bellamallegri@gmail.com"
                   className="link-accent [overflow-wrap:anywhere]"
