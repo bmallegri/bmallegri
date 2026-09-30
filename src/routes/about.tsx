@@ -42,12 +42,12 @@ const shelf = [
   {
     index: "01",
     title: "Turing, Computing Machinery and Intelligence (1950).",
-    note: "Where the whole field's question comes from.",
+    note: "Where the question comes from.",
   },
   {
     index: "02",
     title: "Hebb, The Organization of Behavior (1949).",
-    note: "How learning physically changes a brain.",
+    note: "How learning changes a brain.",
   },
   {
     index: "03",
@@ -56,18 +56,13 @@ const shelf = [
   },
   {
     index: "04",
-    title: "Vaswani et al., Attention Is All You Need (2017).",
-    note: "Modern AI starts here.",
+    title: "Marr, Vision (1982).",
+    note: "Three levels for any thinking system.",
   },
   {
     index: "05",
-    title: "Marr, Vision (1982).",
-    note: "Three levels for understanding any thinking system.",
-  },
-  {
-    index: "06",
-    title: "Endsley, Toward a Theory of Situation Awareness in Dynamic Systems (1995).",
-    note: "What a person inside a fast machine actually knows.",
+    title: "Endsley, Situation Awareness in Dynamic Systems (1995).",
+    note: "What a person in a fast machine knows.",
   },
 ];
 
@@ -116,7 +111,7 @@ function About() {
               The shelf
             </Reveal>
             <Reveal as="p" delay={60} className="relative mt-6 max-w-[720px] t-body">
-              Six papers I keep going back to.
+              Five papers I keep going back to.
             </Reveal>
             <ol className="shelf-list relative mt-10">
               {shelf.map((item, i) => (
