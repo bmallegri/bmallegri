@@ -5,7 +5,6 @@ import { ContactForm } from "@/components/site/ContactForm";
 import { Reveal } from "@/components/site/Reveal";
 import { LineReveal } from "@/components/site/LineReveal";
 import { SectionMark } from "@/components/site/SectionMark";
-import asteremaLogoAsset from "@/assets/asterema-logo.png.asset.json";
 
 const TITLE = "About Bella Allegri | Human Systems Architecture";
 const DESCRIPTION =
@@ -31,12 +30,12 @@ export const Route = createFileRoute("/about")({
 });
 
 const paragraphs = [
-  "I got here through wires. I started in high school on my school's FTC robotics team, eventually running it as captain. Senior year, I joined Brown Formula Racing and spent nine months in the electronics subsystem. I also found I liked strategy. With an FRC team I was helping, the Excel spreadsheet full of match data and automatic macros calculating scoring chances was the part I kept coming back to. The numbers told a story about what a person under pressure was likely to do next.",
-  "That question became the plan. At Northeastern I study Artificial Intelligence and Behavioral Neuroscience, and both are about the same thing: people under load. I like tools that notice what is happening in the person using them. What you know. When you are about to make a bad call.",
-  "In my own notes I call this work human systems architecture. Systems that understand, support, predict, and improve how people think and perform. Big words for what is currently a chess trainer. The direction holds.",
+  "I got here through wires. I captained my high school's FTC robotics team, then spent nine months on the electronics subsystem of Brown Formula Racing, a team I joined while I was still in high school. Strategy came next. With an FRC team I was helping, the match-data spreadsheet and the macros working out scoring odds were the part I kept returning to. The numbers described what a person under pressure does next.",
+  "That question became the plan. At Northeastern I study Artificial Intelligence and Behavioral Neuroscience, and both are about people under load. I like tools that notice what is happening in the person using them: what you know, and when you are about to make a bad call.",
+  "In my notes I call this human systems architecture: systems that understand, support, and improve how people think and perform. Big words for what is currently a chess trainer. The direction holds.",
+  "I'm COO & Cofounder of a non-profit, a collective of student builders and artists with members across Brown, MIT, Stanford, and more.",
   "I'm in Belfast for my first semester at Queen's University. Boston from January.",
-  "Aside from all that, I'm COO & Cofounder of a non-profit, a collective of student builders and artists with members across Brown, MIT, Stanford, and more.",
-  "For the summer of 2027, I would love to do research or a first-year technical program. If your lab or team sits anywhere near human performance or human\u2011AI systems, please write to me.",
+  "For summer 2027 I would love research or a first-year technical program. If your lab or team sits near human performance or human-AI systems, write to me.",
 ];
 
 const shelf = [
@@ -92,33 +91,8 @@ function About() {
             <div className="relative">
               <LineReveal as="h1" className="t-section t-heading-italic" lines={["Who I am"]} />
               <div className="mt-10 flex flex-col gap-7 t-body">
-                {paragraphs.slice(0, 5).map((p, i) => (
-                  <Reveal as="p" key={p.slice(0, 24)} delay={i * 60}>
-                    {p}
-                  </Reveal>
-                ))}
-                <Reveal as="div" delay={5 * 60} className="mt-4 flex items-start gap-5">
-                  <a
-                    href="https://www.linkedin.com/company/abg-institute"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="shrink-0 rounded-sm bg-white p-2 dark:bg-white"
-                  >
-                    <img
-                      src={asteremaLogoAsset.url}
-                      alt="Logo of the non-profit I co-run"
-                      className="h-14 w-14 object-contain"
-                    />
-                  </a>
-                  <div className="t-mono">
-                    <p>COO & Cofounder, non-profit</p>
-                    <a href="https://www.linkedin.com/company/abg-institute" className="link-accent">
-                      LinkedIn
-                    </a>
-                  </div>
-                </Reveal>
-                {paragraphs.slice(5).map((p, i) => (
-                  <Reveal as="p" key={p.slice(0, 24)} delay={(6 + i) * 60}>
+                {paragraphs.map((p, i) => (
+                  <Reveal as="p" key={p.slice(0, 24)} delay={Math.min(i, 6) * 60}>
                     {p}
                   </Reveal>
                 ))}
@@ -142,7 +116,7 @@ function About() {
               The shelf
             </Reveal>
             <Reveal as="p" delay={60} className="relative mt-6 max-w-[720px] t-body">
-              I really like these six papers, and I thought I would share.
+              Six papers I keep going back to.
             </Reveal>
             <ol className="shelf-list relative mt-10">
               {shelf.map((item, i) => (
