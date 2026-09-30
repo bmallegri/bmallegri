@@ -14,7 +14,7 @@ import drone3 from "@/assets/drone-3.webp";
 
 const TITLE = "Bella Allegri | AI & Behavioral Neuroscience";
 const DESCRIPTION =
-  "Bella Michele Allegri builds tools for how people learn and decide: a chess trainer, a Python game, NASA GeneLab GL4HS, and Formula SAE electronics.";
+  "Bella Michele Allegri builds tools for how people learn and decide: a chess trainer, NASA GeneLab GL4HS, and Formula SAE electronics.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -51,7 +51,6 @@ export const Route = createFileRoute("/")({
           affiliation: [
             { "@type": "CollegeOrUniversity", name: "Northeastern University" },
             { "@type": "CollegeOrUniversity", name: "Queen's University Belfast" },
-            { "@type": "Organization", name: "Asterema" },
           ],
           knowsAbout: [
             "Artificial Intelligence",
@@ -77,14 +76,6 @@ const projects = [
   },
   {
     index: "02",
-    title: "Python game",
-    meta: "",
-    status: "working" as const,
-    statusLabel: "working on it",
-    body: "A browser game that teaches Python one line at a time. You start with an empty spellbook, and a page only fills in once you can rebuild that line from scrambled tokens in three different contexts. It sits somewhere between recognising code and writing it cold, which is where things start to stick.",
-  },
-  {
-    index: "03",
     title: "Brown Formula Racing",
     meta: "September 2025 to May 2026",
     status: "done" as const,
@@ -92,7 +83,7 @@ const projects = [
     body: "Nine months on the electronics subsystem of a Formula SAE car, on a team I joined in high school. Most of my hours went to the wiring harness and electrical QA, and also driving up 4 hours on weekends from New Jersey.",
   },
   {
-    index: "04",
+    index: "03",
     title: "PKU dietary recommendation app",
     meta: "Kean University, July 2025",
     status: "done" as const,
@@ -100,7 +91,7 @@ const projects = [
     body: "Built during a four-week research program. Phenylketonuria means tracking protein in almost everything you eat, so meal planning is daily cognitive work. I built a hybrid recommender over a database of 900+ foods and deployed it with Streamlit.",
   },
   {
-    index: "05",
+    index: "04",
     title: "NASA GeneLab GL4HS internship",
     meta: "Summer 2025",
     status: "done" as const,
@@ -111,7 +102,7 @@ const projects = [
 
 const route = [
   { place: "METUCHEN, NJ", note: "home", state: "past" as const },
-  { place: "PROVIDENCE, RI", note: "asterema, before the semester", state: "past" as const },
+  { place: "PROVIDENCE, RI", note: "non-profit, before the semester", state: "past" as const },
   {
     place: "BELFAST, Northern Ireland",
     note: "now / queen's university",
@@ -148,7 +139,7 @@ function Index() {
                 I'm a first-year at Northeastern studying Artificial Intelligence and Behavioral
                 Neuroscience. I want to know what happens when a person learns something hard, and
                 whether software can see it. Right now that's a chess trainer that models what you
-                know instead of counting your puzzle streak, and a game that teaches Python. Until
+                know instead of counting your puzzle streak. Until
                 this May it was nine months on the electronics of Brown's Formula SAE car, a team I
                 joined while I was still in high school. The summer before that, spaceflight omics
                 at NASA GeneLab GL4HS.
@@ -177,9 +168,9 @@ function Index() {
                 </span>
               </Reveal>
               <Reveal as="p" delay={60} className="mt-6 t-body">
-                I'm at Queen's University Belfast for my first semester. I'm running operations as
-                COO and Cofounder of Asterema, finishing the IBM Generative AI Engineering
-                certification, and building the chess trainer. January is Boston.
+                I'm at Queen's University Belfast for my first semester. I'm COO & Cofounder of a
+                non-profit, finishing the IBM Generative AI Engineering certification, and building
+                the chess trainer. January is Boston.
               </Reveal>
               <Reveal delay={120} className="mt-10">
                 <ol className="route-line">
