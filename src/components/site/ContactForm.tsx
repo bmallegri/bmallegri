@@ -1,11 +1,11 @@
 import { useState, type FormEvent } from "react";
 
-const PURPOSES = ["Hiring info", "Full portfolio", "Asterema", "Other"];
+const PURPOSES = ["Hiring info", "Full portfolio", "Non-profit", "Other"];
 const SOURCES = [
   "Friend",
   "LinkedIn",
   "Networking event or college event",
-  "Asterema",
+  "Non-profit",
   "Other",
 ];
 

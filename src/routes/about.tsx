@@ -35,7 +35,7 @@ const paragraphs = [
   "That question became the plan. At Northeastern I study Artificial Intelligence and Behavioral Neuroscience, and both are about the same thing: people under load. I like tools that notice what is happening in the person using them. What you know. When you are about to make a bad call.",
   "In my own notes I call this work human systems architecture. Systems that understand, support, predict, and improve how people think and perform. Big words for what is currently a chess trainer. The direction holds.",
   "I'm in Belfast for my first semester at Queen's University. Boston from January.",
-  "Aside from all that, I'm part of Asterema, a collective of student builders and artists with members across Brown, MIT, Stanford, and more.",
+  "Aside from all that, I'm COO & Cofounder of a non-profit, a collective of student builders and artists with members across Brown, MIT, Stanford, and more.",
   "For the summer of 2027, I would love to do research or a first-year technical program. If your lab or team sits anywhere near human performance or human\u2011AI systems, please write to me.",
 ];
 
@@ -106,12 +106,12 @@ function About() {
                   >
                     <img
                       src={asteremaLogoAsset.url}
-                      alt="Asterema logo"
+                      alt="Logo of the non-profit I co-run"
                       className="h-14 w-14 object-contain"
                     />
                   </a>
                   <div className="t-mono">
-                    <p>Asterema</p>
+                    <p>COO & Cofounder, non-profit</p>
                     <a href="https://www.linkedin.com/company/abg-institute" className="link-accent">
                       LinkedIn
                     </a>

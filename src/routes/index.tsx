@@ -51,7 +51,6 @@ export const Route = createFileRoute("/")({
           affiliation: [
             { "@type": "CollegeOrUniversity", name: "Northeastern University" },
             { "@type": "CollegeOrUniversity", name: "Queen's University Belfast" },
-            { "@type": "Organization", name: "Asterema" },
           ],
           knowsAbout: [
             "Artificial Intelligence",
@@ -103,7 +102,7 @@ const projects = [
 
 const route = [
   { place: "METUCHEN, NJ", note: "home", state: "past" as const },
-  { place: "PROVIDENCE, RI", note: "asterema, before the semester", state: "past" as const },
+  { place: "PROVIDENCE, RI", note: "non-profit, before the semester", state: "past" as const },
   {
     place: "BELFAST, Northern Ireland",
     note: "now / queen's university",
@@ -169,9 +168,9 @@ function Index() {
                 </span>
               </Reveal>
               <Reveal as="p" delay={60} className="mt-6 t-body">
-                I'm at Queen's University Belfast for my first semester, finishing the IBM
-                Generative AI Engineering certification, and building the chess trainer. January is
-                Boston.
+                I'm at Queen's University Belfast for my first semester. I'm COO & Cofounder of a
+                non-profit, finishing the IBM Generative AI Engineering certification, and building
+                the chess trainer. January is Boston.
               </Reveal>
               <Reveal delay={120} className="mt-10">
                 <ol className="route-line">
