@@ -32,7 +32,6 @@ export const Route = createFileRoute("/about")({
 const paragraphs = [
   "I got here through wires. I captained my high school's FTC robotics team, then spent nine months on the electronics subsystem of Brown Formula Racing, a team I joined while I was still in high school. Strategy came next. With an FRC team I was helping, the match-data spreadsheet and the macros working out scoring odds were the part I kept returning to. The numbers described what a person under pressure does next.",
   "That question became the plan. At Northeastern I study Artificial Intelligence and Behavioral Neuroscience, and both are about people under load. I like tools that notice what is happening in the person using them: what you know, and when you are about to make a bad call.",
-  "In my notes I call this human systems architecture: systems that understand, support, and improve how people think and perform. Big words for what is currently a chess trainer. The direction holds.",
   "I'm COO & Cofounder of a non-profit, a collective of student builders and artists with members across Brown, MIT, Stanford, and more.",
   "I'm in Belfast for my first semester at Queen's University. Boston from January.",
   "For summer 2027 I would love research or a first-year technical program. If your lab or team sits near human performance or human-AI systems, write to me.",
