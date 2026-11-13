@@ -228,9 +228,6 @@ function Index() {
                   </Reveal>
                 ))}
               </ol>
-              <Reveal as="p" delay={60} className="mt-10 t-body">
-                Repos go up as I finish the write-ups. Email me if you want a look before then.
-              </Reveal>
             </div>
           </div>
         </section>
