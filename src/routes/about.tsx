@@ -40,27 +40,22 @@ const shelf = [
   {
     index: "01",
     title: "Turing, Computing Machinery and Intelligence (1950).",
-    note: "Where the question comes from.",
   },
   {
     index: "02",
     title: "Hebb, The Organization of Behavior (1949).",
-    note: "How learning changes a brain.",
   },
   {
     index: "03",
     title: "Kahneman and Tversky, Judgment under Uncertainty (1974).",
-    note: "Why smart people decide badly.",
   },
   {
     index: "04",
     title: "Marr, Vision (1982).",
-    note: "Three levels for any thinking system.",
   },
   {
     index: "05",
     title: "Endsley, Situation Awareness in Dynamic Systems (1995).",
-    note: "What a person in a fast machine knows.",
   },
 ];
 
@@ -117,7 +112,6 @@ function About() {
                   <span className="shelf-index">{item.index}</span>
                   <div>
                     <p className="shelf-title">{item.title}</p>
-                    <p className="shelf-note">{item.note}</p>
                   </div>
                 </Reveal>
               ))}
