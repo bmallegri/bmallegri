@@ -1181,7 +1181,6 @@ body::-webkit-scrollbar-corner {
 
 .hero-accent-line {
   color: var(--brand-accent);
-  font-style: italic;
   font-variation-settings: "opsz" 144, "SOFT" 60, "WONK" 1;
 }
 

@@ -100,15 +100,13 @@ const projects = [
   },
 ];
 
-const route = [
-  { place: "METUCHEN, NJ", note: "home", state: "past" as const },
-  { place: "PROVIDENCE, RI", note: "non-profit, before the semester", state: "past" as const },
-  {
-    place: "BELFAST, Northern Ireland",
-    note: "now / queen's university",
-    state: "current" as const,
-  },
-  { place: "BOSTON, MA", note: "january", state: "future" as const },
+type Stop = { place: string; note?: string; state: "past" | "current" | "future" };
+
+const route: Stop[] = [
+  { place: "METUCHEN, NJ", state: "past" },
+  { place: "PROVIDENCE, RI", state: "past" },
+  { place: "BELFAST, Northern Ireland", note: "queen's uni", state: "current" },
+  { place: "BOSTON, MA", state: "future" },
 ];
 
 function Index() {
@@ -167,16 +165,18 @@ function Index() {
                 </span>
               </Reveal>
               <Reveal as="p" delay={60} className="mt-6 t-body">
-                I'm at Queen's University Belfast for my first semester, COO & Cofounder of a
-                non-profit, and finishing the IBM Generative AI Engineering certification. The chess
-                trainer continues. January is Boston.
+                I'm at Queen's University Belfast for my first semester, finishing the IBM
+                Generative AI Engineering certification, and building the chess trainer. January is
+                Boston.
               </Reveal>
               <Reveal delay={120} className="mt-10">
                 <ol className="route-line">
                   {route.map((stop) => (
                     <li key={stop.place} className="route-stop" data-state={stop.state}>
                       <span>{stop.place}</span>
-                      <span className="route-stop-note">/ {stop.note}</span>
+                      {stop.note && (
+                        <span className="route-stop-note">/ {stop.note}</span>
+                      )}
                     </li>
                   ))}
                 </ol>

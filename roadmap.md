@@ -7,3 +7,6 @@
 - [x] Drop the LinkedIn button and the non-profit logo image from About.
 - [x] Drop paper 04 (Vaswani) from the shelf and shorten the shelf copy.
 - [x] Shorten the wordier passages on Home and About.
+- [x] Remove all COO and non-profit mentions from Home, About, and the contact form.
+- [x] Keep the location timeline but drop the per-stop details; only Belfast shows "queen's uni".
+- [x] Stop italicizing the name in the hero title.
